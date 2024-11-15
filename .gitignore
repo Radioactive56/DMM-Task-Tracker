@@ -1,0 +1,44 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+_pycache_/
+*.egg
+*.egg-info/
+*.whl
+pip-log.txt
+venv/
+.venv/
+env/
+ENV/
+
+# Django
+backend/db.sqlite3              # SQLite database file, if used
+backend/staticfiles/            # Collected static files (run collectstatic)
+backend/media/                  # User-uploaded media files, if any
+
+# Node.js
+node_modules/                   # Node modules directory
+npm-debug.log                   # NPM debug log file
+yarn-debug.log                  # Yarn debug log file
+yarn-error.log                  # Yarn error log file
+
+# React
+frontend/build/                 # Production build folder for React
+
+# Git
+.gitattributes                   # Git attributes file
+.gitignore                       # Git ignore file itself
+
+# IDE / Text Editor Files
+.vscode/                         # Visual Studio Code settings
+.idea/                           # IntelliJ IDEA settings
+*.sublime-workspace              # Sublime Text workspace file
+*.sublime-project                # Sublime Text project file
