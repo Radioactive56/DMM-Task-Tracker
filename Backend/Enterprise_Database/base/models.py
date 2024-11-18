@@ -29,12 +29,13 @@ class Employee(models.Model):
         return self.name
 
 class Project(models.Model):
-    Project_name=[
-        ('advance_tax','Advance Tax'),
+    project_name_choices=[
+        ('Advance Tax','Advance Tax'),
         ('GSTR1','GSTR1')
     ]
     # query can be wriiten wrt to first column in below () i.e data_collection,data_recieved ...and so on
-    project_status_advance_tax=[
+    project_status_choices={
+        'Advance Tax' :[
         ('1','Data Collection'),
         ('2','Data Recieved'),
         ('3','Data Process / Working'),
@@ -42,8 +43,8 @@ class Project(models.Model):
         ('5','Approval From Client'),
         ('6','Challan Sent'),
         ('7','Challan Paid')
-    ]
-    project_status_gstr1=[
+    ],
+    'GSTR1':[
         ('1','Follow Up'),
         ('2','Data Recieved'),
         ('3','Working / Process'),
@@ -52,12 +53,13 @@ class Project(models.Model):
         ('6','Checking By HOD'),
         ('7','Uploading')
     ]
-    name = models.CharField(max_length=128)
+    }
+    name = models.CharField(max_length=128,choices=project_name_choices)
     Department=models.ForeignKey(Department,on_delete=models.RESTRICT)
     Client=models.ForeignKey(Client,on_delete=models.RESTRICT)
     Employee=models.ForeignKey(Employee,on_delete=models.RESTRICT)
     period=MonthField()
-    status=models.CharField(max_length=128,choices=project_status_advance_tax)
+    status=models.CharField(max_length=128)
     start_date=models.DateField()
     end_date=models.DateField(blank=True,null=True)
     mode_of_payment=models.CharField(max_length=128,blank=True,null=True)
