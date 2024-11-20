@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useForm} from "react-hook-form"
+import { API_URL } from '../App';
 
 
 export default function Form() {
@@ -7,7 +8,7 @@ export default function Form() {
     const {register,handleSubmit,watch}=useForm();
 
     useEffect(()=>{
-        const api_url='http://localhost:8000/pname';
+        const api_url=`${API_URL}/pname`;
         fetch(api_url)
         .then(response=>{
             if (!response.ok){
@@ -20,6 +21,7 @@ export default function Form() {
             setprojectname(data);
         })
     },[])
+
     useEffect(()=>{
 
     })
@@ -27,6 +29,10 @@ export default function Form() {
         console.log(data)
     }
   return (
+    <>
+    <div>
+      {API_URL}
+    </div>
 <div style={{width:"100vw",height:'100vh'}}>
 <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={handleSubmit(onSubmit)}>
     <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">Project Form</h2>
@@ -167,6 +173,7 @@ export default function Form() {
     </div>
   </form>
 </div>
+</>
 
 
   )
