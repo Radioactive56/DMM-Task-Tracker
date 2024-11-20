@@ -5,14 +5,16 @@ import { API_URL } from '../App';
 
 export default function Form() {
     const [projectname,setprojectname]=useState([])
-    const {register,handleSubmit,watch}=useForm();
+    const {register,handleSubmit,setValue,watch}=useForm();
+    const [statusOptions,setstatusoptions]=useState([]);
+    const selectedProjectName = watch("name");
 
     useEffect(()=>{
         const api_url=`${API_URL}/pname`;
         fetch(api_url)
         .then(response=>{
             if (!response.ok){
-                console.error("Api calling Failed");
+                console.error("Project name Api calling Failed");
             }
             return response.json()
         })
@@ -23,8 +25,25 @@ export default function Form() {
     },[])
 
     useEffect(()=>{
+      if (selectedProjectName){
+        const api_url=`${API_URL}/status/${selectedProjectName}`;
 
-    })
+        fetch(api_url)
+        .then(response=>{
+          if (!response.ok){
+            console.error("Error in status api calling.")
+          }
+          else{
+            return response.json()
+          }
+        })
+        .then(data=>{
+          setstatusoptions(data)
+          setValue("status","");
+        })
+      }
+
+    },[selectedProjectName,setValue])
     const onSubmit=(data)=>{
         console.log(data)
     }
@@ -96,7 +115,7 @@ export default function Form() {
         />
       </div>
       <div>
-        <label for="budget" className="block text-sm font-medium text-gray-700">Mode Of Payment:</label>
+        <label className="block text-sm font-medium text-gray-700">Mode Of Payment:</label>
         <input
           type="number"
           id="budget"
@@ -116,14 +135,16 @@ export default function Form() {
       <div>
         <label for="priority" className="block text-sm font-medium text-gray-700">Status:</label>
         <select
-          id="priority"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        >
-          <option value="">Select priority</option>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
+  {...register("status", { required: "Status is required" })}
+  disabled={!statusOptions.length} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+>
+  <option value="">Select Status</option>
+  {statusOptions.map((status) => (
+    <option key={status} value={status}>
+      {status}
+    </option>
+  ))}
+</select>
       </div>
       </div>
       {/* <div>
