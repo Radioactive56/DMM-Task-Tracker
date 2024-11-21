@@ -1,5 +1,4 @@
 from django.db import models
-from month.models import MonthField
 # Create your models here.
 class Department(models.Model):
     name = models.CharField(max_length=128,unique=True)
@@ -29,7 +28,7 @@ class Employee(models.Model):
         return self.name
 
 class Project(models.Model):
-    project_name_choices=[
+    project_type_choices=[
         ('Advance Tax','Advance Tax'),
         ('GSTR1','GSTR1')
     ]
@@ -54,14 +53,14 @@ class Project(models.Model):
         ('7','Uploading')
     ]
     }
-    name = models.CharField(max_length=128,choices=project_name_choices)
+    name = models.CharField(max_length=128)
+    type = models.CharField(max_length=128,choices=project_type_choices)
     Department=models.ForeignKey(Department,on_delete=models.RESTRICT)
     Client=models.ForeignKey(Client,on_delete=models.RESTRICT)
     Employee=models.ForeignKey(Employee,on_delete=models.RESTRICT)
-    period=MonthField()
     status=models.CharField(max_length=128)
-    start_date=models.DateField()
-    end_date=models.DateField(blank=True,null=True)
+    start_date=models.DateField(blank=True,null=True)
+    end_date = models.DateField(null=True,blank=True)
     mode_of_payment=models.CharField(max_length=128,blank=True,null=True)
     status_description=models.TextField(blank=True,null=True)
     project_completed=models.BooleanField(default=False)
