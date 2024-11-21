@@ -4,29 +4,82 @@ import { API_URL } from '../App';
 
 
 export default function Form() {
-    const [projectname,setprojectname]=useState([])
+    const [projecttype,setprojecttype]=useState([]);
+    const [clientName,setclientName] = useState([]);
+    const [departmentName,setdepartmentName] = useState([]);
+    const [employeeName,setemployeeName] = useState([]);
     const {register,handleSubmit,setValue,watch}=useForm();
     const [statusOptions,setstatusoptions]=useState([]);
-    const selectedProjectName = watch("name");
+    const selectedProjectType = watch("type");
+    // const end_date = watch("end_date",null);
 
     useEffect(()=>{
-        const api_url=`${API_URL}/pname`;
+        const api_url=`${API_URL}/ptype`;
         fetch(api_url)
         .then(response=>{
             if (!response.ok){
-                console.error("Project name Api calling Failed");
+                console.error("Project type Api calling Failed");
             }
             return response.json()
         })
         .then(data=>{
-            console.log(data)
-            setprojectname(data);
+          console.log("Project Type data :"+data);
+            setprojecttype(data);
+        })
+
+        const client_api_url = `${API_URL}/cname`;
+
+        fetch(client_api_url)
+        .then(response=>{
+          if (!response.ok){
+            console.error("Error calling the client Api..")
+          }
+          else{
+            return response.json()
+          }
+        })
+        .then(data=>{
+          console.log(data);
+          setclientName(data);
+        })
+        const department_api_url=`${API_URL}/dname`;
+
+        fetch(department_api_url)
+        .then(response=>{
+          if (!response.ok){
+            console.error('Error in calling department api..')
+          }
+          else{
+            return response.json()
+          }
+        })
+        .then(data=>{
+          console.log("Department data :"+data);
+          setdepartmentName(data);
+
+        })
+
+        const employee_api_url=`${API_URL}/ename`;
+
+        fetch(employee_api_url)
+        .then(response=>{
+          if (!response.ok){
+            console.error('Error in calling department api..')
+          }
+          else{
+            return response.json()
+          }
+        })
+        .then(data=>{
+          console.log("Employee data :"+data);
+          setemployeeName(data);
+
         })
     },[])
 
     useEffect(()=>{
-      if (selectedProjectName){
-        const api_url=`${API_URL}/status/${selectedProjectName}`;
+      if (selectedProjectType){
+        const api_url=`${API_URL}/status/${selectedProjectType}`;
 
         fetch(api_url)
         .then(response=>{
@@ -39,19 +92,41 @@ export default function Form() {
         })
         .then(data=>{
           setstatusoptions(data)
-          setValue("status","");
+          // setValue("status","");
         })
       }
 
-    },[selectedProjectName,setValue])
+    },[selectedProjectType])
     const onSubmit=(data)=>{
-        console.log(data)
+        const payload = {
+          ...data,
+          Client : parseInt(data.Client,10),
+          Department : parseInt(data.Department,10),
+          Employee : parseInt(data.Employee,10),
+        }
+
+        const form_api_url=`${API_URL}/newp`;
+
+        fetch(form_api_url,{
+          method:"POST",
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify(payload)
+        })
+        .then(response=>{
+          if (response.ok){
+            alert('Form submitted successfully')
+          }
+          else{
+          return response.json().then((err)=>{
+            alert(err.message);
+          })
+        }
+        })
     }
   return (
     <>
-    <div>
-      {API_URL}
-    </div>
 <div style={{width:"100vw",height:'100vh'}}>
 <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={handleSubmit(onSubmit)}>
     <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">Project Form</h2>
@@ -60,10 +135,20 @@ export default function Form() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {/* <!-- Input Fields --> */}
       <div>
-        <label className="block text-sm font-medium text-gray-700">Project Name:</label>
-        <select {...register("name", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <label for="name" className="block text-sm font-medium text-gray-700">Project Name:</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Project name"
+          {...register("name",{ required : true })}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Project Type:</label>
+        <select {...register("type", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
         <option value="">Select Project</option>
-        {projectname.map((name) => (
+        {projecttype.map((name) => (
           <option key={name} value={name}>
             {name}
           </option>
@@ -72,63 +157,59 @@ export default function Form() {
           
       </div>
       <div>
-        <label for="clientName" className="block text-sm font-medium text-gray-700">Client Name:</label>
+        <label className="block text-sm font-medium text-gray-700">Client Name:</label>
+        <select {...register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <option value=''>Select Client</option>
+        {
+          clientName.map((item)=>(
+            <option key={item.id} value={item.id}>{item.name}</option>
+          ))
+        }
+        </select>
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Department Name:</label>
+        <select {...register("Department",{ required : true})} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          <option value="">Select Department</option>
+          {
+            departmentName.map((item)=>(
+              <option key={item.id} value={item.id}>{item.name}</option>
+            ))
+          }
+        </select>
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Employee Name:</label>
+        <select {...register("Employee", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <option value=''>Select Employee</option>
+        {
+          employeeName.map((item)=>(
+            <option key={item.id} value={item.id}>{item.name}</option>
+          ))
+        }
+        </select>
+      </div>
+      <div>
+        <label  className="block text-sm font-medium text-gray-700">Start Date:</label>
         <input
-          type="text"
-          id="clientName"
-          placeholder="Enter client name"
+          type='date'
+          {...register('start_date',{ required : true })}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
       <div>
-        <label for="email" className="block text-sm font-medium text-gray-700">Department Name:</label>
+        <label className="block text-sm font-medium text-gray-700">End Date:</label>
         <input
-          type="email"
-          id="email"
-          placeholder="Enter email"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        />
-      </div>
-      <div>
-        <label for="phone" className="block text-sm font-medium text-gray-700">Employee Name:</label>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Enter phone number"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        />
-      </div>
-      <div>
-        <label for="startDate" className="block text-sm font-medium text-gray-700">Start Date:</label>
-        <input
-          type="date"
-          id="startDate"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        />
-      </div>
-      <div>
-        <label for="endDate" className="block text-sm font-medium text-gray-700">End Date:</label>
-        <input
-          type="date"
-          id="endDate"
+          type='date'
+          {...register('end_date')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Mode Of Payment:</label>
         <input
-          type="number"
-          id="budget"
-          placeholder="Enter budget"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        />
-      </div>
-      <div>
-        <label for="teamSize" className="block text-sm font-medium text-gray-700">Period:</label>
-        <input
-          type="number"
-          id="teamSize"
-          placeholder="Enter team size"
+          type="text"
+          {...register('mode_of_payment')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
@@ -147,18 +228,6 @@ export default function Form() {
 </select>
       </div>
       </div>
-      {/* <div>
-        <label for="status" className="block text-sm font-medium text-gray-700"></label>
-        <select
-          id="status"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-        >
-          <option value="">Select status</option>
-          <option value="not_started">Not Started</option>
-          <option value="in_progress">In Progress</option>
-          <option value="completed">Completed</option>
-        </select>
-      </div> */}
  
     {/* <!-- Textarea and Checkbox --> */}
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -167,19 +236,30 @@ export default function Form() {
         <textarea
           id="description"
           rows="3"
+          {...register('status_description')}
           placeholder="Provide a brief description"
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         ></textarea>
       </div>
-      <div className="flex items-center mt-2">
+      <div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Document Endpath:</label>
+        <input
+          type="text"
+          {...register('Document_endpath')}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        />
+      </div>
+      <div className="flex items-center mt-4">
         <input
           type="checkbox"
-          id="completed"
+          {...register('project_completed')}
           className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
         />
         <label for="completed" className="ml-2 text-sm font-medium text-gray-700">
           Project Completed
         </label>
+      </div>
       </div>
     </div>
  
