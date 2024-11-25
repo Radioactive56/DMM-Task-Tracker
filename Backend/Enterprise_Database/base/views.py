@@ -7,8 +7,27 @@ import json
 from .models import Project,Client,Employee,Department
 from .serializers import Project_serializer,Client_serializer,Employee_serializer,Department_serializer
 from datetime import date
+from django.contrib.auth import authenticate
+from rest_framework.authtoken.models import Token
+from datetime import timedelta
+from django.utils import timezone
 # Create your views here.
 
+@api_view(['POST'])
+def login(request):
+    data = json.loads(request.body)
+    username=data.get('username')
+    password=data.get('password')
+
+    user = authenticate(username=username,password=password)
+    if user:
+        token,created = Token.objects.get_or_create(user=user)
+        expiry = timezone.now() + timedelta(minutes=30)
+        response = Response({'message':'Login Successfull'},status=status.HTTP_200_OK)
+        response.set_cookie('Token',token.key,secure=True,samesite='Strict',expires=expiry)
+        return response
+    else:
+        return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
 def check(request):

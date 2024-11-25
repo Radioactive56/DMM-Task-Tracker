@@ -1,9 +1,36 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import './Login.css';
-
+import { API_URL } from '../App';
+import { Navigate, useNavigate } from 'react-router-dom';
 export default function Login() {
-    const {register,handleSubmit,onSubmit} = useForm();
+
+    const {register,handleSubmit} = useForm();
+    const navigate = useNavigate();
+    const onSubmit = (data)=>{
+        const api_url=`${API_URL}/login`;
+
+        fetch(api_url,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            credentials:'include',
+            body:JSON.stringify(data)  
+        })
+        .then(response=>{
+            if (response.ok){
+                alert("Login Successfull");
+                navigate('/project');
+                
+            }
+            else{
+                return response.json().then(data=>{
+                    alert(data.message)
+                })
+            }
+        })
+    }
     return (
         <div className='root' style={{"height":"100vh","display":"flex","justifyContent":"center","alignItems":"center"}}>
             
