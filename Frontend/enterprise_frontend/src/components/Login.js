@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import './Login.css';
 import { API_URL } from '../App';
+import Cookies from 'js-cookie';
 import { Navigate, useNavigate } from 'react-router-dom';
 export default function Login() {
 
@@ -15,20 +16,21 @@ export default function Login() {
             headers:{
                 "Content-Type":"application/json",
             },
-            credentials:'include',
             body:JSON.stringify(data)  
         })
         .then(response=>{
-            if (response.ok){
-                alert("Login Successfull");
-                navigate('/project');
-                
+            if (response.status===400){
+                alert("Invalid Credentials...")
             }
             else{
-                return response.json().then(data=>{
-                    alert(data.message)
-                })
+                return response.json();
             }
+        })
+        .then(data=>{
+            console.log(data)
+            Cookies.set('Token',data,{expires:0.5 / 24,sameSite:'Strict',path:'/'});
+            alert('Login Successfull token recieved....')
+            navigate('/home')
         })
     }
     return (
