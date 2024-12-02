@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { DataGrid, GridToolbar,GridToolbarQuickFilter } from '@mui/x-data-grid';
 import { useMovieData } from '@mui/x-data-grid-generator';
 import { API_URL } from '../App';
 
@@ -31,10 +32,12 @@ export default function Dashboard() {
       { field: 'phone_number', headerName: 'Phone Number', width:200 },
       { field: 'email', headerName: 'Email Info', width:200 },
     ]
+    const navigate = useNavigate();
 
   return (
+    <>
     <div>
-       <Box sx={{ height: 400, width: 1 }}>
+      <Box sx={{ height: 400, width: 1 }}>
       <DataGrid
         rows={cdata}
         disableColumnFilter
@@ -50,5 +53,9 @@ export default function Dashboard() {
       />
     </Box>
     </div>
+    <div style={{display:'flex',justifyContent:'center',alignItems:'center',marginTop:'2%'}}>
+    <button type="button" onClick={()=>navigate('/project')} class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add Project</button>
+    </div>
+    </>
   )
 }
