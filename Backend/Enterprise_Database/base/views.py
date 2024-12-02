@@ -22,10 +22,8 @@ def login(request):
     user = authenticate(username=username,password=password)
     if user:
         token,created = Token.objects.get_or_create(user=user)
-        expiry = timezone.now() + timedelta(minutes=30)
-        response = Response({'message':'Login Successfull'},status=status.HTTP_200_OK)
-        response.set_cookie('Token',token.key,secure=True,expires=expiry)
-        return response
+        # response.set_cookie('Token',token.key,secure=True,expires=expiry)
+        return Response(token.key,status=status.HTTP_200_OK)
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)
 
