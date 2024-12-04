@@ -16,6 +16,7 @@ export default function Dashboard() {
   const [selectedRow, setSelectedRow] = useState(null);
  
   const handleRowClick = (params) => {
+    console.log(params.row.id)
     setSelectedRow(params.row);
     setOpen(true);
   };
@@ -78,7 +79,7 @@ export default function Dashboard() {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: 400,
+            width: '60%',
             bgcolor: 'background.paper',
             boxShadow: 24,
             p: 4,
