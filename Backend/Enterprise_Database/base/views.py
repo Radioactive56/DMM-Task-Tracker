@@ -76,3 +76,14 @@ def add_Project(request):
         print('data invalid')
         print(serializer.errors)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+def fetch_project_from_client(request,id):
+
+    data = Project.objects.filter(Client__id=id)
+    print(data)
+    if data:
+        serializer= Project_serializer(data,many=True)
+        return Response(serializer.data,status=status.HTTP_200_OK)
+    else:
+        return Response({'message':'No project or client found'},status=status.HTTP_404_NOT_FOUND)
