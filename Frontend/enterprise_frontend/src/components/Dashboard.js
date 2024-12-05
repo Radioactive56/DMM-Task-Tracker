@@ -13,17 +13,32 @@ export default function Dashboard() {
   const [cdata,set_cdata]= useState("");
 
   const [open, setOpen] = useState(false);
-  const [selectedRow, setSelectedRow] = useState(null);
+  const [selectedRow, setSelectedRow] = useState([]);
  
   const handleRowClick = (params) => {
     console.log(params.row.id)
-    setSelectedRow(params.row);
+    const c = params.row.id
+    const api_url=`${API_URL}/get_project/${c}/`;
+    fetch(api_url)
+    .then(response=>{
+      if (!response.ok){
+        if (response.status===404){
+          throw new Error('No Projects available for this client.')
+        }
+        console.error('Error in fetching the api......')
+      }
+      return response.json()
+    })
+    .then(data=>{
+      setSelectedRow(data);
+    })
+    .catch((error)=>setSelectedRow([{'name':'Project Not Found'}]));
     setOpen(true);
   };
  
   const handleClose = () => {
     setOpen(false);
-    setSelectedRow(null);
+    setSelectedRow([]);
   };
 
   useEffect(()=>{
@@ -87,18 +102,32 @@ export default function Dashboard() {
           }}
         >
           <Typography variant="h6" component="h2">
-            Row Details
+            Projects Details
           </Typography>
-          {selectedRow && (
+          {/* {selectedRow && ( */}
             <>
-              <Typography sx={{ mt: 2 }}>
-ID: {selectedRow.id}
-              </Typography>
-              <Typography>
-Name: {selectedRow.name}
-              </Typography>
-            </>
-          )}
+                {selectedRow.map((item,index)=>(
+                  <Typography sx={{ mt: 2 }}>
+                    {index} : {item.name}
+                  </Typography>
+  
+          ))}
+          </>
+          {/* )} */}
+          {/* {
+            error ?(
+              <p>{error}</p>
+            ):(
+              <>
+              {selectedRow.map((item,index)=>(
+                <Typography sx={{ mt: 2 }}>
+                  {index} : {item.name}
+                </Typography>
+
+        ))}
+        </>
+            )
+          } */}
           <Button onClick={handleClose} sx={{ mt: 2 }} variant="contained">
             Close
           </Button>
