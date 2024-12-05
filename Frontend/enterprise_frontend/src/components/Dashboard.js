@@ -7,10 +7,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Cookies from 'js-cookie';
 
 
 export default function Dashboard() {
   const [cdata,set_cdata]= useState("");
+
+  const token = Cookies.get('Token');
 
   const [open, setOpen] = useState(false);
   const [selectedRow, setSelectedRow] = useState([]);
@@ -19,7 +22,12 @@ export default function Dashboard() {
     console.log(params.row.id)
     const c = params.row.id
     const api_url=`${API_URL}/get_project/${c}/`;
-    fetch(api_url)
+    fetch(api_url,{
+      method:"GET",
+      headers:{
+          'Authorization': `Token ${token}`
+      },
+    })
     .then(response=>{
       if (!response.ok){
         if (response.status===404){

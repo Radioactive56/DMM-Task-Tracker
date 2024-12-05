@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
+import Cookies from 'js-cookie';
 
 
 export default function Form() {
@@ -11,11 +12,17 @@ export default function Form() {
     const {register,handleSubmit,setValue,watch}=useForm();
     const [statusOptions,setstatusoptions]=useState([]);
     const selectedProjectType = watch("type");
+    const token = Cookies.get('Token')
     // const end_date = watch("end_date",null);
 
     useEffect(()=>{
         const api_url=`${API_URL}/ptype`;
-        fetch(api_url)
+        fetch(api_url,{
+          method:"GET",
+          headers:{
+              'Authorization': `Token ${token}`
+          },
+        })
         .then(response=>{
             if (!response.ok){
                 console.error("Project type Api calling Failed");
@@ -29,7 +36,12 @@ export default function Form() {
 
         const client_api_url = `${API_URL}/cname`;
 
-        fetch(client_api_url)
+        fetch(client_api_url,{
+          method:"GET",
+          headers:{
+              'Authorization': `Token ${token}`
+          },
+        })
         .then(response=>{
           if (!response.ok){
             console.error("Error calling the client Api..")
@@ -44,7 +56,12 @@ export default function Form() {
         })
         const department_api_url=`${API_URL}/dname`;
 
-        fetch(department_api_url)
+        fetch(department_api_url,{
+          method:"GET",
+          headers:{
+              'Authorization': `Token ${token}`
+          },
+        })
         .then(response=>{
           if (!response.ok){
             console.error('Error in calling department api..')
@@ -61,7 +78,12 @@ export default function Form() {
 
         const employee_api_url=`${API_URL}/ename`;
 
-        fetch(employee_api_url)
+        fetch(employee_api_url,{
+          method:"GET",
+          headers:{
+              'Authorization': `Token ${token}`
+          },
+        })
         .then(response=>{
           if (!response.ok){
             console.error('Error in calling department api..')
@@ -81,7 +103,12 @@ export default function Form() {
       if (selectedProjectType){
         const api_url=`${API_URL}/status/${selectedProjectType}`;
 
-        fetch(api_url)
+        fetch(api_url,{
+          method:"GET",
+          headers:{
+              'Authorization': `Token ${token}`
+          },
+        })
         .then(response=>{
           if (!response.ok){
             console.error("Error in status api calling.")
@@ -110,7 +137,8 @@ export default function Form() {
         fetch(form_api_url,{
           method:"POST",
           headers:{
-            'Content-Type':'application/json'
+            'Content-Type':'application/json',
+            'Authorization': `Token ${token}`,
           },
           body:JSON.stringify(payload)
         })
