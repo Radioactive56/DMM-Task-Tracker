@@ -4,6 +4,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.core.cache import cache
 from .models import Project,Client,Employee,Department
 from .serializers import Project_serializer,Client_serializer,Employee_serializer,Department_serializer
 from datetime import date
@@ -12,6 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from datetime import timedelta
 from django.utils import timezone
+from django.http import HttpResponse
 
 from django.core.cache import cache
 from django.http import JsonResponse
