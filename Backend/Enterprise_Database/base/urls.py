@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
+from .views import generate_captcha,validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
 urlpatterns=[
     path('query',check),
     path('ptype',project_type),
@@ -11,4 +11,5 @@ urlpatterns=[
     path('login',login),
     path('get_project/<int:id>/',fetch_project_from_client),
     path('validate/',validate),
+    path('generate-captcha/',generate_captcha),
 ]
