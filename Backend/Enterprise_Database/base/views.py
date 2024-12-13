@@ -13,6 +13,7 @@ from rest_framework.authtoken.models import Token
 from datetime import timedelta
 from django.utils import timezone
 
+from django.core.cache import cache
 from django.http import JsonResponse
 from captcha.image import ImageCaptcha
 from io import BytesIO
