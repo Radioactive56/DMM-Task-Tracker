@@ -12,6 +12,13 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from datetime import timedelta
 from django.utils import timezone
+
+from django.http import JsonResponse
+from captcha.image import ImageCaptcha
+from io import BytesIO
+import random
+import string
+ 
 # Create your views here.
 
 
