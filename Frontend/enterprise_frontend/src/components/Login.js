@@ -52,9 +52,8 @@ export default function Login() {
             })
             .then(data=>{
                 console.log(data)
-                Cookies.set('Token',data.Token,{expires:30/1440})
-                localStorage.setItem('name',data.user)
-                navigate('/dashboard')
+                Cookies.set('Token',data,{expires:30/1440})
+                navigate('/home')
 
             })
             .catch(error=>{
