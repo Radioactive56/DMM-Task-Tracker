@@ -19,16 +19,31 @@ from django.utils import timezone
 def validate(request):
     return Response({'message':'token is valid'},status=status.HTTP_200_OK)
 
+# Generate Captcha
+def generate_captcha(request):
+    captcha_text = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+    cache.set('captcha_code', captcha_text, timeout=300)  # Store in cache for 5 minutes
+    image = ImageCaptcha()
+    data = BytesIO()
+    image.write(captcha_text, data)
+    data.seek(0)
+    return HttpResponse(data, content_type="image/png")
+ 
+
 @api_view(['POST'])
 def login(request):
     data = json.loads(request.body)
     username=data.get('username')
     password=data.get('password')
+    user_captcha = data.get('captcha')
 
+    server_captcha = cache.get('captcha_code')
+    if not server_captcha or user_captcha != server_captcha:
+        return Response({"message": "Invalid captcha!"},status = status.HTTP_400_BAD_REQUEST)
+ 
     user = authenticate(username=username,password=password)
     if user:
         token,created = Token.objects.get_or_create(user=user)
-        # response.set_cookie('Token',token.key,secure=True,expires=expiry)
         return Response(token.key,status=status.HTTP_200_OK)
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)
