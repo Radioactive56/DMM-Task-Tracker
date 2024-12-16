@@ -10,12 +10,13 @@ from .serializers import Project_serializer,Client_serializer,Employee_serialize
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.authtoken.models import Token
 from datetime import timedelta
 from django.utils import timezone
 from django.http import HttpResponse
 
+from rest_framework_simplejwt.tokens import RefreshToken
 from django.core.cache import cache
+
 from django.http import JsonResponse
 from captcha.image import ImageCaptcha
 from io import BytesIO
@@ -32,6 +33,7 @@ def validate(request):
 # Generate Captcha
 def generate_captcha(request):
     captcha_text = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+    print(captcha_text)
     cache.set('captcha_code', captcha_text, timeout=300)  # Store in cache for 5 minutes
     image = ImageCaptcha()
     data = BytesIO()
@@ -53,7 +55,11 @@ def login(request):
  
     user = authenticate(username=username,password=password)
     if user:
-        token,created = Token.objects.get_or_create(user=user)
+        refresh = RefreshToken.for_user(user)
+        access_token = str(refresh.access_token)
+        refresh_token = str(refresh)
+
+        return Response({'Token':access_token},status= status.HTTP_200_OK)
         return Response(token.key,status=status.HTTP_200_OK)
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)

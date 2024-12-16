@@ -18,7 +18,7 @@ export default function PrivateRoute({children}) {
         fetch(`${API_URL}/validate/`,{
             method:"GET",
             headers:{
-                'Authorization': `Token ${token}`
+                'Authorization': `Bearer ${token}`
             },
         })
         .then(response=>{
@@ -44,5 +44,3 @@ export default function PrivateRoute({children}) {
 }
 
 
-
-// Token:"74d371927835ec59fcf27f142827978b507521c3"
