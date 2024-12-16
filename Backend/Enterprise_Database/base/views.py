@@ -13,7 +13,10 @@ from rest_framework.permissions import IsAuthenticated
 from datetime import timedelta
 from django.utils import timezone
 from django.http import HttpResponse
+
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.core.cache import cache
+
 from django.http import JsonResponse
 from captcha.image import ImageCaptcha
 from io import BytesIO
