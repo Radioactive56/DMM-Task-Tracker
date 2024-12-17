@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1xf(yic$1!)@gzjo7upxv7b&9xgc6*azzio6!d7a#2c2(&bs(!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['dmm-server.onrender.com','localhost','127.0.0.1']
 
@@ -53,11 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
 CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOW_CREDENTIALS=True
-
 
 ROOT_URLCONF = 'Enterprise_Database.urls'
 

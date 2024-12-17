@@ -80,8 +80,8 @@ export default function Dashboard() {
   return (
     <>
     <Navbar/>
-    <div style={{marginTop:'5%'}}>
-      <Box sx={{ height: 400, width: 1 }}>
+    <div style={{marginTop:'6%'}}>
+      <Box sx={{ height:'85vh', width: 1 }}>
       <DataGrid
         rows={cdata}
         disableColumnFilter

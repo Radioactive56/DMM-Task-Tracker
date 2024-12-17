@@ -39,7 +39,7 @@ export default function SidebarNew() {
       <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
         <List>
           {[
-            {text:'Dashboard',icon:<DashboardIcon></DashboardIcon>},
+            {text:'Home',icon:<DashboardIcon></DashboardIcon>},
             {text:'Projects',icon:<ManageSearchIcon></ManageSearchIcon>},
             {text:'Employees',icon:<StorageIcon></StorageIcon>},
             {text:'Users',icon:<GroupIcon></GroupIcon>}
