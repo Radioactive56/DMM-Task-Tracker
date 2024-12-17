@@ -64,7 +64,7 @@ def login(request):
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def check(request):
     s_date = date(2024,11,12)
@@ -72,41 +72,41 @@ def check(request):
     serializer = Project_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def project_type(request):
     data = [i[1] for i in Project.project_type_choices]
     return Response(data,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def status_name(request,name):
     data = Project.project_status_choices.get(name,[])
     f = [i[1] for i in data]
     return Response(f,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_client_name(request):
     data = Client.objects.all()
     serializer=Client_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_department_name(request):
     data = Department.objects.all()
     serializer=Department_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_Employee_data(request):
     data = Employee.objects.all()
     serializer=Employee_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @csrf_exempt
 @api_view(['POST'])
 def add_Project(request):
@@ -121,7 +121,7 @@ def add_Project(request):
         print(serializer.errors)
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_project_from_client(request,id):
 
@@ -132,3 +132,12 @@ def fetch_project_from_client(request,id):
         return Response(serializer.data,status=status.HTTP_200_OK)
     else:
         return Response({'message':'No project or client found'},status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def fetch_projects(request):
+    data = Projects.objects.all()
+    serialized_data = Project_serializer(data,many=True)
+    return Response(serialized_data.data,status = status.HTTP_200_OK)
+

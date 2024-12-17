@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
+import Navbar from './Navbar';
 
 
 export default function Form() {
@@ -20,7 +21,7 @@ export default function Form() {
         fetch(api_url,{
           method:"GET",
           headers:{
-              'Authorization': `Token ${token}`
+              'Authorization': `Bearer ${token}`
           },
         })
         .then(response=>{
@@ -39,7 +40,7 @@ export default function Form() {
         fetch(client_api_url,{
           method:"GET",
           headers:{
-              'Authorization': `Token ${token}`
+              'Authorization': `Bearer ${token}`
           },
         })
         .then(response=>{
@@ -59,7 +60,7 @@ export default function Form() {
         fetch(department_api_url,{
           method:"GET",
           headers:{
-              'Authorization': `Token ${token}`
+              'Authorization': `Bearer ${token}`
           },
         })
         .then(response=>{
@@ -81,7 +82,7 @@ export default function Form() {
         fetch(employee_api_url,{
           method:"GET",
           headers:{
-              'Authorization': `Token ${token}`
+              'Authorization': `Bearer ${token}`
           },
         })
         .then(response=>{
@@ -106,7 +107,7 @@ export default function Form() {
         fetch(api_url,{
           method:"GET",
           headers:{
-              'Authorization': `Token ${token}`
+              'Authorization': `Bearer ${token}`
           },
         })
         .then(response=>{
@@ -138,7 +139,7 @@ export default function Form() {
           method:"POST",
           headers:{
             'Content-Type':'application/json',
-            'Authorization': `Token ${token}`,
+            'Authorization': `Bearer ${token}`,
           },
           body:JSON.stringify(payload)
         })
@@ -155,7 +156,8 @@ export default function Form() {
     }
   return (
     <>
-<div style={{width:"100vw",height:'100vh'}}>
+    <Navbar></Navbar>
+<div style={{width:"100vw",height:'100vh',marginTop:'1%'}}>
 <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={handleSubmit(onSubmit)}>
     <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">Project Form</h2>
     
