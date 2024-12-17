@@ -13,7 +13,10 @@ from rest_framework.permissions import IsAuthenticated
 from datetime import timedelta
 from django.utils import timezone
 from django.http import HttpResponse
+
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.core.cache import cache
+
 from django.http import JsonResponse
 from captcha.image import ImageCaptcha
 from io import BytesIO
@@ -131,8 +134,10 @@ def fetch_project_from_client(request,id):
         return Response({'message':'No project or client found'},status=status.HTTP_404_NOT_FOUND)
 
 
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def fetch_projects(request):
     data = Projects.objects.all()
     serialized_data = Project_serializer(data,many=True)
-    return Response()
+    return Response(serialized_data.data,status = status.HTTP_200_OK)
+
