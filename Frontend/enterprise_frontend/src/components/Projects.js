@@ -57,17 +57,17 @@ export default function Projects() {
                 console.error('error in calling the get_project/ api.......')
             }
         })
-        .then(data=>{
-            set_project_data(data)
+        .then(data=>{ 
+          set_project_data(data)
         })
     },[])
 
     const columns = [
         { field: 'name', headerName: 'Project Name', width:200 },
         { field: 'type', headerName: 'Project Type', width:200 },
-        { field: 'Department', headerName: 'Project Department', width:200 },
-        { field: 'Client', headerName: 'Client Name', width:200 },
-        { field: 'Employee', headerName: 'Employee Name', width:200 },
+        { field: 'department_name', headerName: 'Project Department', width:200 },
+        { field: 'client_name', headerName: 'Client Name', width:200 },
+        { field: 'employee_name', headerName: 'Employee Name', width:200 },
         { field: 'status', headerName: 'Project Status', width:200, renderCell:(params)=>{
             return(
                 <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
@@ -104,7 +104,7 @@ export default function Projects() {
                     paginationModel: { page: 0, pageSize: 5 },
                 },
                 }}
-                pageSizeOptions={[5, 10]}
+                pageSizeOptions={[50, 100]}
                 onRowClick={handleRowClick}
                 checkboxSelection
                 // onRowSelectionModelChange={handleSelectionChange} // Handle row selection change

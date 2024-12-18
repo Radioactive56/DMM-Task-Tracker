@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
+import { useNavigate,useParams} from 'react-router-dom';
 
 
 export default function Form() {
@@ -14,6 +15,8 @@ export default function Form() {
     const [statusOptions,setstatusoptions]=useState([]);
     const selectedProjectType = watch("type");
     const token = Cookies.get('Token')
+    const {id}=useParams();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         const api_url=`${API_URL}/ptype`;
@@ -96,6 +99,24 @@ export default function Form() {
           console.log("Employee data :"+data);
           setemployeeName(data);
         })
+
+
+      fetch(`${API_URL}/project/${id}/`,{
+        method:'GET',
+        headers:{
+          'Authorization' : `Bearer ${token}`
+        }
+      })
+      .then(response=>{
+        if (!response.ok){
+          console.error('Error in calling /project/:id api.......')
+        }
+        return response.json()
+      })
+      .then(data=>{
+        console.log(data)
+        reset(data)
+      })
     },[])
 
     useEffect(()=>{

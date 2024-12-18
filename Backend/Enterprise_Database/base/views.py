@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from django.core.cache import cache
 from .models import Project,Client,Employee,Department
-from .serializers import Project_serializer,Client_serializer,Employee_serializer,Department_serializer
+from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
@@ -135,10 +135,15 @@ def fetch_project_from_client(request,id):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def fetch_projects(request):
     data = Project.objects.all()
-    print(data)
     serialized_data = Project_serializer(data,many=True)
     return Response(serialized_data.data,status = status.HTTP_200_OK)
+
+@api_view(['GET'])
+def fetch_project_by_id(request,id):
+    data = Project.objects.get(id=id)
+    serialized_data = Projects_serializer(data)
+    return Response(serialized_data.data,status=status.HTTP_200_OK)
 
