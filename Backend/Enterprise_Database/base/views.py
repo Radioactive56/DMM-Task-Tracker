@@ -137,7 +137,8 @@ def fetch_project_from_client(request,id):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def fetch_projects(request):
-    data = Projects.objects.all()
+    data = Project.objects.all()
+    print(data)
     serialized_data = Project_serializer(data,many=True)
     return Response(serialized_data.data,status = status.HTTP_200_OK)
 
