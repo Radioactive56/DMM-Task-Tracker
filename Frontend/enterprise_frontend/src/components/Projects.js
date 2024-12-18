@@ -40,7 +40,7 @@ const CustomToolbar=()=>{
 export default function Projects() {
     const [project_data,set_project_data] = useState([]);
     const token = Cookies.get('Token')
-
+    const navigate = useNavigate();
     useEffect(()=>{
         const api_url = `${API_URL}/get_project/`;
         fetch(api_url,{
