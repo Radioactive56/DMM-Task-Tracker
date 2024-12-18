@@ -3,7 +3,6 @@ import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
-import { useNavigate } from 'react-router-dom';
 
 
 export default function Form() {
@@ -11,11 +10,10 @@ export default function Form() {
     const [clientName,setclientName] = useState([]);
     const [departmentName,setdepartmentName] = useState([]);
     const [employeeName,setemployeeName] = useState([]);
-    const {register,handleSubmit,setValue,watch}=useForm();
+    const {register,handleSubmit,reset,setValue,watch}=useForm();
     const [statusOptions,setstatusoptions]=useState([]);
     const selectedProjectType = watch("type");
     const token = Cookies.get('Token')
-    // const end_date = watch("end_date",null);
 
     useEffect(()=>{
         const api_url=`${API_URL}/ptype`;
@@ -97,7 +95,6 @@ export default function Form() {
         .then(data=>{
           console.log("Employee data :"+data);
           setemployeeName(data);
-
         })
     },[])
 
@@ -124,9 +121,9 @@ export default function Form() {
           // setValue("status","");
         })
       }
-
     },[selectedProjectType])
-    const navigate = useNavigate();
+
+
     const onSubmit=(data)=>{
         const payload = {
           ...data,
@@ -148,7 +145,6 @@ export default function Form() {
         .then(response=>{
           if (response.ok){
             alert('Form submitted successfully')
-            navigate('/projects')
           }
           else{
           return response.json().then((err)=>{
