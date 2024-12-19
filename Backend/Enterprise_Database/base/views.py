@@ -60,9 +60,8 @@ def login(request):
         refresh_token = str(refresh)
 
         return Response({'Token':access_token},status= status.HTTP_200_OK)
-        return Response(token.key,status=status.HTTP_200_OK)
     else:
-        return Response({'message':"Invalid Credentials"},status=status.HTTP_400_BAD_REQUEST)
+        return Response({'message':"Invalid Credentials"},status=status.HTTP_403_FORBIDDEN)
 
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
