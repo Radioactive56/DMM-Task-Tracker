@@ -79,7 +79,6 @@ export default function Projects() {
         { field: 'mode_of_payment', headerName: 'Mode Of Payment', width:200 },
         { field: 'Document_endpath', headerName: 'Document Endpath', width:200 },
         { field: 'status_description', headerName: 'Status Description', width:200 },
-        
     ]
 
     const handleRowClick = (params)=>{
@@ -90,8 +89,8 @@ export default function Projects() {
   return (
     <>
     <Navbar/>
-    <div style={{marginTop:'6%'}}>
-      <Box sx={{ height:'85vh', width: 1 }}>
+    <div style={{marginTop:'15vh'}}>
+      <Box sx={{ height:'85vh'}}>
       <DataGrid
                 rows={project_data}
                 columns={columns}

@@ -53,8 +53,7 @@ export default function Login() {
             .then(data=>{
                 console.log(data)
                 Cookies.set('Token',data.Token,{expires:30/1440})
-                navigate('/home')
-
+                window.location.replace("/home");
             })
             .catch(error=>{
                 window.location.reload();
