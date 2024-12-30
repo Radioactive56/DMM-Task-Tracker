@@ -110,7 +110,7 @@ def get_Employee_data(request):
 @api_view(['POST'])
 def add_Project(request):
     print(request.data)
-    serializer = Project_serializer(data=request.data)
+    serializer = Projects_serializer(data=request.data)
     if serializer.is_valid():
         print('data is valid')
         serializer.save()
