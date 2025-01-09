@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams} from 'react-router-dom';
 
 
 export default function Form() {
@@ -11,11 +11,12 @@ export default function Form() {
     const [clientName,setclientName] = useState([]);
     const [departmentName,setdepartmentName] = useState([]);
     const [employeeName,setemployeeName] = useState([]);
-    const {register,handleSubmit,setValue,watch}=useForm();
+    const {register,handleSubmit,reset,setValue,watch}=useForm();
     const [statusOptions,setstatusoptions]=useState([]);
     const selectedProjectType = watch("type");
     const token = Cookies.get('Token')
-    // const end_date = watch("end_date",null);
+    const {id}=useParams();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         const api_url=`${API_URL}/ptype`;
@@ -97,8 +98,25 @@ export default function Form() {
         .then(data=>{
           console.log("Employee data :"+data);
           setemployeeName(data);
-
         })
+
+
+      fetch(`${API_URL}/project/${id}/`,{
+        method:'GET',
+        headers:{
+          'Authorization' : `Bearer ${token}`
+        }
+      })
+      .then(response=>{
+        if (!response.ok){
+          console.error('Error in calling /project/:id api.......')
+        }
+        return response.json()
+      })
+      .then(data=>{
+        console.log(data)
+        reset(data)
+      })
     },[])
 
     useEffect(()=>{
@@ -124,9 +142,9 @@ export default function Form() {
           // setValue("status","");
         })
       }
-
     },[selectedProjectType])
-    const navigate = useNavigate();
+
+
     const onSubmit=(data)=>{
         const payload = {
           ...data,
@@ -135,7 +153,7 @@ export default function Form() {
           Employee : parseInt(data.Employee,10),
         }
 
-        const form_api_url=`${API_URL}/newp`;
+        const form_api_url=`${API_URL}/update_project/${id}/`;
 
         fetch(form_api_url,{
           method:"POST",
