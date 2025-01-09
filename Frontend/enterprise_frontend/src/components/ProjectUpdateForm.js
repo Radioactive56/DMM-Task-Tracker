@@ -153,7 +153,7 @@ export default function Form() {
           Employee : parseInt(data.Employee,10),
         }
 
-        const form_api_url=`${API_URL}/newp`;
+        const form_api_url=`${API_URL}/update_project/${id}/`;
 
         fetch(form_api_url,{
           method:"POST",
@@ -166,6 +166,7 @@ export default function Form() {
         .then(response=>{
           if (response.ok){
             alert('Form submitted successfully')
+            navigate('/projects')
           }
           else{
           return response.json().then((err)=>{

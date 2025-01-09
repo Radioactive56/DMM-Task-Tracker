@@ -10,6 +10,11 @@ class Projects_serializer(serializers.ModelSerializer):
         if data.get('end_date') == '':
             data['end_date']=None
         return super().to_internal_value(data)
+    # def validate_status():
+    #     valid_choices = [i[0] for i in Project.project_status_choices]
+    #     if value not in valid_choices:
+    #         raise serializers.ValidationError(f"{value} is not a valid category....")
+    #     return value
 
 class Project_serializer(serializers.ModelSerializer):
     client_name = serializers.CharField(source='Client.name',read_only=True)
