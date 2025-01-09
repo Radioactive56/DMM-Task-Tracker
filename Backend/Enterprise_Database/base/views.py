@@ -146,3 +146,14 @@ def fetch_project_by_id(request,id):
     serialized_data = Projects_serializer(data)
     return Response(serialized_data.data,status=status.HTTP_200_OK)
 
+@api_view(['POST'])
+def update_projects(request,id):
+    item = Project.objects.get(id = id)
+    print(item)
+    updated_data = Projects_serializer(instance=item,data=request.data)
+    if updated_data.is_valid():
+        updated_data.save()
+        return Response('Data saved Successfully......',status = status.HTTP_200_OK)
+    else:
+        return Response('Error in saving the form data.....',status = status.HTTP_400_BAD_REQUEST)
+
