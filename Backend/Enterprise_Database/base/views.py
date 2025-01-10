@@ -22,7 +22,7 @@ from captcha.image import ImageCaptcha
 from io import BytesIO
 import random
 import string
- 
+from django.core.mail import EmailMessage
 # Create your views here.
 
 
@@ -163,4 +163,35 @@ def update_projects(request,id):
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def send_email(request):
-    pass
+    # data = json.loads(request.body) this only works if the body is a json string and not formdata
+    # if it is formdata you have to use the below code....
+
+    email_reciever = request.POST.get('email_reciever')
+    emails=json.loads(email_reciever)
+    body = request.POST.get('body')
+    file = request.FILES.get('image_upload')
+    print(email_reciever)
+    print(body)
+
+    subject = "This is a broadcast mail from DMM"
+    salutations = "Dear All,"
+    # body=(
+    #     "I hope this email finds you well....\n"
+    #     "We have succesfully submitted your report.....\n\n"
+    #     "We have attached the report below feel free to update us if there are any changes available..."
+    # )
+    closing = "Regards\nYash Mehta"
+    message = f'{salutations}\n\n{body}\n\n{closing}'
+    from_email='neoemailtest12@gmail.com'
+    email = EmailMessage(subject,message,from_email,emails)
+
+    if file:
+        email.attach(file.name,file.read(),file.content_type)
+    
+    try:
+        email.send()
+        return Response('Email Sent Successfully...',status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'message':str(e)},status=status.HTTP_400_BAD_REQUEST)
+     
+
