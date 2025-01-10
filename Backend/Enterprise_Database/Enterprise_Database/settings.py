@@ -158,6 +158,10 @@ SIMPLE_JWT = {
 # DEFAULT_FROM_EMAIL = 'neoemailtest12@gmail.com'
 
 import os
+from dotenv import load_dotenv
+ 
+# Load environment variables from .env file
+load_dotenv()
  
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')
@@ -165,3 +169,11 @@ EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', None)
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', None)
+ 
+# Debugging print to check loaded values
+print("EMAIL_BACKEND:", EMAIL_BACKEND)
+print("EMAIL_HOST:", EMAIL_HOST)
+print("EMAIL_PORT:", EMAIL_PORT)
+print("EMAIL_USE_TLS:", EMAIL_USE_TLS)
+print("EMAIL_HOST_USER:", EMAIL_HOST_USER)
+print("EMAIL_HOST_PASSWORD:", EMAIL_HOST_PASSWORD)
