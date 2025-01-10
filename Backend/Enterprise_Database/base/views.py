@@ -27,6 +27,7 @@ import string
 
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def validate(request):
     return Response({'message':'token is valid'},status=status.HTTP_200_OK)
 
@@ -134,12 +135,13 @@ def fetch_project_from_client(request,id):
 
 
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def fetch_projects(request):
     data = Project.objects.all()
     serialized_data = Project_serializer(data,many=True)
     return Response(serialized_data.data,status = status.HTTP_200_OK)
 
+@permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_project_by_id(request,id):
     data = Project.objects.get(id=id)
@@ -147,6 +149,7 @@ def fetch_project_by_id(request,id):
     return Response(serialized_data.data,status=status.HTTP_200_OK)
 
 @api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def update_projects(request,id):
     item = Project.objects.get(id = id)
     print(item)
@@ -157,3 +160,7 @@ def update_projects(request,id):
     else:
         return Response('Error in saving the form data.....',status = status.HTTP_400_BAD_REQUEST)
 
+@permission_classes([IsAuthenticated])
+@api_view(['POST'])
+def send_email(request):
+    pass

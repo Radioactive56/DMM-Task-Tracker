@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 import Projects from './components/Projects';
 import ProjectUpdateForm from './components/ProjectUpdateForm'
+import Email from './components/Email';
 
 export let API_URL = process.env.REACT_APP_API_URL
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/projects' element={<PrivateRoute><Projects/></PrivateRoute>}></Route>
         <Route exact path='/projects/update/:id' element={<PrivateRoute><ProjectUpdateForm/></PrivateRoute>}></Route>
         <Route exact path='/home' element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}></Route>
+        <Route exact path='/email' element={<PrivateRoute><Email></Email></PrivateRoute>}></Route>
       </Routes>
     </Router>
   );
