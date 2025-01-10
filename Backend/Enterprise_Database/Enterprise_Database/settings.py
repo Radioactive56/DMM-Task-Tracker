@@ -146,3 +146,22 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
 }
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com' # For Gmail, use 'smtp.gmail.com'
+# EMAIL_PORT = 587  # For TLS
+# EMAIL_USE_TLS = True  # Use TLS (True or False)\]\]
+# EMAIL_USE_SSL = False  # Set to True if using SSL
+# EMAIL_HOST_USER = 'neoemailtest12@gmail.com'  # Your email address
+# EMAIL_HOST_PASSWORD = 'arycdxrykhsyskka'  # Your email password or app password
+# DEFAULT_FROM_EMAIL = 'neoemailtest12@gmail.com'
+
+import os
+ 
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', None)
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', None)

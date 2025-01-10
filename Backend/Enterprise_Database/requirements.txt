@@ -8,6 +8,7 @@ djangorestframework-simplejwt==5.3.1
 et_xmlfile==2.0.0
 numpy==2.2.0
 openpyxl==3.1.5
+python-decouple==3.8
 pandas==2.2.3
 pillow==11.0.0
 PyJWT==2.10.1
