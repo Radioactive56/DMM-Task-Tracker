@@ -33,7 +33,7 @@ def validate(request):
 
 # Generate Captcha
 def generate_captcha(request):
-    captcha_text = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+    captcha_text = ''.join(random.choices(string.digits, k=6))
     print(captcha_text)
     cache.set('captcha_code', captcha_text, timeout=300)  # Store in cache for 5 minutes
     image = ImageCaptcha()
@@ -183,7 +183,7 @@ def send_email(request):
     closing = "Regards\nYash Mehta"
     message = f'{salutations}\n\n{body}\n\n{closing}'
     from_email='neoemailtest12@gmail.com'
-    email = EmailMessage(subject,message,from_email,emails)
+    email = EmailMessage(subject,message,from_email,[],emails)
 
     if file:
         email.attach(file.name,file.read(),file.content_type)
