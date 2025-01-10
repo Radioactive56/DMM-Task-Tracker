@@ -10,6 +10,7 @@ import ListItemText from '@mui/material/ListItemText';
 import {Link, useNavigate} from "react-router-dom";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import StorageIcon from '@mui/icons-material/Storage';
+import EmailIcon from '@mui/icons-material/Email';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import GroupIcon from '@mui/icons-material/Group';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
@@ -42,7 +43,8 @@ export default function SidebarNew() {
             {text:'Home',icon:<DashboardIcon></DashboardIcon>},
             {text:'Projects',icon:<ManageSearchIcon></ManageSearchIcon>},
             {text:'Employees',icon:<StorageIcon></StorageIcon>},
-            {text:'Users',icon:<GroupIcon></GroupIcon>}
+            {text:'Users',icon:<GroupIcon></GroupIcon>},
+            {text:'Email',icon:<EmailIcon></EmailIcon>}
           ].map((item, index) => (
             <ListItem key={item.text} component={Link} to={`/${item.text.toLowerCase()}`} disablePadding>
               <ListItemButton>

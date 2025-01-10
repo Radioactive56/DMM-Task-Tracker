@@ -26,7 +26,7 @@ export default function Dashboard() {
     fetch(api_url,{
       method:"GET",
       headers:{
-          'Authorization': `Token ${token}`
+          'Authorization': `Bearer ${token}`
       },
     })
     .then(response=>{
