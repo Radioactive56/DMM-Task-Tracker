@@ -165,28 +165,20 @@ def update_projects(request,id):
 def send_email(request):
     # data = json.loads(request.body) this only works if the body is a json string and not formdata
     # if it is formdata you have to use the below code....
-
+    from_email=request.POST.get('from_email')
     email_reciever = request.POST.get('email_reciever')
     emails=json.loads(email_reciever)
     body = request.POST.get('body')
-    file = request.FILES.get('image_upload')
-    print(email_reciever)
-    print(body)
+    subject=request.POST.get('subject')
+    files = request.FILES.getlist('attachment')
 
-    subject = "This is a broadcast mail from DMM"
-    salutations = "Dear All,"
-    # body=(
-    #     "I hope this email finds you well....\n"
-    #     "We have succesfully submitted your report.....\n\n"
-    #     "We have attached the report below feel free to update us if there are any changes available..."
-    # )
-    closing = "Regards\nYash Mehta"
-    message = f'{salutations}\n\n{body}\n\n{closing}'
+
     from_email='neoemailtest12@gmail.com'
-    email = EmailMessage(subject,message,from_email,[],emails)
+    email = EmailMessage(subject,body,from_email,[],emails)
 
-    if file:
-        email.attach(file.name,file.read(),file.content_type)
+    if files != []:
+        for file in files:
+            email.attach(file.name,file.read(),file.content_type)
     
     try:
         email.send()
