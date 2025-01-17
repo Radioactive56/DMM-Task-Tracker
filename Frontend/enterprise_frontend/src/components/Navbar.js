@@ -16,7 +16,7 @@ export default function Navbar() {
      const name = localStorage.getItem("name")
   
       const navbar = {
-          background : "linear-gradient(90deg,#007991 0% ,#78ffd6 100%)",
+          background : "linear-gradient(90deg,#1c92d2 0% ,#f2fcfe 100%)",
           color: "antiquewhite"
           };
         return(

@@ -68,12 +68,16 @@ export default function Projects() {
         { field: 'department_name', headerName: 'Project Department', width:200 },
         { field: 'client_name', headerName: 'Client Name', width:200 },
         { field: 'employee_name', headerName: 'Employee Name', width:200 },
-        { field: 'status', headerName: 'Project Status', width:200, renderCell:(params)=>{
-            return(
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
-            )
-    }, },
-    { field: 'project_completed', headerName: 'Project Completed', width:200 },
+    //     { field: 'status', headerName: 'Project Status', width:200, renderCell:(params)=>{
+    //         return(
+    //             <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
+    //         )
+    // }, },
+    { field: 'project_completed', headerName: 'Project Completed', width:200,renderCell:(params)=>{
+      return(
+          <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
+      )
+}, },
         { field: 'start_date', headerName: 'Start Date', width:200 },
         { field: 'end_date', headerName: 'End Date', width:200 },
         { field: 'mode_of_payment', headerName: 'Mode Of Payment', width:200 },

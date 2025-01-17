@@ -5,8 +5,8 @@ from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.core.cache import cache
-from .models import Project,Client,Employee,Department
-from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer
+from .models import Project,Client,Employee,Department,Task
+from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer,Task_Serializer
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
@@ -81,7 +81,7 @@ def project_type(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def status_name(request,name):
-    data = Project.project_status_choices.get(name,[])
+    data = Task.project_status_choices.get(name,[])
     f = [i[1] for i in data]
     return Response(f,status=status.HTTP_200_OK)
 
@@ -185,5 +185,26 @@ def send_email(request):
         return Response('Email Sent Successfully...',status=status.HTTP_200_OK)
     except Exception as e:
         return Response({'message':str(e)},status=status.HTTP_400_BAD_REQUEST)
-     
 
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def fetch_all_tasks_by_project_id(request,id):
+    data = Task.objects.filter(Project__id=id)
+    print(data)
+    serialized_data = Task_Serializer(data,many=True)
+    return Response(serialized_data.data,status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_tasks_for_project_id(request,id):
+    data = json.loads(request.body)
+    print(data)
+    data['Project'] = id
+    print(data)
+
+    new_data = Task_Serializer(data=data)
+    if new_data.is_valid():
+        new_data.save()
+        return Response('Data saved successfully',status=status.HTTP_200_OK)
+    else:
+        return Response('Error in saving data.....',status=status.HTTP_404_NOT_FOUND)
