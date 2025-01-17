@@ -12,7 +12,8 @@ export default function Form() {
     const [departmentName,setdepartmentName] = useState([]);
     const [employeeName,setemployeeName] = useState([]);
     const {register,handleSubmit,setValue,watch}=useForm();
-    const [statusOptions,setstatusoptions]=useState([]);
+    // const [statusOptions,setstatusoptions]=useState([]);
+    const statusOptions = ['Completed','Not Completed']
     const selectedProjectType = watch("type");
     const token = Cookies.get('Token')
     // const end_date = watch("end_date",null);
@@ -101,31 +102,31 @@ export default function Form() {
         })
     },[])
 
-    useEffect(()=>{
-      if (selectedProjectType){
-        const api_url=`${API_URL}/status/${selectedProjectType}`;
+    // useEffect(()=>{
+    //   if (selectedProjectType){
+    //     const api_url=`${API_URL}/status/${selectedProjectType}`;
 
-        fetch(api_url,{
-          method:"GET",
-          headers:{
-              'Authorization': `Bearer ${token}`
-          },
-        })
-        .then(response=>{
-          if (!response.ok){
-            console.error("Error in status api calling.")
-          }
-          else{
-            return response.json()
-          }
-        })
-        .then(data=>{
-          setstatusoptions(data)
-          // setValue("status","");
-        })
-      }
+    //     fetch(api_url,{
+    //       method:"GET",
+    //       headers:{
+    //           'Authorization': `Bearer ${token}`
+    //       },
+    //     })
+    //     .then(response=>{
+    //       if (!response.ok){
+    //         console.error("Error in status api calling.")
+    //       }
+    //       else{
+    //         return response.json()
+    //       }
+    //     })
+    //     .then(data=>{
+    //       setstatusoptions(data)
+    //       // setValue("status","");
+    //     })
+    //   }
 
-    },[selectedProjectType])
+    // },[selectedProjectType])
     const navigate = useNavigate();
     const onSubmit=(data)=>{
         const payload = {
@@ -247,12 +248,12 @@ export default function Form() {
         />
       </div>
       <div>
-        <label for="priority" className="block text-sm font-medium text-gray-700">Status:</label>
+        <label className="block text-sm font-medium text-gray-700">Project Completed:</label>
         <select
-  {...register("status", { required: "Status is required" })}
+  {...register("project_completed", { required: "Status is required" })}
   disabled={!statusOptions.length} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 >
-  <option value="">Select Status</option>
+  <option value="">Select Project Completion Status</option>
   {statusOptions.map((status) => (
     <option key={status} value={status}>
       {status}
@@ -282,16 +283,6 @@ export default function Form() {
           {...register('Document_endpath')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
-      </div>
-      <div className="flex items-center mt-4">
-        <input
-          type="checkbox"
-          {...register('project_completed')}
-          className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-        />
-        <label for="completed" className="ml-2 text-sm font-medium text-gray-700">
-          Project Completed
-        </label>
       </div>
       </div>
     </div>

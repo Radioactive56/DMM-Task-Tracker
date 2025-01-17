@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import send_email,update_projects,fetch_project_by_id,fetch_projects,generate_captcha,validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
+from .views import add_tasks_for_project_id,fetch_all_tasks_by_project_id,send_email,update_projects,fetch_project_by_id,fetch_projects,generate_captcha,validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
 urlpatterns=[
     path('query',check),
     path('ptype',project_type),
@@ -16,4 +16,6 @@ urlpatterns=[
     path('project/<int:id>/',fetch_project_by_id),
     path('update_project/<int:id>/',update_projects),
     path('email/',send_email),
+    path('tasks/<int:id>/',fetch_all_tasks_by_project_id),
+    path('addtask/<int:id>/',add_tasks_for_project_id),
 ]

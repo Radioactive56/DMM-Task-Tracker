@@ -32,39 +32,51 @@ class Project(models.Model):
         ('Advance Tax','Advance Tax'),
         ('GSTR1','GSTR1')
     ]
-    # query can be wriiten wrt to first column in below () i.e data_collection,data_recieved ...and so on
-    project_status_choices={
-        'Advance Tax' :[
-        ('1','Data Collection'),
-        ('2','Data Recieved'),
-        ('3','Data Process / Working'),
-        ('4','Approval From Sir'),
-        ('5','Approval From Client'),
-        ('6','Challan Sent'),
-        ('7','Challan Paid')
-    ],
-    'GSTR1':[
-        ('1','Follow Up'),
-        ('2','Data Recieved'),
-        ('3','Working / Process'),
-        ('4','Query Sent To Client'),
-        ('5','Answer Recieved From Client'),
-        ('6','Checking By HOD'),
-        ('7','Uploading')
+    project_completed_choices=[
+        ('Completed','Completed'),
+        ('Not Completed','Not Completed')
     ]
-    }
+    # query can be wriiten wrt to first column in below () i.e data_collection,data_recieved ...and so on
     name = models.CharField(max_length=128)
     type = models.CharField(max_length=128,choices=project_type_choices)
     Department=models.ForeignKey(Department,on_delete=models.RESTRICT)
     Client=models.ForeignKey(Client,on_delete=models.RESTRICT)
     Employee=models.ForeignKey(Employee,on_delete=models.RESTRICT)
-    status=models.CharField(max_length=128)
     start_date=models.DateField(blank=True,null=True)
     end_date = models.DateField(null=True,blank=True)
     mode_of_payment=models.CharField(max_length=128,blank=True,null=True)
     status_description=models.TextField(blank=True,null=True)
-    project_completed=models.BooleanField(default=False)
+    project_completed=models.CharField(max_length=128,choices=project_completed_choices,default='Not Completed')
     Document_endpath=models.CharField(max_length=128,blank=True,null=True)
 
-    def __str__(self):
-        return self.name
+    def __int__(self):
+        return self.id
+
+class Task(models.Model):
+    project_status_choices={
+        'Advance Tax' :[
+        ('Data Collection','Data Collection'),
+        ('Data Recieved','Data Recieved'),
+        ('Data Process / Working','Data Process / Working'),
+        ('Approval From Sir','Approval From Sir'),
+        ('Approval From Client','Approval From Client'),
+        ('Challan Sent','Challan Sent'),
+        ('Challan Paid','Challan Paid')
+    ],
+    'GSTR1':[
+        ('Follow Up','Follow Up'),
+        ('Data Recieved','Data Recieved'),
+        ('Working / Process','Working / Process'),
+        ('Query Sent To Client','Query Sent To Client'),
+        ('Answer Recieved From Client','Answer Recieved From Client'),
+        ('Checking By HOD','Checking By HOD'),
+        ('Uploading','Uploading')
+    ]
+    }
+    id = models.BigAutoField(primary_key=True)
+    Project=models.ForeignKey(Project,on_delete=models.RESTRICT) 
+    task_status = models.CharField(max_length=126,choices=project_status_choices)
+    task_date = models.DateField()
+
+    def __int__(self):
+        return self.id

@@ -4,18 +4,54 @@ import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
 import { useNavigate,useParams} from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import TaskForm from './TaskForm';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
 
 
 export default function Form() {
+  const parentForm = useForm();
     const [projecttype,setprojecttype]=useState([]);
     const [clientName,setclientName] = useState([]);
     const [departmentName,setdepartmentName] = useState([]);
     const [employeeName,setemployeeName] = useState([]);
-    const {register,handleSubmit,reset,setValue,watch}=useForm();
-    const [statusOptions,setstatusoptions]=useState([]);
-    const selectedProjectType = watch("type");
+    // const {register,handleSubmit,reset,setValue,watch}=useForm();
+    const statusOptions = ['Completed','Not Completed']
+    const selectedProjectType = parentForm.watch('type')
     const token = Cookies.get('Token')
     const {id}=useParams();
+
+ 
+    // Parent form submission handler
+    const handleParentSubmit = (data) => {
+      console.log("Parent Form Data:", data);
+    };
+   
+    // Modal form submission handler
+    const handleModalSubmit = (data) => {
+      console.log("Modal Form Data:", data);
+    };
+
+
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -115,35 +151,9 @@ export default function Form() {
       })
       .then(data=>{
         console.log(data)
-        reset(data)
+        parentForm.reset(data)
       })
     },[])
-
-    useEffect(()=>{
-      if (selectedProjectType){
-        const api_url=`${API_URL}/status/${selectedProjectType}`;
-
-        fetch(api_url,{
-          method:"GET",
-          headers:{
-              'Authorization': `Bearer ${token}`
-          },
-        })
-        .then(response=>{
-          if (!response.ok){
-            console.error("Error in status api calling.")
-          }
-          else{
-            return response.json()
-          }
-        })
-        .then(data=>{
-          setstatusoptions(data)
-          // setValue("status","");
-        })
-      }
-    },[selectedProjectType])
-
 
     const onSubmit=(data)=>{
         const payload = {
@@ -179,7 +189,7 @@ export default function Form() {
     <>
     <Navbar></Navbar>
 <div style={{width:"100vw",height:'100vh',marginTop:'1%'}}>
-<form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={handleSubmit(onSubmit)}>
+<form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={parentForm.handleSubmit(handleParentSubmit)}>
     <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">Project Form</h2>
     
     {/* <!-- Form Grid --> */}
@@ -191,13 +201,13 @@ export default function Form() {
           type="text"
           id="name"
           placeholder="Enter Project name"
-          {...register("name",{ required : true })}
+          {...parentForm.register("name",{ required : true })}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Project Type:</label>
-        <select {...register("type", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("type", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
         <option value="">Select Project</option>
         {projecttype.map((name) => (
           <option key={name} value={name}>
@@ -209,7 +219,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Client Name:</label>
-        <select {...register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
         <option value=''>Select Client</option>
         {
           clientName.map((item)=>(
@@ -220,7 +230,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Department Name:</label>
-        <select {...register("Department",{ required : true})} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Department",{ required : true})} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
           <option value="">Select Department</option>
           {
             departmentName.map((item)=>(
@@ -231,7 +241,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Employee Name:</label>
-        <select {...register("Employee", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Employee", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
         <option value=''>Select Employee</option>
         {
           employeeName.map((item)=>(
@@ -244,7 +254,7 @@ export default function Form() {
         <label  className="block text-sm font-medium text-gray-700">Start Date:</label>
         <input
           type='date'
-          {...register('start_date',{ required : true })}
+          {...parentForm.register('start_date',{ required : true })}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
@@ -252,7 +262,7 @@ export default function Form() {
         <label className="block text-sm font-medium text-gray-700">End Date:</label>
         <input
           type='date'
-          {...register('end_date')}
+          {...parentForm.register('end_date')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
@@ -260,17 +270,17 @@ export default function Form() {
         <label className="block text-sm font-medium text-gray-700">Mode Of Payment:</label>
         <input
           type="text"
-          {...register('mode_of_payment')}
+          {...parentForm.register('mode_of_payment')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
       <div>
-        <label for="priority" className="block text-sm font-medium text-gray-700">Status:</label>
+        <label className="block text-sm font-medium text-gray-700">Project Completed:</label>
         <select
-  {...register("status", { required: "Status is required" })}
+  {...parentForm.register("project_completed", { required: "Status is required" })}
   disabled={!statusOptions.length} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
 >
-  <option value="">Select Status</option>
+  <option value="">Select Project Completion Status</option>
   {statusOptions.map((status) => (
     <option key={status} value={status}>
       {status}
@@ -287,7 +297,7 @@ export default function Form() {
         <textarea
           id="description"
           rows="3"
-          {...register('status_description')}
+          {...parentForm.register('status_description')}
           placeholder="Provide a brief description"
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         ></textarea>
@@ -297,19 +307,25 @@ export default function Form() {
         <label className="block text-sm font-medium text-gray-700">Document Endpath:</label>
         <input
           type="text"
-          {...register('Document_endpath')}
+          {...parentForm.register('Document_endpath')}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
-      <div className="flex items-center mt-4">
-        <input
-          type="checkbox"
-          {...register('project_completed')}
-          className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-        />
-        <label for="completed" className="ml-2 text-sm font-medium text-gray-700">
-          Project Completed
-        </label>
+      <div>
+        <label for="task_status" className="block text-sm font-medium text-gray-700">Task Status:</label>
+        <div>
+      <Button onClick={handleOpen}>Open Task Addition form</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <TaskForm type={selectedProjectType} close={handleClose}></TaskForm>
+        </Box>
+      </Modal>
+    </div>
       </div>
       </div>
     </div>
