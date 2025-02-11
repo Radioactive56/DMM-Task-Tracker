@@ -4,10 +4,12 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { API_URL } from '../App';
 
+import Swal from 'sweetalert2';
 import Cookies from 'js-cookie';
 
 
 export default function Login() {
+
     const [captchaUrl, setCaptchaUrl] = useState(""); // URL to fetch captcha image
     const navigate = useNavigate();
     const { register, handleSubmit, clearErrors, formState: { errors } } = useForm();
@@ -19,6 +21,23 @@ export default function Login() {
     useEffect(() => {
         fetchCaptcha();
     }, []);
+
+    function showAlert(message,type = 'error'){
+        Swal.fire({
+            title: type.toUpperCase(),
+            text : message,
+            icon: type,
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                    window.location.reload()
+                }
+            });
+    }
 
     const onSubmit = (data) =>{
             const api_url=`${API_URL}/login`
@@ -33,30 +52,44 @@ export default function Login() {
             .then(response=>{
 
                 if (response.status === 403){
-                    alert('Login InSuccessfull due to incorrect password')
-                    navigate('/')
+                    showAlert('Login Failed due to Incorrect Username or Password.')
+                    throw new Error('Error')
                 }
                 else if (response.status === 400){
-                    alert('Invalid Captcha!!!!')
-                    throw new Error('error!!!!!')
-                    navigate('/')
+                    showAlert('Invalid Captcha!')
+                    throw new Error('Error')
                 }
                 else if (!response.ok){
-                    alert('Error in calling the api...')
-                    navigate('/')
+                    showAlert('Error in calling the api.')
+                    throw new Error('Error')
                 }
                 else{
-                    alert('Login Sucessfull....')
                     return response.json()
                 }
             })
             .then(data=>{
-                console.log(data)
-                Cookies.set('Token',data.Token,{expires:30/1440})
-                window.location.replace("/home");
+                Swal.fire({
+                    title: "Success",
+                    text : 'Login Successfull',
+                    icon: 'success',
+                    confirmButtonText:"Ok",
+                    showConfirmButton:true,
+                    customClass:{
+                        confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    }
+                    }).then(result=>{
+                        if (result.isConfirmed){
+                            console.log(data)
+                            Cookies.set('Token',data.Token,{expires:30/1440})
+                            // localStorage.setItem('name',data.user)
+                            window.location.replace("/home");
+                        }
+                    });
+                // console.log(data)
+                // Cookies.set('Token',data.Token,{expires:30/1440})
+                // window.location.replace("/home");
             })
             .catch(error=>{
-                window.location.reload();
             })
     }
     

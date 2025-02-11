@@ -3,10 +3,10 @@ import {useForm} from "react-hook-form"
 import { API_URL } from '../App'
 import Cookies from 'js-cookie';
 import { useNavigate,useParams} from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 
   
-export default function TaskForm({ type,}) {
+export default function TaskForm({ type,setOpen}) {
 
     const {id}=useParams();
     const token = Cookies.get('Token')
@@ -45,6 +45,7 @@ export default function TaskForm({ type,}) {
       const data = modalForm.getValues(); 
       console.log(data)
       console.log(id)
+      setOpen(false)
 
       const api_url=`${API_URL}/addtask/${id}/`
       fetch(api_url,{
@@ -56,11 +57,38 @@ export default function TaskForm({ type,}) {
       })
       .then(response=>{
         if (response.status===200){
-          alert('Task added successfully......')
-          modalForm.reset();
+          Swal.fire({
+            title: "Success",
+            text : 'Task Added Successfully',
+            icon: 'success',
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                  modalForm.reset();
+                }
+            });
+          // alert('Task added successfully......')
+          // modalForm.reset();
         }
         else{
-          alert('Error in adding the data....')
+          Swal.fire({
+            title: "Error",
+            text : 'Error in adding the data.',
+            icon: 'error',
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                }
+            });
+          // alert('Error in adding the data....')
         }
       })
     }
@@ -78,7 +106,7 @@ export default function TaskForm({ type,}) {
         </select>
       </div>
       <div>
-        <label  className="block text-sm font-medium text-gray-700">Start Date:</label>
+        <label className="block text-sm font-medium text-gray-700">Start Date:</label>
         <input
           type='date'
           {...modalForm.register('task_date',{ required : true })}

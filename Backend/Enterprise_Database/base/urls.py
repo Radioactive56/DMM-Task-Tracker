@@ -18,4 +18,5 @@ urlpatterns=[
     path('email/',send_email),
     path('tasks/<int:id>/',fetch_all_tasks_by_project_id),
     path('addtask/<int:id>/',add_tasks_for_project_id),
+    # path('read/',read_excel)
 ]

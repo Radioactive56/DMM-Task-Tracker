@@ -69,10 +69,17 @@ export default function Dashboard() {
     const columns = [
 
 
-      { field: 'id', headerName: 'Customer ID', width:200 },
-      { field: 'name', headerName: 'Name', width:200 },
-      { field: 'phone_number', headerName: 'Phone Number', width:200 },
-      { field: 'email', headerName: 'Email Info', width:200 },
+      { field: 'id', headerName: 'Customer ID', width:50 },
+      { field: 'name', headerName: 'Client Name', width:400 },
+      { field: 'group', headerName: 'Client Group', width:200 },
+      { field: 'email', headerName: 'Client Email', width:200 },
+      { field: 'pan', headerName: 'PAN NO', width:200 },
+      { field: 'gstin', headerName: 'GSTIN', width:200 },
+      { field: 'tan', headerName: 'TAN', width:200 },
+      { field: 'ptrc', headerName: 'PTRC', width:200 },
+      { field: 'ptec', headerName: 'PTEC', width:200 },
+      { field: 'contact_no', headerName: 'Contact Info', width:200 },
+      { field: 'poc', headerName: 'Point Of Contact', width:200 },
     ]
 
     const navigate = useNavigate();

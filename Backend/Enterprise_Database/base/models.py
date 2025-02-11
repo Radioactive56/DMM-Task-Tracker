@@ -8,9 +8,16 @@ class Department(models.Model):
     
 class Client(models.Model):
     id=models.AutoField(primary_key=True)
-    name=models.CharField(max_length=128)
-    phone_number=models.CharField(max_length=15)
-    email=models.EmailField()
+    name = models.CharField(max_length=128)
+    group = models.CharField(max_length=128,blank=True,null=True)
+    pan = models.CharField(max_length=128,blank=True,null=True)
+    gstin = models.CharField(max_length=128,blank=True,null=True)
+    tan = models.CharField(max_length=128,blank=True,null=True)
+    ptrc = models.CharField(max_length=128,blank=True,null=True)
+    ptec = models.CharField(max_length=128,blank=True,null=True)
+    contact_no = models.CharField(max_length=10,blank=True,null=True)
+    email = models.CharField(max_length=128,blank=True,null=True)
+    poc = models.CharField(max_length =128,blank=True,null=True)
 
     def __str__(self):
         return self.name

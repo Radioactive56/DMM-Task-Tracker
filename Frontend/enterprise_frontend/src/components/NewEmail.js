@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from "./Navbar";
+import Swal from "sweetalert2";
 
  
 export default function NewEmail() {
@@ -53,14 +54,52 @@ export default function NewEmail() {
         })
         .then(response=>{
         if (response.status===400){
-            alert('Emails Not sent.....')
+          Swal.fire({
+            title: "Error",
+            text : "Error in sending Email.",
+            icon: 'error',
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                }
+            });
+            // alert('Emails Not sent.....')
         }
         else if (response.ok){
-            window.alert("Emails sent successfully.........");
-            window.location.reload();
+          Swal.fire({
+            title: "Success",
+            text : 'Emails Sent Successfully',
+            icon: 'success',
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                   window.location.reload();
+                }
+            });
+            // window.alert("Emails sent successfully.........");
         }
         else{
-            window.alert("Emails Not Sent.....")
+          Swal.fire({
+            title: "Error",
+            text : "Error in sending Email.",
+            icon: 'error',
+            confirmButtonText:"Ok",
+            showConfirmButton:true,
+            customClass:{
+                confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            }
+            }).then(result=>{
+                if (result.isConfirmed){
+                }
+            });
         }});
 
     // reset();

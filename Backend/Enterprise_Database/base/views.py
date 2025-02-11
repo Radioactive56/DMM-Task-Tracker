@@ -4,6 +4,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
 import json
+import pandas as pd
 from django.core.cache import cache
 from .models import Project,Client,Employee,Department,Task
 from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer,Task_Serializer
@@ -208,3 +209,23 @@ def add_tasks_for_project_id(request,id):
         return Response('Data saved successfully',status=status.HTTP_200_OK)
     else:
         return Response('Error in saving data.....',status=status.HTTP_404_NOT_FOUND)
+
+
+# def read_excel(request):
+#     df = pd.read_excel('Final GST List-1.xlsx')
+#     print(len(df))
+
+#     for x, y in df.iterrows():
+#         Client.objects.create(
+#             name = y['Client Name'],
+#             group = y['Client Group'],
+#             pan = y['PAN'],
+#             gstin = y['GSTIN'],
+#             tan = y['TAN'],
+#             ptrc = y['PTRC'],
+#             ptec= y['PTEC'],
+#             contact_no = y['Ph. No'],
+#             email = y['Email'],
+#             poc=y['Point of Contact']
+#         )
+    
