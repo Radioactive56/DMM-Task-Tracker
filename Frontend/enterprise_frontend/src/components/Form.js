@@ -4,7 +4,7 @@ import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 
 export default function Form() {
     const [projecttype,setprojecttype]=useState([]);
@@ -148,12 +148,40 @@ export default function Form() {
         })
         .then(response=>{
           if (response.ok){
-            alert('Form submitted successfully')
-            navigate('/projects')
+            Swal.fire({
+              title: "Success",
+              text : 'Project Added Successfully.',
+              icon: 'success',
+              confirmButtonText:"Ok",
+              showConfirmButton:true,
+              customClass:{
+                  confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              }
+              }).then(result=>{
+                  if (result.isConfirmed){
+                      navigate('/projects')
+                  }
+              });
+            // alert('Form submitted successfully')
+            // navigate('/projects')
           }
           else{
           return response.json().then((err)=>{
-            alert(err.message);
+            Swal.fire({
+              title: "Error",
+              text : err.message,
+              icon: 'error',
+              confirmButtonText:"Ok",
+              showConfirmButton:true,
+              customClass:{
+                  confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              }
+              }).then(result=>{
+                  if (result.isConfirmed){
+                      navigate('/projects');
+                  }
+              });
+            // alert(err.message);
           })
         }
         })

@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TaskForm from './TaskForm';
+import TaskView from './TaskView';
+import Swal from 'sweetalert2';
 
 const style = {
   position: 'absolute',
@@ -25,7 +27,7 @@ const style = {
 
 
 export default function Form() {
-  const parentForm = useForm();
+    const parentForm = useForm();
     const [projecttype,setprojecttype]=useState([]);
     const [clientName,setclientName] = useState([]);
     const [departmentName,setdepartmentName] = useState([]);
@@ -36,22 +38,17 @@ export default function Form() {
     const token = Cookies.get('Token')
     const {id}=useParams();
 
- 
-    // Parent form submission handler
-    const handleParentSubmit = (data) => {
-      console.log("Parent Form Data:", data);
-    };
    
-    // Modal form submission handler
-    const handleModalSubmit = (data) => {
-      console.log("Modal Form Data:", data);
-    };
-
 
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const [open1, setOpen1] = React.useState(false);
+    const handleOpen1 = () => setOpen1(true);
+    const handleClose1 = () => setOpen1(false);
+
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -155,7 +152,7 @@ export default function Form() {
       })
     },[])
 
-    const onSubmit=(data)=>{
+    const handleParentSubmit=(data)=>{
         const payload = {
           ...data,
           Client : parseInt(data.Client,10),
@@ -175,12 +172,40 @@ export default function Form() {
         })
         .then(response=>{
           if (response.ok){
-            alert('Form submitted successfully')
-            navigate('/projects')
+            Swal.fire({
+              title: "Success",
+              text : 'Project Added Successfully.',
+              icon: 'success',
+              confirmButtonText:"Ok",
+              showConfirmButton:true,
+              customClass:{
+                  confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              }
+              }).then(result=>{
+                  if (result.isConfirmed){
+                      navigate('/projects')
+                  }
+              });
+            // alert('Form submitted successfully')
+            // navigate('/projects')
           }
           else{
           return response.json().then((err)=>{
-            alert(err.message);
+            Swal.fire({
+              title: "Error",
+              text : err.message,
+              icon: 'error',
+              confirmButtonText:"Ok",
+              showConfirmButton:true,
+              customClass:{
+                  confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              }
+              }).then(result=>{
+                  if (result.isConfirmed){
+                      navigate('/projects');
+                  }
+              });
+            // alert(err.message);
           })
         }
         })
@@ -311,8 +336,9 @@ export default function Form() {
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
+      <div style={{display:'flex',flexDirection:'row'}}>
       <div>
-        <label for="task_status" className="block text-sm font-medium text-gray-700">Task Status:</label>
+        <label for="task_status" className="block text-sm font-medium text-gray-700">Add Task :</label>
         <div>
       <Button onClick={handleOpen}>Open Task Addition form</Button>
       <Modal
@@ -322,9 +348,26 @@ export default function Form() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <TaskForm type={selectedProjectType} close={handleClose}></TaskForm>
+          <TaskForm type={selectedProjectType} setOpen={setOpen}></TaskForm>
         </Box>
       </Modal>
+    </div>
+    </div>
+    <div>
+    <label for="task_view" className="block text-sm font-medium text-gray-700">Task View :</label>
+        <div>
+      <Button onClick={handleOpen1}>Open All the Added Tasks</Button>
+      <Modal
+        open={open1}
+        onClose={handleClose1}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <TaskView></TaskView>
+        </Box>
+      </Modal>
+    </div>
     </div>
       </div>
       </div>
