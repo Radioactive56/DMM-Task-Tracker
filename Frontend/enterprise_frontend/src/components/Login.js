@@ -3,6 +3,8 @@ import './Login.css';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { API_URL } from '../App';
+import user from './icons8-user-male-3-40.png'
+import password from './icons8-password-64.png'
 
 import Swal from 'sweetalert2';
 import Cookies from 'js-cookie';
@@ -103,16 +105,27 @@ export default function Login() {
        
        
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+        <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Welcome Back!</h1>
             <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to DMM Server</h5>
             <div>
                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Username</label>
-                <input {...register('username')} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="username" required />
+                <div class="flex">
+                    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <img width="20" height="10" src={user} alt="user-male-3"/>
+                    </span>
+                    <input type="text" {...register('username')} className="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="username" required/>
+                </div>
+                {/* <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="username" required /> */}
             </div>
             <div>
                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                <input type="password" {...register('password')} placeholder="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                <div class="flex">
+                    <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border rounded-e-0 border-gray-300 border-e-0 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <img width="20" height="10" src={password} alt="password"/>
+                    </span>
+                    <input type="password" {...register('password')} placeholder="password" className="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required/>
+                </div>
             </div>
-
             <div style={{ marginTop: "20px" }}>
           <img src={captchaUrl} alt="Captcha" style={{ display: "block", marginBottom: "10px" }} />
           <input
