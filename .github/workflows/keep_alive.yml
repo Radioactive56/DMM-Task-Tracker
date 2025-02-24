@@ -2,7 +2,7 @@ name: Keep Render Server Alive
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Runs every 1 minute
+    - cron: '* * * * *'  # Runs every 1 minute
   workflow_dispatch:       # Allows manual trigger from GitHub Actions tab
 
 jobs:
