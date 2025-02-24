@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import {useForm} from "react-hook-form"
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import TextField from '@mui/material/TextField';
+import { useForm, Controller } from 'react-hook-form';
+import Autocomplete from '@mui/material/Autocomplete';
 
 export default function Form() {
     const [projecttype,setprojecttype]=useState([]);
     const [clientName,setclientName] = useState([]);
     const [departmentName,setdepartmentName] = useState([]);
     const [employeeName,setemployeeName] = useState([]);
-    const {register,handleSubmit,setValue,watch}=useForm();
+    const {register,handleSubmit,setValue,watch,control}=useForm();
     // const [statusOptions,setstatusoptions]=useState([]);
     const statusOptions = ['Completed','Not Completed']
     const selectedProjectType = watch("type");
@@ -128,6 +130,7 @@ export default function Form() {
 
     // },[selectedProjectType])
     const navigate = useNavigate();
+
     const onSubmit=(data)=>{
         const payload = {
           ...data,
@@ -220,14 +223,35 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Client Name:</label>
-        <select {...register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <Controller 
+        name="autocompleteField"
+        control={control}
+        defaultValue={null}
+        render={({ field: { onChange, ...field } }) => (
+          <Autocomplete
+            {...field}
+            options={clientName}
+            getOptionLabel={(clientName) => clientName.name || ''}
+            onChange={(event, newValue) => onChange(newValue)}
+            renderInput={(params) => (
+              <input
+          ref={params.InputProps.ref}
+          {...params.inputProps}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          placeholder="Select a Company"
+        />
+            )}
+          />
+        )}
+      />
+        {/* <select {...register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
         <option value=''>Select Client</option>
         {
           clientName.map((item)=>(
             <option key={item.id} value={item.id}>{item.name}</option>
           ))
         }
-        </select>
+        </select> */}
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Department Name:</label>
