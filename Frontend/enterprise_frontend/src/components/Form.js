@@ -223,7 +223,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Client Name:</label>
-        <Controller 
+        {/* <Controller 
         name="autocompleteField"
         control={control}
         defaultValue={null}
@@ -234,24 +234,33 @@ export default function Form() {
             getOptionLabel={(clientName) => clientName.name || ''}
             onChange={(event, newValue) => onChange(newValue)}
             renderInput={(params) => (
-              <input
+              <TextField
           ref={params.InputProps.ref}
           {...params.inputProps}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="Select a Company"
         />
             )}
           />
         )}
-      />
-        {/* <select {...register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-        <option value=''>Select Client</option>
-        {
-          clientName.map((item)=>(
-            <option key={item.id} value={item.id}>{item.name}</option>
-          ))
-        }
-        </select> */}
+      /> */}
+      <Controller
+            name="Client"
+            control={control}
+            defaultValue={null}
+            render={({ field: { onChange, value } }) => (
+              <Autocomplete
+                options={clientName}
+                getOptionLabel={(clientName) => clientName.name || ""}
+                value={clientName.find((opt) => opt.id === value) || null}
+                onChange={(_, newValue) => onChange(newValue?.id || null)}
+                renderInput={(params) => (
+                  <TextField {...params} label="Select Client"
+                  size="small" // Reduces height from 56px to ~48px
+                  style={{marginTop:'4px'}}
+                  />
+                )}
+              />
+            )}
+          />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Department Name:</label>
