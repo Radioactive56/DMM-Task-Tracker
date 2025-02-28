@@ -210,7 +210,7 @@ def add_tasks_for_project_id(request,id):
     else:
         return Response('Error in saving data.....',status=status.HTTP_404_NOT_FOUND)
 
-
+# @api_view(['GET'])
 # def read_excel(request):
 #     df = pd.read_excel('Final GST List-1.xlsx')
 #     print(len(df))
@@ -228,4 +228,16 @@ def add_tasks_for_project_id(request,id):
 #             email = y['Email'],
 #             poc=y['Point of Contact']
 #         )
-    
+
+
+# def error(request):
+#     c=0
+#     data = Client.objects.all()
+#     for i in data:
+#         if len(i.contact_no)>10:
+#             i.contact_no = i.contact_no[:-2]
+#             i.save()
+#             c+=1
+#             print(f'edited {i.name}')
+#     print(f'done edited total of {c}') 
+

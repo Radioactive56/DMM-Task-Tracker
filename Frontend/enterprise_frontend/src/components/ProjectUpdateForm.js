@@ -227,12 +227,12 @@ export default function Form() {
           id="name"
           placeholder="Enter Project name"
           {...parentForm.register("name",{ required : true })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled
         />
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Project Type:</label>
-        <select {...parentForm.register("type", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("type", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
         <option value="">Select Project</option>
         {projecttype.map((name) => (
           <option key={name} value={name}>
@@ -244,7 +244,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Client Name:</label>
-        <select {...parentForm.register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Client", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
         <option value=''>Select Client</option>
         {
           clientName.map((item)=>(
@@ -255,7 +255,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Department Name:</label>
-        <select {...parentForm.register("Department",{ required : true})} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Department",{ required : true})} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
           <option value="">Select Department</option>
           {
             departmentName.map((item)=>(
@@ -266,7 +266,7 @@ export default function Form() {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Employee Name:</label>
-        <select {...parentForm.register("Employee", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <select {...parentForm.register("Employee", { required: true })} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" disabled>
         <option value=''>Select Employee</option>
         {
           employeeName.map((item)=>(

@@ -19,4 +19,5 @@ urlpatterns=[
     path('tasks/<int:id>/',fetch_all_tasks_by_project_id),
     path('addtask/<int:id>/',add_tasks_for_project_id),
     # path('read/',read_excel)
+    # path('error/',error)
 ]
