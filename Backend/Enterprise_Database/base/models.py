@@ -37,7 +37,8 @@ class Employee(models.Model):
 class Project(models.Model):
     project_type_choices=[
         ('Advance Tax','Advance Tax'),
-        ('GSTR1','GSTR1')
+        ('GSTR1','GSTR1'),
+        ('GSTR3B','GSTR3B')
     ]
     project_completed_choices=[
         ('Completed','Completed'),
@@ -71,12 +72,25 @@ class Task(models.Model):
         ('Challan Paid','Challan Paid')
     ],
     'GSTR1':[
-        ('Follow Up','Follow Up'),
+        ('Follow Up for Data','Follow Up for Data'),
         ('Data Recieved','Data Recieved'),
-        ('Working / Process','Working / Process'),
+        ('Processing of Data','Processing of Data'),
         ('Query Sent To Client','Query Sent To Client'),
-        ('Answer Recieved From Client','Answer Recieved From Client'),
-        ('Checking By HOD','Checking By HOD'),
+        ('Query Solve From Client','Query Sent From Client'),
+        ('After solving of Query Tax Power Feeding ','After solving of Query Tax Power Feeding '),
+        ('Checking Done By Head','Checking Done By Head'),
+        ('Uploading','Uploading')
+    ],
+    'GSTR3B':[
+        ('Download and Sent 2B Report','Download and Sent 2B Report'),
+        ('Follow Up For Data','Follow Up For Data'),
+        ('Data Recieved and Processing of Data','Data Recieved and Processing of Data'),
+        ('Query Sent To Client & Query Solve From Client','Query Sent To Client & Query Solve From Client'),
+        ('After solving of Query Tax Power Feeding ','After solving of Query Tax Power Feeding '),
+        ('Checking Done By Head','Checking Done By Head'),
+        ('Challan Sent to Client & Follow Up for Payment','Challan Sent to Client & Follow Up for Payment'),
+        ('Checking For Payment Status Whether Paid Or Not','Checking For Payment Status Whether Paid Or Not'),
+        ('After Making Of Payment Submit the Return','After Making Of Payment Submit the Return'),
         ('Uploading','Uploading')
     ]
     }

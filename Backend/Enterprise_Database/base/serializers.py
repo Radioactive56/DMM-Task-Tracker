@@ -3,7 +3,8 @@ from .models import Project,Client,Department,Employee,Task
 
 project_type_choices=[
         ('Advance Tax','Advance Tax'),
-        ('GSTR1','GSTR1')
+        ('GSTR1','GSTR1'),
+        ('GSTR3B','GSTR3B')
     ]
 project_completed_choices=[
         ('Completed','Completed'),
