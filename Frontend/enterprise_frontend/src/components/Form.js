@@ -192,7 +192,7 @@ export default function Form() {
   return (
     <>
     <Navbar></Navbar>
-<div style={{width:"100vw",height:'100vh',marginTop:'1%'}}>
+<div style={{width:"100vw",height:'100vh',marginTop:'15vh'}}>
 <form className="bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl" onSubmit={handleSubmit(onSubmit)}>
     <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">Project Form</h2>
     

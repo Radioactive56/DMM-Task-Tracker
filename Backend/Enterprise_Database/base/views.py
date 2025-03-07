@@ -191,8 +191,8 @@ def send_email(request):
 @api_view(['GET'])
 def fetch_all_tasks_by_project_id(request,id):
     data = Task.objects.filter(Project__id=id)
-    print(data)
     serialized_data = Task_Serializer(data,many=True)
+    print(serialized_data.data)
     return Response(serialized_data.data,status=status.HTTP_200_OK)
 
 @api_view(['POST'])
@@ -241,3 +241,8 @@ def add_tasks_for_project_id(request,id):
 #             print(f'edited {i.name}')
 #     print(f'done edited total of {c}') 
 
+
+def read_excel(request):
+    data  = pd.read_excel('Final GST List-1.xlsx')
+    print(data[:2][:2])
+    

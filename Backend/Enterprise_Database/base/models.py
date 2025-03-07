@@ -86,7 +86,7 @@ class Task(models.Model):
         ('Follow Up For Data','Follow Up For Data'),
         ('Data Recieved and Processing of Data','Data Recieved and Processing of Data'),
         ('Query Sent To Client & Query Solve From Client','Query Sent To Client & Query Solve From Client'),
-        ('After solving of Query Tax Power Feeding ','After solving of Query Tax Power Feeding '),
+        ('After Solving of Query Tax Power Feeding','After Solving of Query Tax Power Feeding'),
         ('Checking Done By Head','Checking Done By Head'),
         ('Challan Sent to Client & Follow Up for Payment','Challan Sent to Client & Follow Up for Payment'),
         ('Checking For Payment Status Whether Paid Or Not','Checking For Payment Status Whether Paid Or Not'),

@@ -58,7 +58,10 @@ class Department_serializer(serializers.ModelSerializer):
         fields='__all__'
 
 
-project_status_choices={
+
+class Task_Serializer(serializers.ModelSerializer):
+
+    project_status_choices={
         'Advance Tax' :[
         ('Data Collection','Data Collection'),
         ('Data Recieved','Data Recieved'),
@@ -69,19 +72,28 @@ project_status_choices={
         ('Challan Paid','Challan Paid')
     ],
     'GSTR1':[
-        ('Follow Up','Follow Up'),
+        ('Follow Up for Data','Follow Up for Data'),
         ('Data Recieved','Data Recieved'),
-        ('Working / Process','Working / Process'),
+        ('Processing of Data','Processing of Data'),
         ('Query Sent To Client','Query Sent To Client'),
-        ('Answer Recieved From Client','Answer Recieved From Client'),
-        ('Checking By HOD','Checking By HOD'),
+        ('Query Solve From Client','Query Sent From Client'),
+        ('After solving of Query Tax Power Feeding ','After solving of Query Tax Power Feeding '),
+        ('Checking Done By Head','Checking Done By Head'),
+        ('Uploading','Uploading')
+    ],
+    'GSTR3B':[
+        ('Download and Sent 2B Report','Download and Sent 2B Report'),
+        ('Follow Up For Data','Follow Up For Data'),
+        ('Data Recieved and Processing of Data','Data Recieved and Processing of Data'),
+        ('Query Sent To Client & Query Solve From Client','Query Sent To Client & Query Solve From Client'),
+        ('After Solving of Query Tax Power Feeding','After Solving of Query Tax Power Feeding'),
+        ('Checking Done By Head','Checking Done By Head'),
+        ('Challan Sent to Client & Follow Up for Payment','Challan Sent to Client & Follow Up for Payment'),
+        ('Checking For Payment Status Whether Paid Or Not','Checking For Payment Status Whether Paid Or Not'),
+        ('After Making Of Payment Submit the Return','After Making Of Payment Submit the Return'),
         ('Uploading','Uploading')
     ]
 }
-
-
-
-class Task_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields='__all__'
@@ -94,16 +106,23 @@ class Task_Serializer(serializers.ModelSerializer):
             project_type = project_id.type
             
             if project_type =="Advance Tax":
-                status_choices = project_status_choices.get('Advance Tax')
+                status_choices = self.project_status_choices.get('Advance Tax')
                 status_choices_list = [i[0] for i in status_choices]
                 if status not in status_choices_list:
                     raise serializers.ValidationError(f"Invalid status for Advance Tax......")
             
             elif project_type=="GSTR1":
-                status_choices = project_status_choices.get('GSTR1')
+                status_choices = self.project_status_choices.get('GSTR1')
                 status_choices_list = [i[0] for i in status_choices]
                 if status not in status_choices_list:
                     raise serializers.ValidationError(f"Invalid status for GSTR1......")
+                
+            elif project_type=="GSTR3B":
+                status_choices = self.project_status_choices.get('GSTR3B')
+                status_choices_list_3 = [i[0] for i in status_choices]
+                if status not in status_choices_list_3:
+                    raise serializers.ValidationError(f"Invalid status for GSTR3B......")
+
         
         return data
 
