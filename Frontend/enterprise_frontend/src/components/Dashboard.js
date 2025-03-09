@@ -9,13 +9,16 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
+import DashboardView from './DashboardView';
 
 
 export default function Dashboard() {
-  const [cdata,set_cdata]= useState("");
 
   const token = Cookies.get('Token');
-
+  const [TaskId, setTaskId] = useState(null);
+  const [cdata, set_cdata] = useState([]);
+  const [selectedProjects, setSelectedProjects] = useState([]);
+  const [openTasksModal, setOpenTasksModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedRow, setSelectedRow] = useState([]);
  
@@ -39,6 +42,7 @@ export default function Dashboard() {
       return response.json()
     })
     .then(data=>{
+      console.log(data)
       setSelectedRow(data);
     })
     .catch((error)=>setSelectedRow([{'name':'Project Not Found'}]));
@@ -82,7 +86,38 @@ export default function Dashboard() {
       { field: 'poc', headerName: 'Point Of Contact', width:200 },
     ]
 
-    const navigate = useNavigate();
+    // const handleClose = () => {
+    //   setOpen(false);
+    //   setSelectedProjects([]);
+    // };
+  
+    const handleOpenTasksModal = (id) => {
+      setTaskId(id);
+      setOpenTasksModal(true);
+    };
+  
+    const handleCloseTasksModal = () => {
+      setOpenTasksModal(false);
+      setTaskId(null);
+    };
+    
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+  
+  const navigate = useNavigate();
+
+
 
   return (
     <>
@@ -121,35 +156,40 @@ export default function Dashboard() {
           <Typography variant="h6" component="h2">
             Projects Details
           </Typography>
-          {/* {selectedRow && ( */}
-            <>
-                {selectedRow.map((item,index)=>(
-                  <Typography sx={{ mt: 2 }}>
-                    {index} : {item.name}
-                  </Typography>
-  
-          ))}
-          </>
-          {/* )} */}
-          {/* {
-            error ?(
-              <p>{error}</p>
-            ):(
-              <>
-              {selectedRow.map((item,index)=>(
-                <Typography sx={{ mt: 2 }}>
-                  {index} : {item.name}
-                </Typography>
+          {selectedRow.length > 0 ? (
+              selectedRow.map((item) => (
+                <div key={item.id}>
+                  <Button onClick={() => handleOpenTasksModal(item.id)}>
+                    {item.name}
+                  </Button>
+                </div>
+              ))
+            ) : (
+              <Typography>No projects found.</Typography>
+            )}
+            <Button onClick={handleClose} sx={{ mt: 2 }} variant="contained">
+              Close
+            </Button>
+          </Box>
+        </Modal>
 
-        ))}
-        </>
-            )
-          } */}
-          <Button onClick={handleClose} sx={{ mt: 2 }} variant="contained">
-            Close
-          </Button>
-        </Box>
-      </Modal>
+        {/* Modal for Task Details */}
+        <Modal open={openTasksModal} onClose={handleCloseTasksModal}>
+          <Box sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 400,
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: 4,
+            borderRadius: 2,
+          }}>
+            {TaskId ? <DashboardView id={TaskId} /> : <Typography>No tasks available.</Typography>}
+          </Box>
+        </Modal>
+
     </div>
     </>
   )
