@@ -187,7 +187,7 @@ const style = {
   return (
     <>
     <Navbar/>
-    <div style={{marginTop:'6%'}}>
+    <div style={{marginTop:'15vh'}}>
       <Box sx={{ height:'85vh', width: 1 }}>
       <DataGrid
         rows={cdata}
