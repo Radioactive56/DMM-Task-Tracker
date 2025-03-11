@@ -8,12 +8,14 @@ import PrivateRoute from './components/PrivateRoute';
 import Projects from './components/Projects';
 import ProjectUpdateForm from './components/ProjectUpdateForm'
 import NewEmail from './components/NewEmail';
+import Client from './components/Client';
+import ClientUpdate from './components/ClientUpdate';
 
 export let API_URL = process.env.REACT_APP_API_URL
 
 
 function App() {
-  let API_URL = process.env.REACT_APP_API_URL
+  // let API_URL = process.env.REACT_APP_API_URL
   return (
     <Router>
       <Routes>
@@ -23,6 +25,8 @@ function App() {
         <Route exact path='/projects/update/:id' element={<PrivateRoute><ProjectUpdateForm/></PrivateRoute>}></Route>
         <Route exact path='/home' element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}></Route>
         <Route exact path='/email' element={<PrivateRoute><NewEmail></NewEmail></PrivateRoute>}></Route>
+        <Route exact path='/addClient' element={<PrivateRoute><Client></Client></PrivateRoute>} ></Route>
+        <Route exact path='clientupdate/:id' element={<PrivateRoute><ClientUpdate></ClientUpdate></PrivateRoute>}></Route>
       </Routes>
     </Router>
   );

@@ -103,32 +103,6 @@ export default function Form() {
 
         })
     },[])
-
-    // useEffect(()=>{
-    //   if (selectedProjectType){
-    //     const api_url=`${API_URL}/status/${selectedProjectType}`;
-
-    //     fetch(api_url,{
-    //       method:"GET",
-    //       headers:{
-    //           'Authorization': `Bearer ${token}`
-    //       },
-    //     })
-    //     .then(response=>{
-    //       if (!response.ok){
-    //         console.error("Error in status api calling.")
-    //       }
-    //       else{
-    //         return response.json()
-    //       }
-    //     })
-    //     .then(data=>{
-    //       setstatusoptions(data)
-    //       // setValue("status","");
-    //     })
-    //   }
-
-    // },[selectedProjectType])
     const navigate = useNavigate();
 
     const onSubmit=(data)=>{

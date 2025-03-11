@@ -210,24 +210,55 @@ def add_tasks_for_project_id(request,id):
     else:
         return Response('Error in saving data.....',status=status.HTTP_404_NOT_FOUND)
 
-# @api_view(['GET'])
-# def read_excel(request):
-#     df = pd.read_excel('Final GST List-1.xlsx')
-#     print(len(df))
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def addClient(request):
+    serializer = Client_serializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data,status = status.HTTP_200_OK)
+    else:
+        return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
-#     for x, y in df.iterrows():
-#         Client.objects.create(
-#             name = y['Client Name'],
-#             group = y['Client Group'],
-#             pan = y['PAN'],
-#             gstin = y['GSTIN'],
-#             tan = y['TAN'],
-#             ptrc = y['PTRC'],
-#             ptec= y['PTEC'],
-#             contact_no = y['Ph. No'],
-#             email = y['Email'],
-#             poc=y['Point of Contact']
-#         )
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_client_by_id(request,id):
+    data = Client.objects.filter(id = id)
+    serializer = Client_serializer(data,many=True)
+    return Response(serializer.data,status=status.HTTP_200_OK)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def update_client(request,id):
+    item = Client.objects.get(id=id)
+    serializer = Client_serializer(instance=item,data=request.data,partial=True)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data,status=status.HTTP_200_OK)
+    else:
+        return Response(serializer.error,status=status.HTTP_404_NOT_FOUND)
+
+
+
+
+@api_view(['GET'])
+def read_excel(request):
+    df = pd.read_excel('Final GST List-1.xlsx')
+    print(len(df))
+
+    for x, y in df.iterrows():
+        Client.objects.create(
+            name = y['Client Name'],
+            group = y['Client Group'],
+            pan = y['PAN'],
+            gstin = y['GSTIN'],
+            tan = y['TAN'],
+            ptrc = y['PTRC'],
+            ptec= y['PTEC'],
+            contact_no = y['Ph. No'],
+            email = y['Email'],
+            poc=y['Point of Contact']
+        )
 
 
 # def error(request):
@@ -242,7 +273,4 @@ def add_tasks_for_project_id(request,id):
 #     print(f'done edited total of {c}') 
 
 
-def read_excel(request):
-    data  = pd.read_excel('Final GST List-1.xlsx')
-    print(data[:2][:2])
     

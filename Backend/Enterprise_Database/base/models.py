@@ -8,6 +8,7 @@ class Department(models.Model):
     
 class Client(models.Model):
     id=models.AutoField(primary_key=True)
+    active = models.BooleanField(default=True)
     name = models.CharField(max_length=128)
     group = models.CharField(max_length=128,blank=True,null=True)
     pan = models.CharField(max_length=128,blank=True,null=True)
@@ -47,9 +48,9 @@ class Project(models.Model):
     # query can be wriiten wrt to first column in below () i.e data_collection,data_recieved ...and so on
     name = models.CharField(max_length=128)
     type = models.CharField(max_length=128,choices=project_type_choices)
-    Department=models.ForeignKey(Department,on_delete=models.RESTRICT)
-    Client=models.ForeignKey(Client,on_delete=models.RESTRICT)
-    Employee=models.ForeignKey(Employee,on_delete=models.RESTRICT)
+    Department=models.ForeignKey(Department,on_delete=models.SET_NULL, null=True, blank=True)
+    Client=models.ForeignKey(Client,on_delete=models.SET_NULL, null=True, blank=True)
+    Employee=models.ForeignKey(Employee,on_delete=models.SET_NULL, null=True, blank=True)
     start_date=models.DateField(blank=True,null=True)
     end_date = models.DateField(null=True,blank=True)
     mode_of_payment=models.CharField(max_length=128,blank=True,null=True)
@@ -95,7 +96,7 @@ class Task(models.Model):
     ]
     }
     id = models.BigAutoField(primary_key=True)
-    Project=models.ForeignKey(Project,on_delete=models.RESTRICT) 
+    Project=models.ForeignKey(Project,on_delete=models.SET_NULL, null=True, blank=True) 
     task_status = models.CharField(max_length=126,choices=project_status_choices)
     task_date = models.DateField()
 

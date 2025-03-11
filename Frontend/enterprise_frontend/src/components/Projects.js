@@ -3,16 +3,78 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CircularProgress from '@mui/material/CircularProgress';
-import { DataGrid, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarExport,GridToolbarQuickFilter } from '@mui/x-data-grid';
 import Navbar from './Navbar';
 import { useNavigate, useRouteLoaderData } from 'react-router';
 import { API_URL } from '../App';
 import Cookies from 'js-cookie';
+import Swal from 'sweetalert2';
 
 
-const CustomToolbar=()=>{
+const CustomToolbar=({selected_scan_id})=>{
   const navigate = useNavigate();
   const token = Cookies.get('Token'); 
+  const handleDelete = async()=>{
+    setOpen(false)
+      fetch(`${API_URL}/projectDelete/`,{
+          method:"POST",
+          headers:{
+              'Content-Type':'application/json',
+              'Authorization': `Bearer ${token}`
+          },
+          body:JSON.stringify(selected_scan_id)
+  })
+  .then(response=>{
+              if (response.status===403){
+                  Swal.fire({
+                      title: "Error",
+                      text : 'You dont have the permission to perform this function.',
+                      icon: 'error',
+                      confirmButtonText:"Ok",
+                      showConfirmButton:true,
+                      customClass:{
+                          confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                      }
+                      }).then(result=>{
+                          if (result.isConfirmed){
+                            window.location.reload('/projects')
+                          }
+                      });
+              }
+              else if (!response.ok){
+                  Swal.fire({
+                      title: "Error",
+                      text : 'Error in Connecting to Database.',
+                      icon: 'error',
+                      confirmButtonText:"Ok",
+                      showConfirmButton:true,
+                      customClass:{
+                          confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                      }
+                      }).then(result=>{
+                          if (result.isConfirmed){
+                              window.location.reload('/projects')
+                          }
+                      });
+              }
+              else{
+                   Swal.fire({
+                      title: "Success",
+                      text : 'Data Deleted Successfully',
+                      icon: 'success',
+                      confirmButtonText:"Ok",
+                      showConfirmButton:true,
+                      customClass:{
+                          confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                      }
+                      }).then(result=>{
+                          if (result.isConfirmed){
+                              window.location.reload('/projects')
+                          }
+                      });
+              }
+          })
+          }
 
   const style = {
       position: 'absolute',
@@ -26,21 +88,53 @@ const CustomToolbar=()=>{
       p: 4,
     };
 
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
   
   return (
-    <GridToolbarContainer>
-      <GridToolbarExport />
-      <div style={{display:"flex"}}>
-      <button type="button" onClick={()=>navigate('/project')} class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add </button>
-      </div>
-    </GridToolbarContainer>
+     <GridToolbarContainer>
+          <GridToolbarQuickFilter sx={{ flexGrow: 1, marginRight: 2 }} />
+    
+          <GridToolbarExport />
+    
+          
+          <button
+            type="button"
+            onClick={() => navigate("/project")}
+            className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          >
+            Add
+          </button>
+          <button type="button" onClick={handleOpen} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Do you really want to Delete the selected rows ? 
+          </Typography>
+          <div style={{display: 'flex',justifyContent: 'space-around',paddingTop: '5%'}}>
+          <button type="button" onClick={handleDelete} class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Yes</button>
+          <button type="button" onClick={handleClose} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">No</button>
+          </div>
+        </Box>
+      </Modal>
+        </GridToolbarContainer>
   );
 }
 
 export default function Projects() {
     const [project_data,set_project_data] = useState([]);
     const token = Cookies.get('Token')
+    const [selected_scan_id,set_selected_scan_id] = useState([]);
     const navigate = useNavigate();
+
+
     useEffect(()=>{
         const api_url = `${API_URL}/get_project/`;
         fetch(api_url,{
@@ -89,6 +183,9 @@ export default function Projects() {
       navigate(`update/${params.id}`)
     }
 
+    const handleSelectionChange = (newSelection) => {
+      set_selected_scan_id(newSelection);
+    };
 
   return (
     <>
@@ -99,8 +196,8 @@ export default function Projects() {
                 rows={project_data}
                 columns={columns}
                 slots={{
-                  // toolbar: ()=> <CustomToolbar selected_scan_id={selected_scan_id} />,
-                    toolbar: ()=> <CustomToolbar/>,
+                  toolbar: ()=> <CustomToolbar selected_scan_id={selected_scan_id} />,
+                    // toolbar: ()=> <CustomToolbar/>,
                   }}
                 initialState={{
                 pagination: {
@@ -110,7 +207,7 @@ export default function Projects() {
                 pageSizeOptions={[50, 100]}
                 onRowClick={handleRowClick}
                 checkboxSelection
-                // onRowSelectionModelChange={handleSelectionChange} // Handle row selection change
+                onRowSelectionModelChange={handleSelectionChange} // Handle row selection change
             />
     </Box>
     </div>
