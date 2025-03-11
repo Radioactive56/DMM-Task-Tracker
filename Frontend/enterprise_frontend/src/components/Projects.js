@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CircularProgress from '@mui/material/CircularProgress';
-import { DataGrid, GridToolbarContainer, GridToolbarExport } from '@mui/x-data-grid';
+import { DataGrid, GridToolbarContainer, GridToolbarExport,GridToolbarQuickFilter } from '@mui/x-data-grid';
 import Navbar from './Navbar';
 import { useNavigate, useRouteLoaderData } from 'react-router';
 import { API_URL } from '../App';
@@ -28,12 +28,20 @@ const CustomToolbar=()=>{
 
   
   return (
-    <GridToolbarContainer>
-      <GridToolbarExport />
-      <div style={{display:"flex"}}>
-      <button type="button" onClick={()=>navigate('/project')} class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Add </button>
-      </div>
-    </GridToolbarContainer>
+     <GridToolbarContainer>
+          <GridToolbarQuickFilter sx={{ flexGrow: 1, marginRight: 2 }} />
+    
+          <GridToolbarExport />
+    
+          
+          <button
+            type="button"
+            onClick={() => navigate("/project")}
+            className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          >
+            Add
+          </button>
+        </GridToolbarContainer>
   );
 }
 

@@ -210,6 +210,17 @@ def add_tasks_for_project_id(request,id):
     else:
         return Response('Error in saving data.....',status=status.HTTP_404_NOT_FOUND)
 
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def addClient(request):
+    serializer = Client_serializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data,status = status.HTTP_200_OK)
+    else:
+        return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
+
+
 # @api_view(['GET'])
 # def read_excel(request):
 #     df = pd.read_excel('Final GST List-1.xlsx')

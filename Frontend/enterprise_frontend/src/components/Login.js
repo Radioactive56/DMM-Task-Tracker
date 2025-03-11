@@ -17,7 +17,9 @@ export default function Login() {
     const { register, handleSubmit, clearErrors, formState: { errors } } = useForm();
 
     const fetchCaptcha = () => {
+        console.log(`${API_URL}`)
     setCaptchaUrl(`${API_URL}/generate-captcha/?t=${new Date().getTime()}`); // Cache-busting parameter
+    console.log(captchaUrl)
     };
          
     useEffect(() => {
