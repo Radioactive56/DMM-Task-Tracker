@@ -26,6 +26,7 @@ function App() {
         <Route exact path='/home' element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}></Route>
         <Route exact path='/email' element={<PrivateRoute><NewEmail></NewEmail></PrivateRoute>}></Route>
         <Route exact path='/addClient' element={<PrivateRoute><Client></Client></PrivateRoute>} ></Route>
+        <Route exact path='clientupdate/:id' element={<PrivateRoute><ClientUpdate></ClientUpdate></PrivateRoute>}></Route>
       </Routes>
     </Router>
   );

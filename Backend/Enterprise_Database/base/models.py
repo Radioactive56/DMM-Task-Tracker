@@ -11,7 +11,7 @@ class Client(models.Model):
     active = models.BooleanField(default=True)
     name = models.CharField(max_length=128)
     group = models.CharField(max_length=128,blank=True,null=True)
-    pan = models.CharField(max_length=128,blank=True,null=True,unique=True)
+    pan = models.CharField(max_length=128,blank=True,null=True)
     gstin = models.CharField(max_length=128,blank=True,null=True)
     tan = models.CharField(max_length=128,blank=True,null=True)
     ptrc = models.CharField(max_length=128,blank=True,null=True)

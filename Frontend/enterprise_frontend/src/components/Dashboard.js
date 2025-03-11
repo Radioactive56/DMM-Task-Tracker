@@ -10,6 +10,9 @@ import Modal from '@mui/material/Modal';
 import Cookies from 'js-cookie';
 import Navbar from './Navbar';
 import DashboardView from './DashboardView';
+import CheckIcon from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
+import { Tooltip, IconButton } from '@mui/material';
 
 
 
@@ -117,7 +120,18 @@ export default function Dashboard() {
 
 
       { field: 'id', headerName: 'Customer ID', width:50 },
-      { field: 'active', headerName: 'Client Active Status', width:50},
+      {
+        field: 'active',
+        headerName: 'Client Active Status',
+        width: 100,
+        renderCell: (params) => (
+          <Tooltip title={params.value ? "Active" : "Inactive"}>
+            <IconButton color={params.value ? "success" : "error"}>
+              {params.value ? <CheckIcon /> : <CloseIcon />}
+            </IconButton>
+          </Tooltip>
+        ),
+      },
       { field: 'name', headerName: 'Client Name', width:400 },
       { field: 'group', headerName: 'Client Group', width:200 },
       { field: 'email', headerName: 'Client Email', width:200 },
@@ -207,8 +221,10 @@ const style = {
           }}
         >
           <Typography variant="h6" component="h2">
+            <div style={{display:'flex',justifyContent:'space-between'}}>
              Projects Details
-            <Button onClick={clientupdate}>Update</Button>
+            <Button onClick={clientupdate} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" >Update Client Data </Button>
+            </div>
           </Typography>
           {selectedRow.length > 0 ? (
               selectedRow.map((item) => (
