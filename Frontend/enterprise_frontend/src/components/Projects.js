@@ -17,7 +17,7 @@ const CustomToolbar=({selected_scan_id})=>{
   const handleDelete = async()=>{
     setOpen(false)
       fetch(`${API_URL}/projectDelete/`,{
-          method:"POST",
+          method:"DELETE",
           headers:{
               'Content-Type':'application/json',
               'Authorization': `Bearer ${token}`
@@ -37,14 +37,14 @@ const CustomToolbar=({selected_scan_id})=>{
                       }
                       }).then(result=>{
                           if (result.isConfirmed){
-                            window.location.reload('/projects')
+                            window.location.reload()
                           }
                       });
               }
               else if (!response.ok){
                   Swal.fire({
                       title: "Error",
-                      text : 'Error in Connecting to Database.',
+                      text : 'Operation may be completed with errors or not have been completed.',
                       icon: 'error',
                       confirmButtonText:"Ok",
                       showConfirmButton:true,
@@ -53,7 +53,7 @@ const CustomToolbar=({selected_scan_id})=>{
                       }
                       }).then(result=>{
                           if (result.isConfirmed){
-                              window.location.reload('/projects')
+                              window.location.reload()
                           }
                       });
               }
@@ -69,7 +69,7 @@ const CustomToolbar=({selected_scan_id})=>{
                       }
                       }).then(result=>{
                           if (result.isConfirmed){
-                              window.location.reload('/projects')
+                              window.location.reload()
                           }
                       });
               }
