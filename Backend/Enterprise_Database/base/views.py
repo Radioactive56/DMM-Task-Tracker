@@ -238,27 +238,42 @@ def update_client(request,id):
     else:
         return Response(serializer.error,status=status.HTTP_404_NOT_FOUND)
 
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def delete_projects(request):
+    data = request.data
+    count_to_delete=len(data)
+    counter=0
+    for i in data:
+        item = Project.objects.get(id=i)
+        if item:
+            item.delete()
+            counter+=1
+    if counter==count_to_delete:
+        return Response('All items deleted successfully',status=status.HTTP_200_OK)
+    else:
+        return Reponse('Operation Completed with errors',status=status.HTTP_400_BAD_REQUEST)
+    
 
 
+# @api_view(['GET'])
+# def read_excel(request):
+#     df = pd.read_excel('Final GST List-1.xlsx')
+#     print(len(df))
 
-@api_view(['GET'])
-def read_excel(request):
-    df = pd.read_excel('Final GST List-1.xlsx')
-    print(len(df))
-
-    for x, y in df.iterrows():
-        Client.objects.create(
-            name = y['Client Name'],
-            group = y['Client Group'],
-            pan = y['PAN'],
-            gstin = y['GSTIN'],
-            tan = y['TAN'],
-            ptrc = y['PTRC'],
-            ptec= y['PTEC'],
-            contact_no = y['Ph. No'],
-            email = y['Email'],
-            poc=y['Point of Contact']
-        )
+#     for x, y in df.iterrows():
+#         Client.objects.create(
+#             name = y['Client Name'],
+#             group = y['Client Group'],
+#             pan = y['PAN'],
+#             gstin = y['GSTIN'],
+#             tan = y['TAN'],
+#             ptrc = y['PTRC'],
+#             ptec= y['PTEC'],
+#             contact_no = y['Ph. No'],
+#             email = y['Email'],
+#             poc=y['Point of Contact']
+#         )
 
 
 # def error(request):
