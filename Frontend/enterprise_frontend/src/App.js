@@ -10,6 +10,7 @@ import ProjectUpdateForm from './components/ProjectUpdateForm'
 import NewEmail from './components/NewEmail';
 import Client from './components/Client';
 import ClientUpdate from './components/ClientUpdate';
+import Register from './components/Register';
 
 export let API_URL = process.env.REACT_APP_API_URL
 
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' element={<Login></Login>}></Route>
+        <Route exact path='/setup' element={<Register></Register>}></Route>
         <Route exact path='/project' element={<PrivateRoute><Form></Form></PrivateRoute>}></Route>
         <Route exact path='/projects' element={<PrivateRoute><Projects/></PrivateRoute>}></Route>
         <Route exact path='/projects/update/:id' element={<PrivateRoute><ProjectUpdateForm/></PrivateRoute>}></Route>

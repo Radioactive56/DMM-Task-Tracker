@@ -1,4 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User,Permission
+# import pyotp
+# from .models import totp
+
 # Create your models here.
 class Department(models.Model):
     name = models.CharField(max_length=128,unique=True)
@@ -102,3 +106,7 @@ class Task(models.Model):
 
     def __int__(self):
         return self.id
+    
+class totp(models.Model):
+    user = models.ForeignKey(User,on_delete=models.RESTRICT)
+    secret = models.CharField(max_length=32)

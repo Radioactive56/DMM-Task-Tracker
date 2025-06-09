@@ -24,6 +24,9 @@ from io import BytesIO
 import random
 import string
 from django.core.mail import EmailMessage
+from django.contrib.auth.models import User,Permission
+import pyotp
+from .models import totp
 # Create your views here.
 
 
@@ -43,9 +46,31 @@ def generate_captcha(request):
     data.seek(0)
     return HttpResponse(data, content_type="image/png")
  
-
 @api_view(['POST'])
 def login(request):
+    data = request.data
+    print(data)
+    username = data.get('username')
+    totp_key = data.get('totp')
+
+    user = User.objects.get(username=username)
+    if user:
+        totp_obj = totp.objects.get(user=user)
+        generated_totp = pyotp.TOTP(totp_obj.secret)
+
+        if generated_totp.verify(totp_key,valid_window=0):
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
+
+            return Response({'Token':access_token,'user':user.username},status= status.HTTP_200_OK)
+        
+        return Response({'status': 'error', 'message': 'Invalid or expired code'}, status=status.HTTP_403_FORBIDDEN)
+    else:
+        return Response({'status':'error','message':'User not found'},status=status.HTTP_403_FORBIDDEN)
+
+
+@api_view(['POST'])
+def register(request):
     data = json.loads(request.body)
     username=data.get('username')
     password=data.get('password')
@@ -56,12 +81,16 @@ def login(request):
         return Response({"message": "Invalid captcha!"},status = status.HTTP_400_BAD_REQUEST)
  
     user = authenticate(username=username,password=password)
+    print(user)
     if user:
-        refresh = RefreshToken.for_user(user)
-        access_token = str(refresh.access_token)
-        refresh_token = str(refresh)
+        secret = pyotp.random_base32()
+        print(secret)
+        totp.objects.update_or_create(user=user,defaults={"secret":secret})
 
-        return Response({'Token':access_token},status= status.HTTP_200_OK)
+        generated_totp = pyotp.TOTP(secret)
+        otp_uri = generated_totp.provisioning_uri(name=username, issuer_name="DMM SERVER")
+        print(otp_uri)
+        return Response({"secret":secret,"otp_uri":otp_uri},status=status.HTTP_200_OK)
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_403_FORBIDDEN)
 
@@ -166,26 +195,41 @@ def update_projects(request,id):
 def send_email(request):
     # data = json.loads(request.body) this only works if the body is a json string and not formdata
     # if it is formdata you have to use the below code....
-    from_email=request.POST.get('from_email')
+    # from_email=request.POST.get('from_email')
+
     email_reciever = request.POST.get('email_reciever')
     emails=json.loads(email_reciever)
     body = request.POST.get('body')
     subject=request.POST.get('subject')
     files = request.FILES.getlist('attachment')
 
+    print(email_reciever)
+    print(emails)
+    print(body)
+    print(subject)
+    print(files)
+
 
     from_email='neoemailtest12@gmail.com'
-    email = EmailMessage(subject,body,from_email,[],emails)
+    # EmailMessage(
+    #     subject='Subject of the email',
+    #     body='Body of the email',
+    #     from_email='sender@example.com',
+    #     to=['recipient@example.com'],
+    #     cc=['cc@example.com'],
+    #     bcc=['bcc@example.com']
+    # )
+    email = EmailMessage(subject=subject,from_email=from_email,body=body,to=emails)
 
     if files != []:
         for file in files:
             email.attach(file.name,file.read(),file.content_type)
     
-    try:
-        email.send()
-        return Response('Email Sent Successfully...',status=status.HTTP_200_OK)
-    except Exception as e:
-        return Response({'message':str(e)},status=status.HTTP_400_BAD_REQUEST)
+    # try:
+    email.send(fail_silently=False)
+    return Response('Email Sent Successfully...',status=status.HTTP_200_OK)
+    # except Exception as e:
+    #     return Response({'message':str(e)},status=status.HTTP_400_BAD_REQUEST)
 
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
