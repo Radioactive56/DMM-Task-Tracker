@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import register,delete_projects,update_client,get_client_by_id,addClient,add_tasks_for_project_id,fetch_all_tasks_by_project_id,send_email,update_projects,fetch_project_by_id,fetch_projects,generate_captcha,validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
+from .views import user_delete,add_users,register,delete_projects, send_users,update_client,get_client_by_id,addClient,add_tasks_for_project_id,fetch_all_tasks_by_project_id,send_email,update_projects,fetch_project_by_id,fetch_projects,generate_captcha,validate,fetch_project_from_client,check,project_type,status_name,get_client_name,get_department_name,get_Employee_data,add_Project,login
 urlpatterns=[
     path('query',check),
     path('ptype',project_type),
@@ -23,6 +23,9 @@ urlpatterns=[
     path('updateClient/<int:id>/',update_client),
     path('projectDelete/',delete_projects),
     path('register/',register),
+    path('getuser',send_users),
+    path('addUser/',add_users),
+    path('deleteuser/',user_delete),
     # path('read/',read_excel),
     # path('error/',error)
 ]

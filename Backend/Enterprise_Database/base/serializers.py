@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.contrib.auth.models import User
 from .models import Project,Client,Department,Employee,Task
 
 project_type_choices=[
@@ -126,3 +127,7 @@ class Task_Serializer(serializers.ModelSerializer):
         
         return data
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username','is_active','is_staff','is_superuser']

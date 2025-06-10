@@ -11,6 +11,8 @@ import NewEmail from './components/NewEmail';
 import Client from './components/Client';
 import ClientUpdate from './components/ClientUpdate';
 import Register from './components/Register';
+import User from './components/User';
+import Users from './components/Users';
 
 export let API_URL = process.env.REACT_APP_API_URL
 
@@ -22,6 +24,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Login></Login>}></Route>
         <Route exact path='/setup' element={<Register></Register>}></Route>
+        <Route exact path='/users' element={<PrivateRoute><User></User></PrivateRoute>}></Route>
+        <Route exact path='/user' element={<PrivateRoute><Users></Users></PrivateRoute>}></Route>
         <Route exact path='/project' element={<PrivateRoute><Form></Form></PrivateRoute>}></Route>
         <Route exact path='/projects' element={<PrivateRoute><Projects/></PrivateRoute>}></Route>
         <Route exact path='/projects/update/:id' element={<PrivateRoute><ProjectUpdateForm/></PrivateRoute>}></Route>

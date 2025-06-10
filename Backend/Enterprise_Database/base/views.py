@@ -7,7 +7,7 @@ import json
 import pandas as pd
 from django.core.cache import cache
 from .models import Project,Client,Employee,Department,Task
-from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer,Task_Serializer
+from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer,Task_Serializer,UserSerializer
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
@@ -67,6 +67,53 @@ def login(request):
         return Response({'status': 'error', 'message': 'Invalid or expired code'}, status=status.HTTP_403_FORBIDDEN)
     else:
         return Response({'status':'error','message':'User not found'},status=status.HTTP_403_FORBIDDEN)
+
+@permission_classes([IsAuthenticated])
+@api_view(["GET"])
+def send_users(request):
+    if request.method=="GET":
+        data=User.objects.all()
+        serialized_data=UserSerializer(data,many=True)
+        return Response(serialized_data.data,status=status.HTTP_200_OK)
+    return Response([],status=status.HTTP_404_NOT_FOUND)
+
+@permission_classes([IsAuthenticated])
+@api_view(['POST'])
+def add_users(request):
+    data = request.data
+    username = data.get('username')
+    password = data.get('password')
+    print(username,password)
+    try:
+        user=User.objects.get(username=username)
+        print(user)
+        if user :
+            print("User already exists")
+            return Response({"status":"Failed",'message':'User already exists'},status=status.HTTP_400_BAD_REQUEST)
+    except:
+        user=User.objects.create_user(username=username,password=password)
+        print(user)
+        user.save()
+        return Response({"status":"Passed",'message':'User Created'},status=status.HTTP_200_OK)
+
+@permission_classes([IsAuthenticated])
+@api_view(['POST'])
+def user_delete(request):
+    if not request.user.is_superuser:
+        return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
+    else:
+        data = json.loads(request.body)
+        print(data)
+        c=len(data)
+        d=0
+        for i in data:
+            d+=1
+            item = User.objects.get(username=i)
+            item.delete()
+        if d==c:
+            return Response([],status=status.HTTP_200_OK)
+        else:
+            return Response([],status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])

@@ -42,7 +42,6 @@ export default function SidebarNew() {
           {[
             {text:'Home',icon:<DashboardIcon></DashboardIcon>},
             {text:'Projects',icon:<ManageSearchIcon></ManageSearchIcon>},
-            {text:'Employees',icon:<StorageIcon></StorageIcon>},
             {text:'Users',icon:<GroupIcon></GroupIcon>},
             {text:'Email',icon:<EmailIcon></EmailIcon>}
           ].map((item, index) => (
