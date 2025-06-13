@@ -167,6 +167,11 @@ export default function Projects() {
     //             <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
     //         )
     // }, },
+    { field: 'Latest_status', headerName: 'Task Status', width:300,renderCell:(params)=>{
+      return(
+          <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
+      )
+},},
     { field: 'project_completed', headerName: 'Project Completed', width:200,renderCell:(params)=>{
       return(
           <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>

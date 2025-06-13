@@ -6,8 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 import pandas as pd
 from django.core.cache import cache
-from .models import Project,Client,Employee,Department,Task
-from .serializers import Projects_serializer,Project_serializer,Client_serializer,Employee_serializer,Department_serializer,Task_Serializer,UserSerializer
+from .models import Project,Client,Department,Task
+from .serializers import Projects_serializer,Project_serializer,Client_serializer,Department_serializer,Task_Serializer,UserSerializer
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
@@ -83,6 +83,7 @@ def add_users(request):
     data = request.data
     username = data.get('username')
     password = data.get('password')
+
     print(username,password)
     try:
         user=User.objects.get(username=username)
@@ -176,11 +177,12 @@ def get_department_name(request):
     serializer=Department_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 @api_view(['GET'])
-def get_Employee_data(request):
-    data = Employee.objects.all()
-    serializer=Employee_serializer(data,many=True)
+def get_User_data(request):
+    data = User.objects.filter()
+    serializer = UserSerializer(data,many=True)
+    print(serializer.data)
     return Response(serializer.data,status=status.HTTP_200_OK)
 
 @permission_classes([IsAuthenticated])
@@ -201,7 +203,6 @@ def add_Project(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_project_from_client(request,id):
-
     data = Project.objects.filter(Client__id=id)
     print(data)
     if data:
@@ -212,11 +213,36 @@ def fetch_project_from_client(request,id):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def fetch_projects(request):
     data = Project.objects.all()
-    serialized_data = Project_serializer(data,many=True)
-    return Response(serialized_data.data,status = status.HTTP_200_OK)
+    new_data = []
+    for i in data:
+        latest_task=Task.objects.filter(Project__id=i.id).last()
+        print(latest_task)
+        if latest_task ==None:
+            var='No Tasks Added Yet'
+        elif latest_task.task_status=="":
+            var= latest_task.custom_status
+        else:
+            var= latest_task.task_status
+        
+        new_data.append({
+        "id": i.id,
+        "client_name": i.Client.name,
+        "employee_name": i.Users.username,
+        "department_name": i.Department.name,
+        "name": i.name,
+        "type": i.type,
+        "start_date": i.start_date,
+        "end_date": i.end_date,
+        "mode_of_payment": i.mode_of_payment,
+        "status_description": i.status_description,
+        "project_completed": i.project_completed,
+        "Document_endpath": i.Document_endpath,
+        "Latest_status":var,
+        })
+    return Response(new_data,status = status.HTTP_200_OK)
 
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
@@ -281,10 +307,28 @@ def send_email(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_all_tasks_by_project_id(request,id):
-    data = Task.objects.filter(Project__id=id)
-    serialized_data = Task_Serializer(data,many=True)
-    print(serialized_data.data)
-    return Response(serialized_data.data,status=status.HTTP_200_OK)
+    data = Task.objects.filter(Project__id=id)    
+    list=['LUT','Registration','Assessment','GST Refund','Audit']
+    obj = Project.objects.get(id=id)
+    ptype=obj.type
+    c,d=[],[]
+    if ptype in list:
+        for i in data:
+            c.append({
+            'id': i.id,
+            'task_status': i.custom_status,
+            'task_date': i.task_date
+            })
+        return Response(c,status=status.HTTP_200_OK)
+    else:
+        for i in data:
+            c.append({
+            'id': i.id,
+            'task_status': i.task_status,
+            'task_date': i.task_date
+            })
+        return Response(c,status=status.HTTP_200_OK)
+
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

@@ -1,16 +1,25 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Project,Client,Department,Employee,Task
+from .models import Project,Client,Department,Task
 
 project_type_choices=[
         ('Advance Tax','Advance Tax'),
         ('GSTR1','GSTR1'),
-        ('GSTR3B','GSTR3B')
+        ('GSTR3B','GSTR3B'),
+        ('Income Tax Return (Audit)','Income Tax Return (Audit)'),
+        ('Income Tax Return (Non-Audit)','Income Tax Return (Non-Audit)'),
+        ('TDS','TDS'),
+        ('GSTR 2A/2B','GSTR 2A/2B'),
+        ('LUT','LUT'),
+        ('Registration','Registration'),
+        ('Assessment','Assessment'),
+        ('GST Refund','GST Refund'),
+        ('Audit','Audit')
     ]
 project_completed_choices=[
         ('Completed','Completed'),
         ('Not Completed','Not Completed')
-]
+    ]
 
 class Projects_serializer(serializers.ModelSerializer):
     class Meta:
@@ -46,11 +55,6 @@ class Project_serializer(serializers.ModelSerializer):
 class Client_serializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields='__all__'
-
-class Employee_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = Employee
         fields='__all__'
 
 class Department_serializer(serializers.ModelSerializer):
@@ -93,8 +97,64 @@ class Task_Serializer(serializers.ModelSerializer):
         ('Checking For Payment Status Whether Paid Or Not','Checking For Payment Status Whether Paid Or Not'),
         ('After Making Of Payment Submit the Return','After Making Of Payment Submit the Return'),
         ('Uploading','Uploading')
+    ],
+    "Income Tax Return (Audit)":[
+        ("Getting Uploaded Copy of Audit Report","Getting Uploaded Copy of Audit Report"),
+        ('Data collection of Personal of Prop .,/Partners etc','Data collection of Personal of Prop .,/Partners etc'),
+        ('Queries Raised','Queries Raised'),
+        ('Queries Solved','Queries Solved'),
+        ('Data Entry in Software','Data Entry in Software'), 
+        ('Client confirmation for SA ,Income etc','Client confirmation for SA ,Income etc'),
+        ('Checking before Filing','Checking before Filing'),
+        ('Uploaded','Uploaded'),
+        ('Bill Preparation & Sending to Client','Bill Preparation & Sending to Client'),
+        ('Completion Report to DMM','Completion Report to DMM'),
+        ('Rectification Return , if any','Rectification Return , if any')
+    ],
+    "Income Tax Return (Non-Audit)":[
+        ('Data Collection','Data Collection'),
+        ('Data Process','Data Process'),
+        ('Queries Raised','Queries Raised'),
+        ('Queries Solved','Queries Solved'),
+        ('Data Entry in Software','Data Entry in Software'), 
+        ('Client confirmation for SA ,Income etc','Client confirmation for SA ,Income etc'),
+        ('Checking before Filing','Checking before Filing'),
+        ('Uploaded','Uploaded'),
+        ('Bill Preparation & Sending to Client','Bill Preparation & Sending to Client'),
+        ('Completion Report to DMM','Completion Report to DMM'),
+        ('Rectification Return , if any','Rectification Return , if any')
+    ],
+    'TDS':[
+        ('Data Collection','Data Collection'),
+        ('Data Process','Data Process'),
+        ('Queries Raised','Queries Raised'),
+        ('Queries Solved','Queries Solved'),
+        ('Data Entry in Software','Data Entry in Software'), 
+        ('Challan Prepared & Given','Challan Prepared & Given'),
+        ('Data Collection','Data Collection'),
+        ('Data Process','Data Process'),
+        ('Working Prepared','Working Prepared'),
+        ('Queries Raised','Queries Raised'),
+        ('Queries Solved','Queries Solved'),
+        ('Paid Challan Received','Paid Challan Received'),
+        ('Data Entry in Software','Data Entry in Software'),    
+        ('Uploaded','Uploaded'),
+        ('Completion Report to DMM','Completion Report to DMM'),
+    ],
+    'GSTR 2A/2B':[
+        ('Data Collection','Data Collection'),
+        ('Data Process','Data Process'),
+        ('Queries Raised','Queries Raised'),
+        ('Queries Solved','Queries Solved'),
+        ('Data Entry in Software','Data Entry in Software'), 
+        ('Client confirmation in case of 2B','Client confirmation in case of 2B'),
+        ('Checking by HOD','Checking by HOD'),
+        ('Uploaded','Uploaded'),
+        ('Completion Report to DMM','Completion Report to DMM'),
+        ('Amendments ,if any','Amendments ,if any')
     ]
-}
+    }
+
     class Meta:
         model = Task
         fields='__all__'
@@ -123,6 +183,31 @@ class Task_Serializer(serializers.ModelSerializer):
                 status_choices_list_3 = [i[0] for i in status_choices]
                 if status not in status_choices_list_3:
                     raise serializers.ValidationError(f"Invalid status for GSTR3B......")
+            
+            elif project_type=="Income Tax Return (Audit)":
+                status_choices = self.project_status_choices.get('Income Tax Return (Audit)')
+                status_choices_list_3 = [i[0] for i in status_choices]
+                if status not in status_choices_list_3:
+                    raise serializers.ValidationError(f"Invalid status for Income Tax Return (Audit)......")
+            
+            elif project_type=="Income Tax Return (Non-Audit)":
+                status_choices = self.project_status_choices.get('Income Tax Return (Non-Audit)')
+                status_choices_list_3 = [i[0] for i in status_choices]
+                if status not in status_choices_list_3:
+                    raise serializers.ValidationError(f"Invalid status for Income Tax Return (Non-Audit)......")
+            
+            elif project_type=="TDS":
+                status_choices = self.project_status_choices.get('TDS')
+                status_choices_list_3 = [i[0] for i in status_choices]
+                if status not in status_choices_list_3:
+                    raise serializers.ValidationError(f"Invalid status for TDS......")
+            
+            elif project_type=="GSTR 2A/2B":
+                status_choices = self.project_status_choices.get('GSTR 2A/2B')
+                status_choices_list_3 = [i[0] for i in status_choices]
+                if status not in status_choices_list_3:
+                    raise serializers.ValidationError(f"Invalid status for GSTR 2A/2B......")
+
 
         
         return data
@@ -130,4 +215,4 @@ class Task_Serializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username','is_active','is_staff','is_superuser']
+        fields = "__all__"

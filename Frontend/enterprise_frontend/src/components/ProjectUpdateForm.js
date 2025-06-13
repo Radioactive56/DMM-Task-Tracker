@@ -112,7 +112,7 @@ export default function Form() {
 
         })
 
-        const employee_api_url=`${API_URL}/ename`;
+        const employee_api_url=`${API_URL}/uname`;
 
         fetch(employee_api_url,{
           method:"GET",
@@ -270,7 +270,7 @@ export default function Form() {
         <option value=''>Select Employee</option>
         {
           employeeName.map((item)=>(
-            <option key={item.id} value={item.id}>{item.name}</option>
+            <option key={item.id}>{item.username}</option>
           ))
         }
         </select>
