@@ -3,6 +3,21 @@ from django.contrib.auth.models import User,Permission
 # import pyotp
 # from .models import totp
 
+class Profile(models.Model):
+    ROLE_CHOICES = (
+        ('manager', 'manager'),
+        ('employee','employee'),
+    )
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone = models.CharField(max_length=10,blank=True,null=True)
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES)
+    address = models.TextField(blank=True,null=True)
+    aadhar = models.CharField(max_length=12,blank=True,null=True)
+
+    def __str__(self):
+        return f"{self.user.username} Profile"
+
 # Create your models here.
 class Department(models.Model):
     name = models.CharField(max_length=128,unique=True)

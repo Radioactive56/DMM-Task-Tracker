@@ -81,21 +81,22 @@ def send_users(request):
 @api_view(['POST'])
 def add_users(request):
     data = request.data
-    username = data.get('username')
-    password = data.get('password')
+    print(data)
+    # username = data.get('username')
+    # password = data.get('password')
 
-    print(username,password)
-    try:
-        user=User.objects.get(username=username)
-        print(user)
-        if user :
-            print("User already exists")
-            return Response({"status":"Failed",'message':'User already exists'},status=status.HTTP_400_BAD_REQUEST)
-    except:
-        user=User.objects.create_user(username=username,password=password)
-        print(user)
-        user.save()
-        return Response({"status":"Passed",'message':'User Created'},status=status.HTTP_200_OK)
+    # print(username,password)
+    # try:
+    #     user=User.objects.get(username=username)
+    #     print(user)
+    #     if user :
+    #         print("User already exists")
+    #         return Response({"status":"Failed",'message':'User already exists'},status=status.HTTP_400_BAD_REQUEST)
+    # except:
+    #     user=User.objects.create_user(username=username,password=password)
+    #     print(user)
+    #     user.save()
+    #     return Response({"status":"Passed",'message':'User Created'},status=status.HTTP_200_OK)
 
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
