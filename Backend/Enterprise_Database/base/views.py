@@ -166,7 +166,14 @@ def status_name(request,name):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_client_name(request):
-    data = Client.objects.all()
+    data = Client.objects.all().order_by('-active')
+    serializer=Client_serializer(data,many=True)
+    return Response(serializer.data,status=status.HTTP_200_OK)
+
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def get_client_name_form(request):
+    data = Client.objects.filter(active=True)
     serializer=Client_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
 

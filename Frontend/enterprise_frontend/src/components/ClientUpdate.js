@@ -65,7 +65,7 @@ export default function ClientUpdate() {
             if (response.ok){
                 Swal.fire({
                 title: "Success",
-                text : 'Client Added Successfully.',
+                text : 'Client Updated Successfully.',
                 icon: 'success',
                 confirmButtonText:"Ok",
                 showConfirmButton:true,

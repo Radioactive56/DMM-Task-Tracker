@@ -39,7 +39,7 @@ export default function Form() {
             setprojecttype(data);
         })
 
-        const client_api_url = `${API_URL}/cname`;
+        const client_api_url = `${API_URL}/cnameform`;
 
         fetch(client_api_url,{
           method:"GET",
