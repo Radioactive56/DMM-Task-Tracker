@@ -3,10 +3,11 @@ from rest_framework.decorators import api_view,permission_classes
 from rest_framework import status
 from rest_framework.response import Response
 from django.views.decorators.csrf import csrf_exempt
+from django.db import transaction
 import json
 import pandas as pd
 from django.core.cache import cache
-from .models import Project,Client,Department,Task
+from .models import Project,Client,Department,Task,Profile
 from .serializers import Projects_serializer,Project_serializer,Client_serializer,Department_serializer,Task_Serializer,UserSerializer
 from datetime import date
 from django.contrib.auth import authenticate
@@ -72,36 +73,61 @@ def login(request):
 @api_view(["GET"])
 def send_users(request):
     if request.method=="GET":
-        data=User.objects.all()
-        serialized_data=UserSerializer(data,many=True)
-        return Response(serialized_data.data,status=status.HTTP_200_OK)
+        data=Profile.objects.all()
+        res=[]
+        # serialized_data=UserSerializer(data,many=True)
+        for i in data :
+            res.append({
+                "username":i.user.username,
+                "email":i.user.email,
+                "phone":i.phone,
+                "role":i.role,
+                "address":i.address,
+                "aadhar":i.aadhar
+            })
+        print(res)
+        return Response(res,status=status.HTTP_200_OK)
     return Response([],status=status.HTTP_404_NOT_FOUND)
 
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def add_users(request):
     data = request.data
-    print(data)
-    # username = data.get('username')
-    # password = data.get('password')
+    username = data.get('username')
 
-    # print(username,password)
-    # try:
-    #     user=User.objects.get(username=username)
-    #     print(user)
-    #     if user :
-    #         print("User already exists")
-    #         return Response({"status":"Failed",'message':'User already exists'},status=status.HTTP_400_BAD_REQUEST)
-    # except:
-    #     user=User.objects.create_user(username=username,password=password)
-    #     print(user)
-    #     user.save()
-    #     return Response({"status":"Passed",'message':'User Created'},status=status.HTTP_200_OK)
+    user = request.user
+    role = user.profile.role
+    if role=='employee':
+        return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
+
+    if User.objects.filter(username=username).exists():
+        return Response({"error": "User already exists..."}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        with transaction.atomic():
+            user = User.objects.create_user(
+                username=data.get('username'),
+                password=data.get('password'),
+                email=data.get('email')
+            )
+            Profile.objects.create(
+                user=user,
+                role=data.get('role'),
+                aadhar=data.get('aadhar'),
+                address=data.get('address'),
+                phone=data.get('phone')
+            )
+        return Response({"message": "User created"}, status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
 
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def user_delete(request):
-    if not request.user.is_superuser:
+    user = request.user
+    role = user.profile.role
+    if role=='employee':
         return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
     else:
         data = json.loads(request.body)
@@ -356,12 +382,17 @@ def add_tasks_for_project_id(request,id):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def addClient(request):
-    serializer = Client_serializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data,status = status.HTTP_200_OK)
+    user = request.user
+    role = user.profile.role
+    if role=='employee':
+        return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
     else:
-        return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
+        serializer = Client_serializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status = status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
@@ -373,13 +404,19 @@ def get_client_by_id(request,id):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def update_client(request,id):
-    item = Client.objects.get(id=id)
-    serializer = Client_serializer(instance=item,data=request.data,partial=True)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data,status=status.HTTP_200_OK)
+    user = request.user
+    role = user.profile.role
+    if role=='employee':
+        return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
     else:
-        return Response(serializer.error,status=status.HTTP_404_NOT_FOUND)
+        item = Client.objects.get(id=id)
+        print(item)
+        serializer = Client_serializer(instance=item,data=request.data,partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        else:
+            return Response(serializer.errors,status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])

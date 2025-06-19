@@ -182,9 +182,10 @@ export default function User() {
         const new_filtered_data=data.map(
         x=>({
             username:x.username,
-            permission_Staff_status:x.is_staff,
-            permission_active_status:x.is_active,
-            permission_Superuser_status:x.is_superuser,
+            role:x.role,
+            phone:x.phone,
+            email:x.email,
+            aadhar:x.aadhar,
             // privilege: x.privilege&&x.privilege.length>0?x.privilege.map(privilege=>privilege[Object.keys(privilege)[1]]).join(', '):""
         })
     );
@@ -205,44 +206,38 @@ export default function User() {
           editable: true,
         },
         {
-          field: 'permission_Staff_status',
-          headerName: 'Staff Status',
+          field: 'role',
+          headerName: 'Role',
           width: 200,
           cellClassName:'right-align',
-          renderCell: (params) => (
-          <Tooltip title={params.value ? "Active" : "Inactive"}>
-            <IconButton color={params.value ? "success" : "error"}>
-              {params.value ? <CheckIcon /> : <CloseIcon />}
-            </IconButton>
-          </Tooltip>
-        ),
+          renderCell:(params)=>{
+            return(
+                <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{params.value}</span>
+            )
+      },
         },
         {
-          field: 'permission_active_status',
-          headerName: 'Active status',
+          field: 'phone',
+          headerName: 'Contact Info',
           width: 200,
           cellClassName:'right-align',
-          renderCell: (params) => (
-          <Tooltip title={params.value ? "Active" : "Inactive"}>
-            <IconButton color={params.value ? "success" : "error"}>
-              {params.value ? <CheckIcon /> : <CloseIcon />}
-            </IconButton>
-          </Tooltip>
-        ),
+          editable: true,
         },
         {
-            field: 'permission_Superuser_status',
-            headerName: 'Superuser status',
-            width: 300,
-            cellClassName:'right-align',
-            renderCell: (params) => (
-          <Tooltip title={params.value ? "Active" : "Inactive"}>
-            <IconButton color={params.value ? "success" : "error"}>
-              {params.value ? <CheckIcon /> : <CloseIcon />}
-            </IconButton>
-          </Tooltip>
-        ),
+          field: 'email',
+          headerName: 'Email ID',
+          width: 200,
+          cellClassName:'right-align',
+          editable: true,
         },
+        {
+          field: 'aadhar',
+          headerName: 'Aadhar',
+          width: 200,
+          cellClassName:'right-align',
+          editable: true,
+        },
+        
       ];
 
       const handleSelectionChange = (newSelection) => {

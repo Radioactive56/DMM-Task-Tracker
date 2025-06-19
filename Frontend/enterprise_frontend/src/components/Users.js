@@ -40,6 +40,22 @@ export default function Users() {
                     }
                 });
               }
+              else if (response.status === 400){
+                Swal.fire({
+                  title: "Error",
+                  text : 'The user with this username already exists',
+                  icon: 'error',
+                  confirmButtonText:"Ok",
+                  showConfirmButton:true,
+                  customClass:{
+                      confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  }
+                  }).then(result=>{
+                      if (result.isConfirmed){
+                          navigate('/user');
+                      }
+                  });
+            }
               else if (response.status === 403){
                   Swal.fire({
                     title: "Error",
@@ -56,6 +72,22 @@ export default function Users() {
                         }
                     });
               }
+              else if (response.status === 404){
+                Swal.fire({
+                  title: "Error",
+                  text : 'Error in storing in database.....',
+                  icon: 'error',
+                  confirmButtonText:"Ok",
+                  showConfirmButton:true,
+                  customClass:{
+                      confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  }
+                  }).then(result=>{
+                      if (result.isConfirmed){
+                          navigate('/user');
+                      }
+                  });
+            }
               else if (response.status===500){
                 // alert(".....")
                 Swal.fire({

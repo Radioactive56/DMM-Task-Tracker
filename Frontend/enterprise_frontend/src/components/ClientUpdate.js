@@ -78,6 +78,22 @@ export default function ClientUpdate() {
                     }
                 });
             }
+            else if (response.status === 403){
+                              Swal.fire({
+                                title: "Error",
+                                text : 'You dont have the permission to perform this function.',
+                                icon: 'error',
+                                confirmButtonText:"Ok",
+                                showConfirmButton:true,
+                                customClass:{
+                                    confirmButton: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                                }
+                                }).then(result=>{
+                                    if (result.isConfirmed){
+                                        navigate('/home');
+                                    }
+                                });
+                          }
             else{
                 return response.json().then((err)=>{
                 Swal.fire({
