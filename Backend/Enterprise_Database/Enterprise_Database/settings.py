@@ -168,3 +168,50 @@ print("EMAIL_PORT:", EMAIL_PORT)
 print("EMAIL_USE_TLS:", EMAIL_USE_TLS)
 print("EMAIL_HOST_USER:", EMAIL_HOST_USER)
 print("EMAIL_HOST_PASSWORD:", EMAIL_HOST_PASSWORD)
+
+
+import os
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'verbose': {
+            'format': '[{asctime}] [{levelname}] {name} - {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '[{levelname}] {message}',
+            'style': '{',
+        },
+    },
+
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'base.log'),
+            'formatter': 'verbose',
+        },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+
+    'loggers': {
+        # Logger for Django's own logs
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        # Logger specifically for your app 'base'
+        'base': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}

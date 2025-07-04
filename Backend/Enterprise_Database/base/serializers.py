@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Project,Client,Department,Task
+from .models import Project,Client,Department,Task,Profile
 
 project_type_choices=[
         ('Advance Tax','Advance Tax'),
@@ -41,7 +41,7 @@ class Projects_serializer(serializers.ModelSerializer):
 
 class Project_serializer(serializers.ModelSerializer):
     client_name = serializers.CharField(source='Client.name',read_only=True)
-    employee_name = serializers.CharField(source='Employee.name',read_only=True)
+    employee_name = serializers.CharField(source='Users.username',read_only=True)
     department_name = serializers.CharField(source='Department.name',read_only=True)
     class Meta:
         model = Project
@@ -216,3 +216,8 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = "__all__"
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = '__all__'

@@ -1,0 +1,1789 @@
+[2025-07-04 07:30:08,847] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:30:32,614] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:31:00,920] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:31:01,410] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:31:14,652] [WARNING] django.request - Not Found: /
+[2025-07-04 07:31:14,653] [WARNING] django.server - "GET / HTTP/1.1" 404 8744
+[2025-07-04 07:31:15,414] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 07:31:15,415] [WARNING] django.server - "GET /favicon.ico HTTP/1.1" 404 8795
+[2025-07-04 07:32:05,781] [INFO] django.server - "OPTIONS //login HTTP/1.1" 200 0
+[2025-07-04 07:32:05,790] [INFO] base - Login attempt received by manav
+[2025-07-04 07:32:05,829] [INFO] base - manav is logged in....
+[2025-07-04 07:32:05,830] [INFO] django.server - "POST //login HTTP/1.1" 200 255
+[2025-07-04 07:32:07,798] [INFO] django.server - "OPTIONS //validate/ HTTP/1.1" 200 0
+[2025-07-04 07:32:07,803] [INFO] django.server - "OPTIONS //validate/ HTTP/1.1" 200 0
+[2025-07-04 07:32:07,807] [INFO] base - Token validation requested by manav
+[2025-07-04 07:32:07,817] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:32:07,863] [INFO] base - Token validation requested by manav
+[2025-07-04 07:32:07,865] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:32:07,953] [INFO] base - get_client_name function triggered by AnonymousUser
+[2025-07-04 07:32:07,961] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:32:07,964] [INFO] base - get_client_name function triggered by AnonymousUser
+[2025-07-04 07:32:07,978] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:33:05,279] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:33:05,691] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:33:08,629] [INFO] base - Token validation requested by manav
+[2025-07-04 07:33:08,630] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:33:08,644] [INFO] base - Token validation requested by manav
+[2025-07-04 07:33:08,645] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:33:08,723] [INFO] base - get_client_name function triggered by 
+[2025-07-04 07:33:08,743] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:33:08,759] [INFO] base - get_client_name function triggered by 
+[2025-07-04 07:33:08,770] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:34:15,541] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:34:15,962] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:34:19,812] [INFO] base - Token validation requested by manav
+[2025-07-04 07:34:19,813] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:34:19,828] [INFO] base - Token validation requested by manav
+[2025-07-04 07:34:19,831] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:34:19,908] [INFO] base - get_client_name function triggered by AnonymousUser
+[2025-07-04 07:34:19,914] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:34:19,920] [INFO] base - get_client_name function triggered by AnonymousUser
+[2025-07-04 07:34:19,932] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:34:46,894] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:34:47,318] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:34:50,913] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:34:51,354] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:34:56,300] [INFO] base - Token validation requested by manav
+[2025-07-04 07:34:56,300] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:34:56,316] [INFO] base - Token validation requested by manav
+[2025-07-04 07:34:56,322] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:34:56,421] [INFO] base - get_client_name function triggered by 
+[2025-07-04 07:34:56,426] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:34:56,443] [INFO] base - get_client_name function triggered by 
+[2025-07-04 07:34:56,463] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:36:02,356] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:36:02,890] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:36:07,545] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:36:07,982] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:36:11,989] [INFO] base - Token validation requested by manav
+[2025-07-04 07:36:11,990] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:36:11,995] [INFO] base - Token validation requested by manav
+[2025-07-04 07:36:11,996] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:36:12,134] [INFO] base - Client name fetch requested by AnonymousUser
+[2025-07-04 07:36:12,150] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:36:12,156] [INFO] base - Client name fetch requested by AnonymousUser
+[2025-07-04 07:36:12,173] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:36:14,056] [INFO] django.server - "OPTIONS //get_project/4/ HTTP/1.1" 200 0
+[2025-07-04 07:36:14,103] [WARNING] django.request - Not Found: /get_project/4/
+[2025-07-04 07:36:14,103] [WARNING] django.server - "GET //get_project/4/ HTTP/1.1" 404 40
+[2025-07-04 07:38:51,265] [INFO] base - Login attempt received by YashM
+[2025-07-04 07:38:51,270] [INFO] base - YashM is logged in....
+[2025-07-04 07:38:51,274] [INFO] django.server - "POST //login HTTP/1.1" 200 255
+[2025-07-04 07:38:52,588] [INFO] base - Token validation requested by YashM
+[2025-07-04 07:38:52,593] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:38:52,597] [INFO] base - Token validation requested by YashM
+[2025-07-04 07:38:52,598] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 07:38:52,622] [INFO] base - Client name fetch requested by AnonymousUser
+[2025-07-04 07:38:52,633] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:38:52,723] [INFO] base - Client name fetch requested by AnonymousUser
+[2025-07-04 07:38:52,735] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:40:13,126] [INFO] django.server - "OPTIONS //cname HTTP/1.1" 200 0
+[2025-07-04 07:40:13,134] [INFO] base - Client name fetch requested by YashM
+[2025-07-04 07:40:13,139] [INFO] django.server - "GET //cname HTTP/1.1" 200 39529
+[2025-07-04 07:41:40,396] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:41:40,906] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:42:28,232] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:42:28,754] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:42:47,039] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:42:47,456] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:43:19,504] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:43:19,913] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:43:49,790] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:43:50,189] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:44:43,500] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:44:43,952] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:45:07,877] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:45:08,399] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:46:03,798] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:46:04,243] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:46:28,078] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:46:28,652] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:46:44,518] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:46:44,993] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:46:50,607] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:46:51,064] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:50:45,366] [INFO] django.server - "GET /admin/ HTTP/1.1" 302 0
+[2025-07-04 07:50:45,415] [INFO] django.server - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+[2025-07-04 07:50:45,510] [INFO] django.server - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-07-04 07:50:45,512] [INFO] django.server - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-07-04 07:50:45,514] [INFO] django.server - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-07-04 07:50:45,553] [INFO] django.server - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-07-04 07:50:45,566] [INFO] django.server - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-07-04 07:50:45,567] [INFO] django.server - "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[2025-07-04 07:50:45,585] [INFO] django.server - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-07-04 07:50:47,498] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 07:50:47,501] [WARNING] django.server - "GET /favicon.ico HTTP/1.1" 404 8795
+[2025-07-04 07:50:52,425] [INFO] django.server - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-07-04 07:50:52,452] [INFO] django.server - "GET /admin/ HTTP/1.1" 200 12945
+[2025-07-04 07:50:52,524] [INFO] django.server - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2025-07-04 07:50:52,531] [INFO] django.server - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[2025-07-04 07:50:52,531] [INFO] django.server - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-07-04 07:50:52,537] [INFO] django.server - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-07-04 07:50:56,180] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 44243
+[2025-07-04 07:50:56,223] [INFO] django.server - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2025-07-04 07:50:56,256] [INFO] django.server - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,257] [INFO] django.server - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,266] [INFO] django.server - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,267] [INFO] django.server - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,269] [INFO] django.server - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,271] [INFO] django.server - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,271] [INFO] django.server - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,277] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 07:50:56,289] [INFO] django.server - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,338] [INFO] django.server - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2025-07-04 07:50:56,349] [INFO] django.server - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2025-07-04 07:51:04,355] [INFO] django.server - "POST /admin/base/client/ HTTP/1.1" 200 26749
+[2025-07-04 07:51:04,378] [INFO] django.server - "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+[2025-07-04 07:51:11,401] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 44243
+[2025-07-04 07:51:15,724] [INFO] django.server - "POST /admin/base/client/ HTTP/1.1" 200 33760
+[2025-07-04 07:51:19,099] [INFO] django.server - "POST /admin/base/client/ HTTP/1.1" 302 0
+[2025-07-04 07:51:19,111] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9971
+[2025-07-04 07:51:19,178] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 07:51:19,246] [INFO] django.server - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2025-07-04 07:52:58,570] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:52:58,932] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:53:08,634] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:53:09,020] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:53:15,590] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/urls.py changed, reloading.
+[2025-07-04 07:53:15,952] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:53:22,452] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/urls.py changed, reloading.
+[2025-07-04 07:53:22,828] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:53:27,314] [INFO] django.server - "GET /admin/ HTTP/1.1" 200 12944
+[2025-07-04 07:53:33,039] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2025-07-04 07:53:33,042] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 87776
+[2025-07-04 07:54:02,075] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:54:02,506] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:54:05,355] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2025-07-04 07:54:05,357] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 87913
+[2025-07-04 07:54:55,948] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:54:56,358] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:55:21,734] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:55:22,004] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:55:25,343] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Client Name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 473, in read_excel
+    name = y['Client Name'],
+           ~^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Client Name'
+[2025-07-04 07:55:25,347] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 127641
+[2025-07-04 07:55:55,976] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:55:56,413] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:56:13,066] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 07:56:13,425] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 07:56:35,978] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Name'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 473, in read_excel
+    name = y['Name'],
+           ~^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Name'
+[2025-07-04 07:56:35,981] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 127515
+[2025-07-04 08:04:52,995] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:04:53,398] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:05:07,682] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:05:07,705] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:05:09,986] [INFO] django.server - "GET /admin/ HTTP/1.1" 200 12944
+[2025-07-04 08:05:21,145] [INFO] django.server - "GET /read HTTP/1.1" 301 0
+[2025-07-04 08:05:21,187] [INFO] base - Excel import requested by user.
+[2025-07-04 08:05:21,281] [ERROR] base - Error creating client for row 0: 'Name'
+[2025-07-04 08:05:21,281] [ERROR] base - Error creating client for row 1: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 2: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 3: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 4: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 5: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 6: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 7: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 8: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 9: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 10: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 11: 'Name'
+[2025-07-04 08:05:21,282] [ERROR] base - Error creating client for row 12: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 13: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 14: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 15: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 16: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 17: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 18: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 19: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 20: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 21: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 22: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 23: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 24: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 25: 'Name'
+[2025-07-04 08:05:21,283] [ERROR] base - Error creating client for row 26: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 27: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 28: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 29: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 30: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 31: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 32: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 33: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 34: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 35: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 36: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 37: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 38: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 39: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 40: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 41: 'Name'
+[2025-07-04 08:05:21,284] [ERROR] base - Error creating client for row 42: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 43: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 44: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 45: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 46: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 47: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 48: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 49: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 50: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 51: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 52: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 53: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 54: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 55: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 56: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 57: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 58: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 59: 'Name'
+[2025-07-04 08:05:21,285] [ERROR] base - Error creating client for row 60: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 61: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 62: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 63: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 64: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 65: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 66: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 67: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 68: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 69: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 70: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 71: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 72: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 73: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 74: 'Name'
+[2025-07-04 08:05:21,286] [ERROR] base - Error creating client for row 75: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 76: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 77: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 78: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 79: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 80: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 81: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 82: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 83: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 84: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 85: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 86: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 87: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 88: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 89: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 90: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 91: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 92: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 93: 'Name'
+[2025-07-04 08:05:21,287] [ERROR] base - Error creating client for row 94: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 95: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 96: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 97: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 98: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 99: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 100: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 101: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 102: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 103: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 104: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 105: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 106: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 107: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 108: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 109: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 110: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 111: 'Name'
+[2025-07-04 08:05:21,288] [ERROR] base - Error creating client for row 112: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 113: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 114: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 115: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 116: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 117: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 118: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 119: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 120: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 121: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 122: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 123: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 124: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 125: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 126: 'Name'
+[2025-07-04 08:05:21,289] [ERROR] base - Error creating client for row 127: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 128: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 129: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 130: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 131: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 132: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 133: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 134: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 135: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 136: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 137: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 138: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 139: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 140: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 141: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 142: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 143: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 144: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 145: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 146: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 147: 'Name'
+[2025-07-04 08:05:21,290] [ERROR] base - Error creating client for row 148: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 149: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 150: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 151: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 152: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 153: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 154: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 155: 'Name'
+[2025-07-04 08:05:21,291] [ERROR] base - Error creating client for row 156: 'Name'
+[2025-07-04 08:05:21,292] [ERROR] base - Error creating client for row 157: 'Name'
+[2025-07-04 08:05:21,293] [ERROR] base - Error creating client for row 158: 'Name'
+[2025-07-04 08:05:21,294] [ERROR] base - Error creating client for row 159: 'Name'
+[2025-07-04 08:05:21,294] [ERROR] base - Error creating client for row 160: 'Name'
+[2025-07-04 08:05:21,295] [ERROR] base - Error creating client for row 161: 'Name'
+[2025-07-04 08:05:21,295] [ERROR] base - Error creating client for row 162: 'Name'
+[2025-07-04 08:05:21,296] [ERROR] base - Error creating client for row 163: 'Name'
+[2025-07-04 08:05:21,296] [ERROR] base - Error creating client for row 164: 'Name'
+[2025-07-04 08:05:21,296] [ERROR] base - Error creating client for row 165: 'Name'
+[2025-07-04 08:05:21,296] [ERROR] base - Error creating client for row 166: 'Name'
+[2025-07-04 08:05:21,296] [ERROR] base - Error creating client for row 167: 'Name'
+[2025-07-04 08:05:21,297] [ERROR] base - Error creating client for row 168: 'Name'
+[2025-07-04 08:05:21,297] [ERROR] base - Error creating client for row 169: 'Name'
+[2025-07-04 08:05:21,298] [ERROR] base - Error creating client for row 170: 'Name'
+[2025-07-04 08:05:21,298] [ERROR] base - Error creating client for row 171: 'Name'
+[2025-07-04 08:05:21,298] [ERROR] base - Error creating client for row 172: 'Name'
+[2025-07-04 08:05:21,298] [ERROR] base - Error creating client for row 173: 'Name'
+[2025-07-04 08:05:21,299] [ERROR] base - Error creating client for row 174: 'Name'
+[2025-07-04 08:05:21,300] [ERROR] base - Error creating client for row 175: 'Name'
+[2025-07-04 08:05:21,302] [ERROR] base - Error creating client for row 176: 'Name'
+[2025-07-04 08:05:21,302] [ERROR] base - Error creating client for row 177: 'Name'
+[2025-07-04 08:05:21,302] [ERROR] base - Error creating client for row 178: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 179: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 180: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 181: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 182: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 183: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 184: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 185: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 186: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 187: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 188: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 189: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 190: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 191: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 192: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 193: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 194: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 195: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 196: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 197: 'Name'
+[2025-07-04 08:05:21,303] [ERROR] base - Error creating client for row 198: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 199: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 200: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 201: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 202: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 203: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 204: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 205: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 206: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 207: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 208: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 209: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 210: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 211: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 212: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 213: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 214: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 215: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 216: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 217: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 218: 'Name'
+[2025-07-04 08:05:21,304] [ERROR] base - Error creating client for row 219: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 220: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 221: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 222: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 223: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 224: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 225: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 226: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 227: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 228: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 229: 'Name'
+[2025-07-04 08:05:21,305] [ERROR] base - Error creating client for row 230: 'Name'
+[2025-07-04 08:05:21,307] [ERROR] base - Error creating client for row 231: 'Name'
+[2025-07-04 08:05:21,307] [ERROR] base - Error creating client for row 232: 'Name'
+[2025-07-04 08:05:21,307] [ERROR] base - Error creating client for row 233: 'Name'
+[2025-07-04 08:05:21,308] [ERROR] base - Error creating client for row 234: 'Name'
+[2025-07-04 08:05:21,308] [ERROR] base - Error creating client for row 235: 'Name'
+[2025-07-04 08:05:21,308] [ERROR] base - Error creating client for row 236: 'Name'
+[2025-07-04 08:05:21,309] [ERROR] base - Error creating client for row 237: 'Name'
+[2025-07-04 08:05:21,309] [ERROR] base - Error creating client for row 238: 'Name'
+[2025-07-04 08:05:21,310] [ERROR] base - Error creating client for row 239: 'Name'
+[2025-07-04 08:05:21,310] [ERROR] base - Error creating client for row 240: 'Name'
+[2025-07-04 08:05:21,311] [ERROR] base - Error creating client for row 241: 'Name'
+[2025-07-04 08:05:21,311] [ERROR] base - Error creating client for row 242: 'Name'
+[2025-07-04 08:05:21,311] [ERROR] base - Error creating client for row 243: 'Name'
+[2025-07-04 08:05:21,311] [ERROR] base - Error creating client for row 244: 'Name'
+[2025-07-04 08:05:21,311] [ERROR] base - Error creating client for row 245: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 246: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 247: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 248: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 249: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 250: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 251: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 252: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 253: 'Name'
+[2025-07-04 08:05:21,319] [ERROR] base - Error creating client for row 254: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 255: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 256: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 257: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 258: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 259: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 260: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 261: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 262: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 263: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 264: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 265: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 266: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 267: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 268: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 269: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 270: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 271: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 272: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 273: 'Name'
+[2025-07-04 08:05:21,320] [ERROR] base - Error creating client for row 274: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 275: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 276: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 277: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 278: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 279: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 280: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 281: 'Name'
+[2025-07-04 08:05:21,321] [ERROR] base - Error creating client for row 282: 'Name'
+[2025-07-04 08:05:21,322] [ERROR] base - Error creating client for row 283: 'Name'
+[2025-07-04 08:05:21,322] [ERROR] base - Error creating client for row 284: 'Name'
+[2025-07-04 08:05:21,322] [ERROR] base - Error creating client for row 285: 'Name'
+[2025-07-04 08:05:21,322] [ERROR] base - Error creating client for row 286: 'Name'
+[2025-07-04 08:05:21,323] [ERROR] base - Error creating client for row 287: 'Name'
+[2025-07-04 08:05:21,323] [ERROR] base - Error creating client for row 288: 'Name'
+[2025-07-04 08:05:21,323] [ERROR] base - Error creating client for row 289: 'Name'
+[2025-07-04 08:05:21,323] [ERROR] base - Error creating client for row 290: 'Name'
+[2025-07-04 08:05:21,323] [ERROR] base - Error creating client for row 291: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 292: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 293: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 294: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 295: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 296: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 297: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 298: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 299: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 300: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 301: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 302: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 303: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 304: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 305: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 306: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 307: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 308: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 309: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 310: 'Name'
+[2025-07-04 08:05:21,324] [ERROR] base - Error creating client for row 311: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 312: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 313: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 314: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 315: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 316: 'Name'
+[2025-07-04 08:05:21,325] [ERROR] base - Error creating client for row 317: 'Name'
+[2025-07-04 08:05:21,326] [ERROR] base - Error creating client for row 318: 'Name'
+[2025-07-04 08:05:21,326] [ERROR] base - Error creating client for row 319: 'Name'
+[2025-07-04 08:05:21,326] [ERROR] base - Error creating client for row 320: 'Name'
+[2025-07-04 08:05:21,326] [ERROR] base - Error creating client for row 321: 'Name'
+[2025-07-04 08:05:21,326] [ERROR] base - Error creating client for row 322: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 323: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 324: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 325: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 326: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 327: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 328: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 329: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 330: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 331: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 332: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 333: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 334: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 335: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 336: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 337: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 338: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 339: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 340: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 341: 'Name'
+[2025-07-04 08:05:21,327] [ERROR] base - Error creating client for row 342: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 343: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 344: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 345: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 346: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 347: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 348: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 349: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 350: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 351: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 352: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 353: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 354: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 355: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 356: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 357: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 358: 'Name'
+[2025-07-04 08:05:21,328] [ERROR] base - Error creating client for row 359: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 360: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 361: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 362: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 363: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 364: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 365: 'Name'
+[2025-07-04 08:05:21,329] [ERROR] base - Error creating client for row 366: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 367: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 368: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 369: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 370: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 371: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 372: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 373: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 374: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 375: 'Name'
+[2025-07-04 08:05:21,330] [ERROR] base - Error creating client for row 376: 'Name'
+[2025-07-04 08:05:21,331] [ERROR] base - Error creating client for row 377: 'Name'
+[2025-07-04 08:05:21,331] [ERROR] base - Error creating client for row 378: 'Name'
+[2025-07-04 08:05:21,331] [ERROR] base - Error creating client for row 379: 'Name'
+[2025-07-04 08:05:21,331] [ERROR] base - Error creating client for row 380: 'Name'
+[2025-07-04 08:05:21,332] [ERROR] base - Error creating client for row 381: 'Name'
+[2025-07-04 08:05:21,332] [ERROR] base - Error creating client for row 382: 'Name'
+[2025-07-04 08:05:21,332] [ERROR] base - Error creating client for row 383: 'Name'
+[2025-07-04 08:05:21,332] [ERROR] base - Error creating client for row 384: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 385: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 386: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 387: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 388: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 389: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 390: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 391: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 392: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 393: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 394: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 395: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 396: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 397: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 398: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 399: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 400: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 401: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 402: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 403: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 404: 'Name'
+[2025-07-04 08:05:21,333] [ERROR] base - Error creating client for row 405: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 406: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 407: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 408: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 409: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 410: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 411: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 412: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 413: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 414: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 415: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 416: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 417: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 418: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 419: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 420: 'Name'
+[2025-07-04 08:05:21,334] [ERROR] base - Error creating client for row 421: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 422: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 423: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 424: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 425: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 426: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 427: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 428: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 429: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 430: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 431: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 432: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 433: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 434: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 435: 'Name'
+[2025-07-04 08:05:21,335] [ERROR] base - Error creating client for row 436: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 437: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 438: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 439: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 440: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 441: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 442: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 443: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 444: 'Name'
+[2025-07-04 08:05:21,336] [ERROR] base - Error creating client for row 445: 'Name'
+[2025-07-04 08:05:21,337] [ERROR] base - Error creating client for row 446: 'Name'
+[2025-07-04 08:05:21,337] [ERROR] base - Error creating client for row 447: 'Name'
+[2025-07-04 08:05:21,337] [ERROR] base - Error creating client for row 448: 'Name'
+[2025-07-04 08:05:21,337] [ERROR] base - Error creating client for row 449: 'Name'
+[2025-07-04 08:05:21,337] [ERROR] base - Error creating client for row 450: 'Name'
+[2025-07-04 08:05:21,338] [ERROR] base - Error creating client for row 451: 'Name'
+[2025-07-04 08:05:21,338] [ERROR] base - Error creating client for row 452: 'Name'
+[2025-07-04 08:05:21,338] [ERROR] base - Error creating client for row 453: 'Name'
+[2025-07-04 08:05:21,338] [ERROR] base - Error creating client for row 454: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 455: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 456: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 457: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 458: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 459: 'Name'
+[2025-07-04 08:05:21,339] [ERROR] base - Error creating client for row 460: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 461: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 462: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 463: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 464: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 465: 'Name'
+[2025-07-04 08:05:21,340] [ERROR] base - Error creating client for row 466: 'Name'
+[2025-07-04 08:05:21,341] [ERROR] base - Error creating client for row 467: 'Name'
+[2025-07-04 08:05:21,341] [ERROR] base - Error creating client for row 468: 'Name'
+[2025-07-04 08:05:21,341] [ERROR] base - Error creating client for row 469: 'Name'
+[2025-07-04 08:05:21,341] [ERROR] base - Error creating client for row 470: 'Name'
+[2025-07-04 08:05:21,342] [ERROR] base - Error creating client for row 471: 'Name'
+[2025-07-04 08:05:21,342] [ERROR] base - Error creating client for row 472: 'Name'
+[2025-07-04 08:05:21,342] [ERROR] base - Error creating client for row 473: 'Name'
+[2025-07-04 08:05:21,342] [ERROR] base - Error creating client for row 474: 'Name'
+[2025-07-04 08:05:21,342] [ERROR] base - Error creating client for row 475: 'Name'
+[2025-07-04 08:05:21,343] [ERROR] base - Error creating client for row 476: 'Name'
+[2025-07-04 08:05:21,343] [ERROR] base - Error creating client for row 477: 'Name'
+[2025-07-04 08:05:21,343] [ERROR] base - Error creating client for row 478: 'Name'
+[2025-07-04 08:05:21,343] [ERROR] base - Error creating client for row 479: 'Name'
+[2025-07-04 08:05:21,344] [ERROR] base - Error creating client for row 480: 'Name'
+[2025-07-04 08:05:21,355] [INFO] django.server - "GET /read/ HTTP/1.1" 200 5167
+[2025-07-04 08:05:21,485] [INFO] django.server - "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[2025-07-04 08:05:21,499] [INFO] django.server - "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[2025-07-04 08:05:21,502] [INFO] django.server - "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[2025-07-04 08:05:21,506] [INFO] django.server - "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[2025-07-04 08:05:21,550] [INFO] django.server - "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[2025-07-04 08:05:21,562] [INFO] django.server - "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[2025-07-04 08:05:21,564] [INFO] django.server - "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[2025-07-04 08:05:21,568] [INFO] django.server - "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[2025-07-04 08:05:21,577] [INFO] django.server - "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[2025-07-04 08:05:21,579] [INFO] django.server - "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[2025-07-04 08:05:21,579] [INFO] django.server - "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[2025-07-04 08:05:21,597] [INFO] django.server - "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[2025-07-04 08:05:21,737] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 08:05:21,742] [WARNING] django.server - "GET /favicon.ico HTTP/1.1" 404 9033
+[2025-07-04 08:05:34,373] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:05:34,400] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:05:36,599] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:05:36,628] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:05:38,371] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:05:38,386] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:05:40,188] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:05:40,240] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:06:16,493] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:06:16,923] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:09:11,392] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:09:12,030] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:09:17,729] [INFO] django.server - "GET /read/ HTTP/1.1" 200 5168
+[2025-07-04 08:09:17,927] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 08:09:21,606] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:09:21,642] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:09:22,858] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:09:22,922] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:12:03,716] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:12:04,247] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:12:12,447] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:12:12,848] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:12:40,759] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:12:41,175] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:12:46,042] [WARNING] django.request - Method Not Allowed: /read/
+[2025-07-04 08:12:46,043] [WARNING] django.server - "GET /read/ HTTP/1.1" 405 5545
+[2025-07-04 08:12:51,087] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:12:51,127] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:13:03,114] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:13:03,594] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:13:07,394] [ERROR] base - [CRITICAL] Could not process Excel: [Errno 2] No such file or directory: '/mnt/data/IT List.xlsx'
+[2025-07-04 08:13:07,413] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2025-07-04 08:13:07,417] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 86960
+[2025-07-04 08:13:07,567] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 08:13:12,083] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 9832
+[2025-07-04 08:13:12,116] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:13:28,798] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:13:29,354] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:13:33,625] [WARNING] django.request - Bad Request: /read/
+[2025-07-04 08:13:33,625] [WARNING] django.server - "GET /read/ HTTP/1.1" 400 5370
+[2025-07-04 08:13:33,796] [WARNING] django.request - Not Found: /favicon.ico
+[2025-07-04 08:20:04,236] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:20:04,672] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:20:18,366] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2025-07-04 08:20:18,368] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 86960
+[2025-07-04 08:20:32,313] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 40032
+[2025-07-04 08:20:32,344] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:20:48,253] [INFO] django.server - "GET /admin/base/client/478/change/ HTTP/1.1" 200 16888
+[2025-07-04 08:20:48,285] [INFO] django.server - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2025-07-04 08:20:48,292] [INFO] django.server - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2025-07-04 08:20:48,294] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:20:48,311] [INFO] django.server - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2025-07-04 08:20:48,346] [INFO] django.server - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2025-07-04 08:20:52,616] [INFO] django.server - "POST /admin/base/client/478/change/ HTTP/1.1" 302 0
+[2025-07-04 08:20:52,660] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 40245
+[2025-07-04 08:20:52,743] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:21:02,916] [WARNING] django.request - Unauthorized: /validate/
+[2025-07-04 08:21:02,917] [WARNING] django.server - "GET //validate/ HTTP/1.1" 401 183
+[2025-07-04 08:21:02,923] [WARNING] django.request - Unauthorized: /validate/
+[2025-07-04 08:21:02,926] [WARNING] django.server - "GET //validate/ HTTP/1.1" 401 183
+[2025-07-04 08:21:19,410] [INFO] base - Login attempt received by manav
+[2025-07-04 08:21:19,413] [INFO] base - manav is logged in....
+[2025-07-04 08:21:19,415] [INFO] django.server - "POST //login HTTP/1.1" 200 255
+[2025-07-04 08:21:23,499] [INFO] base - Token validation requested by manav
+[2025-07-04 08:21:23,502] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:21:23,509] [INFO] base - Token validation requested by manav
+[2025-07-04 08:21:23,510] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:21:23,608] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:21:23,627] [INFO] django.server - "GET //cname HTTP/1.1" 200 103183
+[2025-07-04 08:21:23,654] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:21:23,671] [INFO] django.server - "GET //cname HTTP/1.1" 200 103183
+[2025-07-04 08:22:54,726] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:22:55,181] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:23:10,986] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:23:11,412] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:23:18,020] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:23:18,416] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:23:29,327] [ERROR] django.request - Internal Server Error: /read/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+[2025-07-04 08:23:29,329] [ERROR] django.server - "GET /read/ HTTP/1.1" 500 86960
+[2025-07-04 08:23:38,640] [INFO] base - Token validation requested by manav
+[2025-07-04 08:23:38,642] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:23:38,656] [INFO] base - Token validation requested by manav
+[2025-07-04 08:23:38,657] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:23:38,785] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:23:38,816] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:23:38,850] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:23:38,886] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:23:55,631] [INFO] django.server - "OPTIONS //get_project/ HTTP/1.1" 200 0
+[2025-07-04 08:23:55,634] [INFO] django.server - "OPTIONS //get_project/ HTTP/1.1" 200 0
+[2025-07-04 08:23:55,686] [INFO] base - Fetch all projects requested
+[2025-07-04 08:23:55,745] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:23:55,756] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:23:55,786] [INFO] base - Fetch all projects requested
+[2025-07-04 08:23:55,842] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:23:55,848] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:23:59,978] [INFO] base - User data fetch requested by AnonymousUser
+[2025-07-04 08:23:59,999] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:24:00,004] [INFO] base - User data fetch requested by AnonymousUser
+[2025-07-04 08:24:00,015] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:24:12,334] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:24:12,358] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:24:12,368] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:24:12,407] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:24:16,479] [INFO] base - Fetch all projects requested
+[2025-07-04 08:24:16,500] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:24:16,503] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:24:16,508] [INFO] base - Fetch all projects requested
+[2025-07-04 08:24:16,525] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:24:16,528] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:24:18,799] [INFO] django.server - "OPTIONS //cnameform HTTP/1.1" 200 0
+[2025-07-04 08:24:18,803] [INFO] django.server - "OPTIONS //ptype HTTP/1.1" 200 0
+[2025-07-04 08:24:18,805] [INFO] django.server - "OPTIONS //dname HTTP/1.1" 200 0
+[2025-07-04 08:24:18,806] [INFO] django.server - "OPTIONS //dname HTTP/1.1" 200 0
+[2025-07-04 08:24:18,814] [INFO] django.server - "OPTIONS //uname HTTP/1.1" 200 0
+[2025-07-04 08:24:18,828] [INFO] django.server - "OPTIONS //ptype HTTP/1.1" 200 0
+[2025-07-04 08:24:18,832] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:24:18,842] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:24:18,842] [INFO] django.server - "OPTIONS //cnameform HTTP/1.1" 200 0
+[2025-07-04 08:24:18,837] [INFO] django.server - "OPTIONS //uname HTTP/1.1" 200 0
+[2025-07-04 08:24:18,846] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:24:18,850] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:24:18,851] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:24:18,852] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:24:18,859] [INFO] django.server - "GET //uname HTTP/1.1" 200 982
+[2025-07-04 08:24:18,874] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:24:18,886] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:24:18,996] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:24:18,997] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:24:19,004] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:24:19,007] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:24:19,008] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:24:19,017] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:24:19,019] [INFO] django.server - "GET //uname HTTP/1.1" 200 982
+[2025-07-04 08:27:41,415] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:27:41,419] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:27:41,446] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:27:41,448] [INFO] django.server - "OPTIONS //getuser HTTP/1.1" 200 0
+[2025-07-04 08:27:41,449] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:27:41,451] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:27:41,486] [INFO] base - User data fetch requested by manav
+[2025-07-04 08:27:41,500] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:27:41,519] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:27:59,667] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:28:00,141] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:30:10,519] [INFO] django.server - "GET /admin/auth/user/ HTTP/1.1" 200 18427
+[2025-07-04 08:30:10,564] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:30:10,568] [INFO] django.server - "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+[2025-07-04 08:30:10,570] [INFO] django.server - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[2025-07-04 08:30:10,642] [INFO] django.server - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[2025-07-04 08:30:10,643] [INFO] django.server - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[2025-07-04 08:30:39,291] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/serializers.py changed, reloading.
+[2025-07-04 08:30:39,692] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:31:43,632] [INFO] base - Login attempt received by manav
+[2025-07-04 08:31:43,635] [WARNING] django.request - Forbidden: /login
+[2025-07-04 08:31:43,636] [WARNING] django.server - "POST //login HTTP/1.1" 403 54
+[2025-07-04 08:31:59,557] [INFO] base - Login attempt received by manav
+[2025-07-04 08:31:59,584] [INFO] base - manav is logged in....
+[2025-07-04 08:31:59,591] [INFO] django.server - "POST //login HTTP/1.1" 200 255
+[2025-07-04 08:32:00,956] [INFO] base - Token validation requested by manav
+[2025-07-04 08:32:00,958] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:32:00,964] [INFO] base - Token validation requested by manav
+[2025-07-04 08:32:00,964] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:32:01,055] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:32:01,076] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:32:01,084] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:32:01,098] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:32:05,079] [INFO] base - Fetch all projects requested
+[2025-07-04 08:32:05,111] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:32:05,118] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:32:05,131] [INFO] base - Fetch all projects requested
+[2025-07-04 08:32:05,152] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:32:05,156] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:32:07,752] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:32:07,758] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:32:07,765] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:32:07,767] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:32:07,776] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:32:07,789] [INFO] base - User data fetch requested by manav
+[2025-07-04 08:32:07,806] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:32:07,810] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:32:07,810] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:32:07,832] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:32:07,837] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:32:07,839] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:32:07,849] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:32:07,888] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:32:07,901] [INFO] base - User data fetch requested by manav
+[2025-07-04 08:32:07,907] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:32:37,099] [INFO] django.server - "OPTIONS //newp HTTP/1.1" 200 0
+[2025-07-04 08:32:37,103] [INFO] base - Add Project request received from manav
+[2025-07-04 08:32:37,106] [WARNING] django.request - Bad Request: /newp
+[2025-07-04 08:32:37,106] [WARNING] django.server - "POST //newp HTTP/1.1" 400 62
+[2025-07-04 08:33:56,844] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/serializers.py changed, reloading.
+[2025-07-04 08:33:57,803] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:34:04,707] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/serializers.py changed, reloading.
+[2025-07-04 08:34:05,180] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:34:19,933] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:34:20,371] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:34:25,078] [INFO] base - Fetch all projects requested
+[2025-07-04 08:34:25,107] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 291, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:34:25,125] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:34:25,152] [INFO] base - Fetch all projects requested
+[2025-07-04 08:34:25,211] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 291, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:34:25,228] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:34:28,158] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:34:28,161] [INFO] base - User data fetch requested by manav
+[2025-07-04 08:34:28,165] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:34:28,194] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:34:28,195] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:34:28,189] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:34:28,181] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:34:28,171] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:34:28,214] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:34:28,278] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:34:28,279] [INFO] base - User data fetch requested by manav
+[2025-07-04 08:34:28,304] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:34:28,306] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:34:28,307] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:34:28,344] [INFO] django.server - "GET //getuser HTTP/1.1" 200 1366
+[2025-07-04 08:34:28,368] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:34:56,937] [INFO] base - Add Project request received from manav
+[2025-07-04 08:34:56,940] [WARNING] django.request - Bad Request: /newp
+[2025-07-04 08:34:56,941] [WARNING] django.server - "POST //newp HTTP/1.1" 400 62
+[2025-07-04 08:38:52,113] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:38:52,524] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:39:01,061] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:39:01,540] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:40:09,298] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:40:09,715] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:40:37,692] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:40:38,081] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:41:39,493] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/urls.py changed, reloading.
+[2025-07-04 08:41:40,066] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:41:53,368] [INFO] base - Login attempt received by manav
+[2025-07-04 08:41:53,378] [INFO] base - manav is logged in....
+[2025-07-04 08:41:53,380] [INFO] django.server - "POST //login HTTP/1.1" 200 255
+[2025-07-04 08:41:54,907] [INFO] base - Token validation requested by manav
+[2025-07-04 08:41:54,910] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:41:54,935] [INFO] base - Token validation requested by manav
+[2025-07-04 08:41:54,944] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:41:55,048] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:41:55,076] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:41:55,125] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:41:55,160] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:42:00,745] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:00,767] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:00,771] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:42:00,808] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:00,852] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:00,854] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105630
+[2025-07-04 08:42:02,211] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:42:02,224] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:42:02,225] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:42:02,225] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:42:02,252] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:42:02,253] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:42:02,276] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:42:02,277] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:42:02,278] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:42:02,284] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:42:02,289] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:42:02,317] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:42:02,331] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:42:02,362] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:42:02,331] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:42:02,408] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:42:23,683] [INFO] base - Add Project request received from manav
+[2025-07-04 08:42:23,735] [INFO] django.server - "POST //newp HTTP/1.1" 200 233
+[2025-07-04 08:42:25,100] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:25,138] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:25,144] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105668
+[2025-07-04 08:42:25,156] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:25,239] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:25,242] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105668
+[2025-07-04 08:42:27,504] [INFO] base - Token validation requested by manav
+[2025-07-04 08:42:27,506] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:42:27,515] [INFO] base - Token validation requested by manav
+[2025-07-04 08:42:27,516] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:42:27,683] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:27,724] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:27,726] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105668
+[2025-07-04 08:42:27,735] [INFO] base - Fetch all projects requested
+[2025-07-04 08:42:27,761] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py", line 290, in fetch_projects
+    "client_name": i.Client.name,
+                   ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2025-07-04 08:42:27,768] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 105668
+[2025-07-04 08:43:21,718] [INFO] django.server - "GET /admin/auth/user/ HTTP/1.1" 200 18427
+[2025-07-04 08:43:21,761] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:43:23,277] [INFO] django.server - "GET /admin/base/client/ HTTP/1.1" 200 44412
+[2025-07-04 08:43:23,306] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:43:25,199] [INFO] django.server - "GET /admin/base/client/617/change/ HTTP/1.1" 200 17052
+[2025-07-04 08:43:25,247] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:43:56,589] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:43:57,051] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:44:02,670] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:44:03,037] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:44:15,390] [INFO] django.server - "GET /admin/base/project/ HTTP/1.1" 200 12572
+[2025-07-04 08:44:15,435] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:44:21,868] [INFO] django.server - "GET /admin/base/project/13/change/ HTTP/1.1" 200 57744
+[2025-07-04 08:44:21,914] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:44:21,916] [INFO] django.server - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[2025-07-04 08:44:21,918] [INFO] django.server - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[2025-07-04 08:44:22,095] [INFO] django.server - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[2025-07-04 08:44:35,461] [INFO] django.server - "GET /admin/base/project/ HTTP/1.1" 200 12572
+[2025-07-04 08:44:45,438] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:44:45,880] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:44:50,925] [INFO] base - Token validation requested by manav
+[2025-07-04 08:44:50,939] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:44:50,955] [INFO] base - Token validation requested by manav
+[2025-07-04 08:44:50,958] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:44:51,130] [INFO] base - Fetch all projects requested
+[2025-07-04 08:44:51,274] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Client is not JSON serializable
+[2025-07-04 08:44:51,279] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 132535
+[2025-07-04 08:44:51,300] [INFO] base - Fetch all projects requested
+[2025-07-04 08:44:51,335] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Client is not JSON serializable
+[2025-07-04 08:44:51,338] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 132535
+[2025-07-04 08:45:18,394] [INFO] django.server - "GET /admin/base/project/?o=1 HTTP/1.1" 200 12986
+[2025-07-04 08:45:18,428] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:45:22,416] [INFO] django.server - "GET /admin/base/project/?o=-1 HTTP/1.1" 200 12993
+[2025-07-04 08:45:22,466] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:45:25,865] [INFO] django.server - "GET /admin/base/project/?o=1 HTTP/1.1" 200 12986
+[2025-07-04 08:45:25,887] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:45:31,895] [INFO] django.server - "POST /admin/base/project/?o=1 HTTP/1.1" 200 10651
+[2025-07-04 08:45:33,549] [INFO] django.server - "POST /admin/base/project/?o=1 HTTP/1.1" 302 0
+[2025-07-04 08:45:33,564] [INFO] django.server - "GET /admin/base/project/?o=1 HTTP/1.1" 200 10003
+[2025-07-04 08:45:33,662] [INFO] django.server - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[2025-07-04 08:45:51,834] [INFO] base - Token validation requested by manav
+[2025-07-04 08:45:51,835] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:45:51,851] [INFO] base - Token validation requested by manav
+[2025-07-04 08:45:51,864] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:45:52,101] [INFO] base - Fetch all projects requested
+[2025-07-04 08:45:52,115] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 2
+[2025-07-04 08:45:52,190] [INFO] base - Fetch all projects requested
+[2025-07-04 08:45:52,237] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 2
+[2025-07-04 08:46:04,746] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:46:04,761] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:46:04,763] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:46:04,769] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:46:04,790] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:46:04,790] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:46:04,825] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:46:04,841] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:46:04,846] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:46:04,883] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:46:04,885] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:46:04,914] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:46:04,927] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:46:04,937] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:46:04,948] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:46:05,000] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:46:43,962] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:46:44,433] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:46:49,134] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:46:49,528] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:47:04,247] [INFO] base - Add Project request received from manav
+[2025-07-04 08:47:04,282] [INFO] django.server - "POST //newp HTTP/1.1" 200 227
+[2025-07-04 08:47:05,518] [INFO] base - Fetch all projects requested
+[2025-07-04 08:47:05,569] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Client is not JSON serializable
+[2025-07-04 08:47:05,572] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 114228
+[2025-07-04 08:47:05,590] [INFO] base - Fetch all projects requested
+[2025-07-04 08:47:05,621] [ERROR] django.request - Internal Server Error: /get_project/
+Traceback (most recent call last):
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 100, in render
+    ret = json.dumps(
+        data, cls=self.encoder_class,
+        indent=indent, ensure_ascii=self.ensure_ascii,
+        allow_nan=not self.strict, separators=separators
+    )
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/venv/lib/python3.13/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Client is not JSON serializable
+[2025-07-04 08:47:05,624] [ERROR] django.server - "GET //get_project/ HTTP/1.1" 500 114228
+[2025-07-04 08:47:34,939] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:47:35,382] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:47:42,172] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:47:42,616] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:47:48,340] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:47:48,931] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:47:54,479] [INFO] base - Token validation requested by manav
+[2025-07-04 08:47:54,482] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:47:54,503] [INFO] base - Token validation requested by manav
+[2025-07-04 08:47:54,505] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:47:54,658] [INFO] base - Fetch all projects requested
+[2025-07-04 08:47:54,697] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 362
+[2025-07-04 08:47:54,719] [INFO] base - Fetch all projects requested
+[2025-07-04 08:47:54,738] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 362
+[2025-07-04 08:47:59,340] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:47:59,341] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:47:59,342] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:47:59,343] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:47:59,368] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:47:59,372] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:47:59,374] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:47:59,374] [INFO] django.server - "OPTIONS //project/14/ HTTP/1.1" 200 0
+[2025-07-04 08:47:59,374] [INFO] django.server - "OPTIONS //project/14/ HTTP/1.1" 200 0
+[2025-07-04 08:47:59,377] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:47:59,382] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:47:59,404] [INFO] base - Fetch project by ID 14 requested by manav
+[2025-07-04 08:47:59,406] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:47:59,407] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:47:59,409] [INFO] django.server - "GET //project/14/ HTTP/1.1" 200 227
+[2025-07-04 08:47:59,412] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:47:59,413] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:47:59,437] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:47:59,511] [INFO] base - Fetch project by ID 14 requested by manav
+[2025-07-04 08:47:59,513] [INFO] django.server - "GET //uname HTTP/1.1" 200 3838
+[2025-07-04 08:47:59,514] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:47:59,518] [INFO] django.server - "GET //project/14/ HTTP/1.1" 200 227
+[2025-07-04 08:48:02,330] [INFO] django.server - "OPTIONS //status/GSTR1 HTTP/1.1" 200 0
+[2025-07-04 08:48:02,335] [INFO] base - Status_name function triggered by manav
+[2025-07-04 08:48:02,336] [INFO] django.server - "GET //status/GSTR1 HTTP/1.1" 200 187
+[2025-07-04 08:48:02,387] [INFO] base - Status_name function triggered by manav
+[2025-07-04 08:48:02,388] [INFO] django.server - "GET //status/GSTR1 HTTP/1.1" 200 187
+[2025-07-04 08:48:06,167] [INFO] base - Status_name function triggered by manav
+[2025-07-04 08:48:06,168] [INFO] django.server - "GET //status/GSTR1 HTTP/1.1" 200 187
+[2025-07-04 08:48:06,177] [INFO] base - Status_name function triggered by manav
+[2025-07-04 08:48:06,178] [INFO] django.server - "GET //status/GSTR1 HTTP/1.1" 200 187
+[2025-07-04 08:48:15,090] [INFO] django.server - "OPTIONS //addtask/14/ HTTP/1.1" 200 0
+[2025-07-04 08:48:15,107] [INFO] base - Add task to project ID 14 by manav
+[2025-07-04 08:48:15,159] [INFO] django.server - "POST //addtask/14/ HTTP/1.1" 200 25
+[2025-07-04 08:48:18,158] [INFO] django.server - "OPTIONS //tasks/14/ HTTP/1.1" 200 0
+[2025-07-04 08:48:18,180] [INFO] django.server - "OPTIONS //tasks/14/ HTTP/1.1" 200 0
+[2025-07-04 08:48:18,194] [INFO] base - Fetch all tasks for project ID 14 requested by manav
+[2025-07-04 08:48:18,203] [INFO] django.server - "GET //tasks/14/ HTTP/1.1" 200 93
+[2025-07-04 08:48:18,304] [INFO] base - Fetch all tasks for project ID 14 requested by manav
+[2025-07-04 08:48:18,307] [INFO] django.server - "GET //tasks/14/ HTTP/1.1" 200 93
+[2025-07-04 08:48:20,955] [INFO] base - Fetch all projects requested
+[2025-07-04 08:48:20,977] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:48:20,981] [INFO] base - Fetch all projects requested
+[2025-07-04 08:48:20,995] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:48:26,422] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:48:26,455] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:48:26,463] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:48:26,491] [INFO] django.server - "GET //cname HTTP/1.1" 200 142435
+[2025-07-04 08:48:32,385] [INFO] django.server - "OPTIONS //get_project/575/ HTTP/1.1" 200 0
+[2025-07-04 08:48:32,387] [INFO] base - Fetch projects for client id 575 requested by manav
+[2025-07-04 08:48:32,391] [INFO] django.server - "GET //get_project/575/ HTTP/1.1" 200 325
+[2025-07-04 08:48:34,231] [INFO] base - Fetch all tasks for project ID 14 requested by manav
+[2025-07-04 08:48:34,235] [INFO] django.server - "GET //tasks/14/ HTTP/1.1" 200 93
+[2025-07-04 08:48:34,251] [INFO] base - Fetch all tasks for project ID 14 requested by manav
+[2025-07-04 08:48:34,256] [INFO] django.server - "GET //tasks/14/ HTTP/1.1" 200 93
+[2025-07-04 08:48:39,966] [INFO] base - Fetch all projects requested
+[2025-07-04 08:48:39,976] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:48:39,981] [INFO] base - Fetch all projects requested
+[2025-07-04 08:48:39,987] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:49:06,014] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:49:06,567] [INFO] django.utils.autoreload - Watching for file changes with StatReloader
+[2025-07-04 08:49:13,504] [INFO] base - Token validation requested by manav
+[2025-07-04 08:49:13,508] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:49:13,513] [INFO] base - Token validation requested by manav
+[2025-07-04 08:49:13,514] [INFO] django.server - "GET //validate/ HTTP/1.1" 200 28
+[2025-07-04 08:49:13,603] [INFO] base - Fetch all projects requested
+[2025-07-04 08:49:13,608] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:49:13,621] [INFO] base - Fetch all projects requested
+[2025-07-04 08:49:13,642] [INFO] django.server - "GET //get_project/ HTTP/1.1" 200 385
+[2025-07-04 08:49:16,629] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:49:16,635] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:49:16,638] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:49:16,644] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:49:16,645] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:49:16,703] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:49:16,703] [INFO] django.server - "GET //uname HTTP/1.1" 200 3492
+[2025-07-04 08:49:16,704] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:49:16,726] [INFO] base - get_department_name function triggered by manav
+[2025-07-04 08:49:16,728] [INFO] django.server - "GET //dname HTTP/1.1" 200 74
+[2025-07-04 08:49:16,761] [INFO] base - get_User_Data function triggered by manav
+[2025-07-04 08:49:16,766] [INFO] base - Project_type function triggered by manav
+[2025-07-04 08:49:16,777] [INFO] django.server - "GET //ptype HTTP/1.1" 200 166
+[2025-07-04 08:49:16,806] [INFO] base - Client name fetch requested by manav
+[2025-07-04 08:49:16,847] [INFO] django.server - "GET //uname HTTP/1.1" 200 3492
+[2025-07-04 08:49:16,871] [INFO] django.server - "GET //cnameform HTTP/1.1" 200 142435
+[2025-07-04 08:49:25,471] [INFO] django.utils.autoreload - /home/kali/Documents/GitHub/DMM-Task-Tracker/Backend/Enterprise_Database/base/views.py changed, reloading.
+[2025-07-04 08:49:26,019] [INFO] django.utils.autoreload - Watching for file changes with StatReloader

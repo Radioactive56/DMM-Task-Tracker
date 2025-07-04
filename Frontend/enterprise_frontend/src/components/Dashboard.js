@@ -103,7 +103,12 @@ export default function Dashboard() {
   useEffect(()=>{
 
     const api_url = `${API_URL}/cname`;
-    fetch(api_url)
+    fetch(api_url,{
+      method:"GET",
+      headers:{
+          'Authorization': `Bearer ${token}`
+      },
+    })
     .then(response=>{
       if (!response.ok){
         console.error("Error in calling Client Api....")

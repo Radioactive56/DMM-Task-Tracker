@@ -8,7 +8,7 @@ import json
 import pandas as pd
 from django.core.cache import cache
 from .models import Project,Client,Department,Task,Profile
-from .serializers import Projects_serializer,Project_serializer,Client_serializer,Department_serializer,Task_Serializer,UserSerializer
+from .serializers import ProfileSerializer,Projects_serializer,Project_serializer,Client_serializer,Department_serializer,Task_Serializer,UserSerializer
 from datetime import date
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
@@ -28,16 +28,20 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.models import User,Permission
 import pyotp
 from .models import totp
-# Create your views here.
+
+import logging
+logger = logging.getLogger('base')
 
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def validate(request):
+    logger.info(f"Token validation requested by {request.user}")
     return Response({'message':'token is valid'},status=status.HTTP_200_OK)
 
 # Generate Captcha
 def generate_captcha(request):
+    logger.info("Captcha generation triggered")
     captcha_text = ''.join(random.choices(string.digits, k=6))
     print(captcha_text)
     cache.set('captcha_code', captcha_text, timeout=300)  # Store in cache for 5 minutes
@@ -49,10 +53,13 @@ def generate_captcha(request):
  
 @api_view(['POST'])
 def login(request):
+    # logger.info("Login attempt received")
     data = request.data
     print(data)
     username = data.get('username')
     totp_key = data.get('totp')
+
+    logger.info(f"Login attempt received by {username}")
 
     user = User.objects.get(username=username)
     if user:
@@ -63,6 +70,8 @@ def login(request):
             refresh = RefreshToken.for_user(user)
             access_token = str(refresh.access_token)
 
+            logger.info(f"{user.username} is logged in....")
+
             return Response({'Token':access_token,'user':user.username},status= status.HTTP_200_OK)
         
         return Response({'status': 'error', 'message': 'Invalid or expired code'}, status=status.HTTP_403_FORBIDDEN)
@@ -72,6 +81,7 @@ def login(request):
 @permission_classes([IsAuthenticated])
 @api_view(["GET"])
 def send_users(request):
+    logger.info(f"User data fetch requested by {request.user}")
     if request.method=="GET":
         data=Profile.objects.all()
         res=[]
@@ -85,13 +95,13 @@ def send_users(request):
                 "address":i.address,
                 "aadhar":i.aadhar
             })
-        print(res)
         return Response(res,status=status.HTTP_200_OK)
     return Response([],status=status.HTTP_404_NOT_FOUND)
 
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def add_users(request):
+    logger.info(f"User creation requested by {request.user}")
     data = request.data
     username = data.get('username')
 
@@ -117,14 +127,17 @@ def add_users(request):
                 address=data.get('address'),
                 phone=data.get('phone')
             )
+        logger.info(f"User created by {request.user} and created username {username}")
         return Response({"message": "User created"}, status=status.HTTP_201_CREATED)
 
     except Exception as e:
+        logger.error(f'Error in creating the user by {request.user}')
         return Response({"error": str(e)}, status=status.HTTP_404_NOT_FOUND)
 
 @permission_classes([IsAuthenticated])
 @api_view(['POST'])
 def user_delete(request):
+    logger.info(f"User deletion requested by {request.user}")
     user = request.user
     role = user.profile.role
     if role=='employee':
@@ -138,6 +151,7 @@ def user_delete(request):
             d+=1
             item = User.objects.get(username=i)
             item.delete()
+            logger.info(f"User deleted by {request.user}")
         if d==c:
             return Response([],status=status.HTTP_200_OK)
         else:
@@ -146,6 +160,7 @@ def user_delete(request):
 
 @api_view(['POST'])
 def register(request):
+    # logger.info("Register function triggered")
     data = json.loads(request.body)
     username=data.get('username')
     password=data.get('password')
@@ -156,7 +171,7 @@ def register(request):
         return Response({"message": "Invalid captcha!"},status = status.HTTP_400_BAD_REQUEST)
  
     user = authenticate(username=username,password=password)
-    print(user)
+    logger.info(f"Register function triggered by {user}")
     if user:
         secret = pyotp.random_base32()
         print(secret)
@@ -164,7 +179,7 @@ def register(request):
 
         generated_totp = pyotp.TOTP(secret)
         otp_uri = generated_totp.provisioning_uri(name=username, issuer_name="DMM SERVER")
-        print(otp_uri)
+        logger.info("Generated otp uri and secret")
         return Response({"secret":secret,"otp_uri":otp_uri},status=status.HTTP_200_OK)
     else:
         return Response({'message':"Invalid Credentials"},status=status.HTTP_403_FORBIDDEN)
@@ -180,12 +195,14 @@ def check(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def project_type(request):
+    logger.info(f"Project_type function triggered by {request.user}")
     data = [i[1] for i in Project.project_type_choices]
     return Response(data,status=status.HTTP_200_OK)
 
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def status_name(request,name):
+    logger.info(f"Status_name function triggered by {request.user}")
     data = Task.project_status_choices.get(name,[])
     f = [i[1] for i in data]
     return Response(f,status=status.HTTP_200_OK)
@@ -193,6 +210,7 @@ def status_name(request,name):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_client_name(request):
+    logger.info(f"Client name fetch requested by {request.user}")
     data = Client.objects.all().order_by('-active')
     serializer=Client_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
@@ -200,6 +218,7 @@ def get_client_name(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_client_name_form(request):
+    logger.info(f"Client name fetch requested by {request.user}")
     data = Client.objects.filter(active=True)
     serializer=Client_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
@@ -207,6 +226,7 @@ def get_client_name_form(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_department_name(request):
+    logger.info(f"get_department_name function triggered by {request.user}")
     data = Department.objects.all()
     serializer=Department_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
@@ -214,7 +234,8 @@ def get_department_name(request):
 # @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def get_User_data(request):
-    data = User.objects.filter()
+    logger.info(f"get_User_Data function triggered by {request.user}")
+    data = User.objects.filter().exclude(username='manav')
     serializer = UserSerializer(data,many=True)
     print(serializer.data)
     return Response(serializer.data,status=status.HTTP_200_OK)
@@ -223,6 +244,7 @@ def get_User_data(request):
 @csrf_exempt
 @api_view(['POST'])
 def add_Project(request):
+    logger.info(f"Add Project request received from {request.user}")
     print(request.data)
     serializer = Projects_serializer(data=request.data)
     if serializer.is_valid():
@@ -237,6 +259,7 @@ def add_Project(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_project_from_client(request,id):
+    logger.info(f"Fetch projects for client id {id} requested by {request.user}")
     data = Project.objects.filter(Client__id=id)
     print(data)
     if data:
@@ -249,7 +272,9 @@ def fetch_project_from_client(request,id):
 @api_view(['GET'])
 # @permission_classes([IsAuthenticated])
 def fetch_projects(request):
-    data = Project.objects.all()
+    logger.info("Fetch all projects requested")
+    data = Project.objects.all().order_by('start_date','-project_completed')
+    print(data)
     new_data = []
     for i in data:
         latest_task=Task.objects.filter(Project__id=i.id).last()
@@ -281,6 +306,7 @@ def fetch_projects(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_project_by_id(request,id):
+    logger.info(f"Fetch project by ID {id} requested by {request.user}")
     data = Project.objects.get(id=id)
     serialized_data = Projects_serializer(data)
     return Response(serialized_data.data,status=status.HTTP_200_OK)
@@ -288,6 +314,7 @@ def fetch_project_by_id(request,id):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def update_projects(request,id):
+    logger.info(f"Update project ID {id} requested by {request.user}")
     item = Project.objects.get(id = id)
     print(item)
     updated_data = Projects_serializer(instance=item,data=request.data)
@@ -303,18 +330,12 @@ def send_email(request):
     # data = json.loads(request.body) this only works if the body is a json string and not formdata
     # if it is formdata you have to use the below code....
     # from_email=request.POST.get('from_email')
-
+    logger.info(f"Send email request triggered by {request.user}")
     email_reciever = request.POST.get('email_reciever')
     emails=json.loads(email_reciever)
     body = request.POST.get('body')
     subject=request.POST.get('subject')
     files = request.FILES.getlist('attachment')
-
-    print(email_reciever)
-    print(emails)
-    print(body)
-    print(subject)
-    print(files)
 
 
     from_email='neoemailtest12@gmail.com'
@@ -341,6 +362,7 @@ def send_email(request):
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def fetch_all_tasks_by_project_id(request,id):
+    logger.info(f"Fetch all tasks for project ID {id} requested by {request.user}")
     data = Task.objects.filter(Project__id=id)    
     list=['LUT','Registration','Assessment','GST Refund','Audit']
     obj = Project.objects.get(id=id)
@@ -367,6 +389,7 @@ def fetch_all_tasks_by_project_id(request,id):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def add_tasks_for_project_id(request,id):
+    logger.info(f"Add task to project ID {id} by {request.user}")
     data = json.loads(request.body)
     print(data)
     data['Project'] = id
@@ -382,6 +405,7 @@ def add_tasks_for_project_id(request,id):
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def addClient(request):
+    logger.info(f"Add client request by {request.user}")
     user = request.user
     role = user.profile.role
     if role=='employee':
@@ -397,6 +421,7 @@ def addClient(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_client_by_id(request,id):
+    logger.info(f"Fetch client by ID {id} requested by {request.user}")
     data = Client.objects.filter(id = id)
     serializer = Client_serializer(data,many=True)
     return Response(serializer.data,status=status.HTTP_200_OK)
@@ -404,6 +429,7 @@ def get_client_by_id(request,id):
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def update_client(request,id):
+    logger.info(f"Update client ID {id} requested by {request.user}")
     user = request.user
     role = user.profile.role
     if role=='employee':
@@ -421,6 +447,7 @@ def update_client(request,id):
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
 def delete_projects(request):
+    logger.info(f"Delete Projects requested by {request.user}")
     data = request.data
     count_to_delete=len(data)
     counter=0
@@ -432,7 +459,7 @@ def delete_projects(request):
     if counter==count_to_delete:
         return Response('All items deleted successfully',status=status.HTTP_200_OK)
     else:
-        return Reponse('Operation Completed with errors',status=status.HTTP_400_BAD_REQUEST)
+        return Response('Operation Completed with errors',status=status.HTTP_400_BAD_REQUEST)
     
 
 
@@ -455,17 +482,6 @@ def delete_projects(request):
 #             poc=y['Point of Contact']
 #         )
 
-
-# def error(request):
-#     c=0
-#     data = Client.objects.all()
-#     for i in data:
-#         if len(i.contact_no)>10:
-#             i.contact_no = i.contact_no[:-2]
-#             i.save()
-#             c+=1
-#             print(f'edited {i.name}')
-#     print(f'done edited total of {c}') 
 
 
     
