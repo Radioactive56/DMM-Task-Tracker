@@ -34,9 +34,27 @@ export default function NewEmail() {
         .split(/[\s,]+/) // Split by commas or spaces (including multiple spaces)
         .filter(email => email.trim() !== ""); // Remove any empty strings
 
+    const ccList = data.cc // here forward slash(/) indicate start and end of regex
+    // [] defines character set
+    // \s whitespace character
+    // , literal , (comma character)
+    // + is a quantifier which determines multiple commas or spaces or both....
+        .split(/[\s,]+/) // Split by commas or spaces (including multiple spaces)
+        .filter(email => email.trim() !== ""); // Remove any empty strings
+    
+    const bccList = data.bcc// here forward slash(/) indicate start and end of regex
+    // [] defines character set
+    // \s whitespace character
+    // , literal , (comma character)
+    // + is a quantifier which determines multiple commas or spaces or both....
+        .split(/[\s,]+/) // Split by commas or spaces (including multiple spaces)
+        .filter(email => email.trim() !== ""); // Remove any empty strings
+
     const formdata = new FormData();
 
     formdata.append('email_reciever',JSON.stringify(emailList))
+    formdata.append('cc',JSON.stringify(ccList))
+    formdata.append('bcc',JSON.stringify(bccList))
     formdata.append("subject",data.subject)
     formdata.append('body',data.body)
     
@@ -120,6 +138,30 @@ export default function NewEmail() {
             multiple
             placeholder="Recipient's email"
             {...register("email_reciever")}
+            style={styles.input}
+          />
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Can add multiple Email Address but make sure to sperate it via , or space like<br></br><span class="text-blue-600">Example 1: email1@gmail.com,email2@gmail.com<br></br>Example 2: email1@gmail.com email2@gmail.com</span></p>
+        </div>
+
+        <div style={styles.field}>
+          <label style={styles.label}>CC</label>
+          <textarea
+            type="email"
+            multiple
+            placeholder="CC"
+            {...register("cc")}
+            style={styles.input}
+          />
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Can add multiple Email Address but make sure to sperate it via , or space like<br></br><span class="text-blue-600">Example 1: email1@gmail.com,email2@gmail.com<br></br>Example 2: email1@gmail.com email2@gmail.com</span></p>
+        </div>
+
+        <div style={styles.field}>
+          <label style={styles.label}>BCC</label>
+          <textarea
+            type="email"
+            multiple
+            placeholder="BCC"
+            {...register("bcc")}
             style={styles.input}
           />
         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Can add multiple Email Address but make sure to sperate it via , or space like<br></br><span class="text-blue-600">Example 1: email1@gmail.com,email2@gmail.com<br></br>Example 2: email1@gmail.com email2@gmail.com</span></p>

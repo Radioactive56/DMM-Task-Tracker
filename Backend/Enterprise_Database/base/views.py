@@ -332,7 +332,13 @@ def send_email(request):
     # from_email=request.POST.get('from_email')
     logger.info(f"Send email request triggered by {request.user}")
     email_reciever = request.POST.get('email_reciever')
+    cc = request.POST.get('cc')
+    bcc = request.POST.get('bcc')
+    
     emails=json.loads(email_reciever)
+    new_cc = json.loads(cc)
+    new_bcc = json.loads(bcc)
+
     body = request.POST.get('body')
     subject=request.POST.get('subject')
     files = request.FILES.getlist('attachment')
@@ -347,7 +353,7 @@ def send_email(request):
     #     cc=['cc@example.com'],
     #     bcc=['bcc@example.com']
     # )
-    email = EmailMessage(subject=subject,from_email=from_email,body=body,to=emails)
+    email = EmailMessage(subject=subject,from_email=from_email,body=body,to=emails,cc=new_cc,bcc=new_bcc)
 
     if files != []:
         for file in files:
@@ -451,6 +457,10 @@ def delete_projects(request):
     data = request.data
     count_to_delete=len(data)
     counter=0
+    user = request.user
+    role = user.profile.role
+    if role=='employee':
+        return Response({'error':'You dont have the permission to perform this action...'},status=status.HTTP_403_FORBIDDEN)
     for i in data:
         item = Project.objects.get(id=i)
         if item:
